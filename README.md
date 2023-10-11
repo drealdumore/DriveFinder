@@ -1,27 +1,17 @@
-# Hars
+#DriveFinder Web App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+DriveFinder is a web application that simplifies the process of finding and hiring cars based on user location. Whether you're planning a road trip, need a vehicle for a specific task, or just want to explore the city in style, CarFinder has you covered. With real-time location tracking, a diverse fleet of cars, and user-friendly features, finding and hiring a car has never been easier.
 
-## Development server
+#Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+    Location-Based Search: Utilize your current location to discover cars available nearby.
+    Diverse Fleet: Choose from a wide range of cars, from compact to luxury, meeting different preferences and needs.
+    Real-Time Availability: Check the real-time availability of cars, ensuring you can book the one you want when you want it.
+    User-Friendly Interface: An intuitive and easy-to-navigate interface for a seamless user experience.
+    Secure Booking: Securely book your chosen car directly through the app, with transparent pricing and payment options.
 
-## Code scaffolding
+#Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    Angular: Frontend development
+    Firebase: Backend services and real-time data storage
+    Google Maps API: Location tracking and mapping features

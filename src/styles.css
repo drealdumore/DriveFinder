@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --color-white: #f0f5f9;
+  --color-secondary: #c9d6de;
+  --color-grey: #52616a;
+  --color-black: #1e2022;
+}
+
+html {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
