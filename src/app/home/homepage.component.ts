@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'homepage',
   templateUrl: 'homepage.component.html',
-  styles: [
-    ``
-  ],
+  styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {}

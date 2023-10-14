@@ -3,9 +3,20 @@
   --color-secondary: #c9d6de;
   --color-grey: #52616a;
   --color-black: #1e2022;
+  --color-ash: #747474;
+  --color-error: rgb(157, 12, 12);
 }
 
 html {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    background-color: var(--color-black);
+}
+
+button {
+  font-family: inherit;
+}
+
+button:disabled:hover {
+  cursor: not-allowed;
 }
