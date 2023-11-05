@@ -1,0 +1,88 @@
+.heading__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  margin: 0;
+}
+
+.bold-p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.browse-cars input {
+  padding: 0.6rem;
+  border-radius: 5px;
+  width: 80%;
+  background: transparent;
+  border: 1px solid #fff;
+  margin-left: 2rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
+.show {
+  background-color: darkolivegreen;
+  padding: 0.4rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.brand img {
+  width: 5rem;
+  height: auto;
+}
+
+.brands {
+  display: flex;
+  gap: 1rem;
+  padding: 0 0.8rem;
+}
+
+.display-section {
+  background-color: rgb(44, 44, 44);
+  margin-top: 3rem;
+}
+
+.display {
+  color: #fff;
+  padding: 2rem;
+}
+
+.display h3 {
+  text-align: center;
+}
+
+.display p {
+  line-height: 1.4rem;
+}
+
+.display__img--box {
+  display: flex;
+  justify-content: center;
+}
+
+.display__img {
+  height: 8rem;
+  width: auto;
+  border-radius: 1rem;
+}

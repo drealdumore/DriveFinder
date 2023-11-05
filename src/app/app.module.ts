@@ -9,10 +9,26 @@ import { SignupComponent } from './signup/signup.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from 'src/routes';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OrderSucessfulPopup } from './app/popup/order-successful-popup.component';
+import { CarProductComponent } from './app/popup/car-product.component';
+import { FrontPageComponent } from './front-page/front-page.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, HomepageComponent, LoginComponent, SignupComponent],
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes), ReactiveFormsModule],
+  declarations: [
+    AppComponent,
+    NavComponent,
+    HomepageComponent,
+    LoginComponent,
+    SignupComponent,
+    OrderSucessfulPopup,
+    CarProductComponent,
+    FrontPageComponent,
+  ],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

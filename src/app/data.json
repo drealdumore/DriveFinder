@@ -1,0 +1,178 @@
+{
+  "cars": [
+    {
+      "brand": "BMW",
+      "name": "BMW i8 2015",
+      "rating": 5.0,
+      "trips": 62,
+      "host": "All-Star Host",
+      "pricePerDay": 155
+    }
+  ],
+
+  "booking": {
+    "startDate": "11/06/2023",
+    "startTime": "10:00 AM",
+    "endDate": "11/09/2023",
+    "endTime": "10:00 AM"
+  },
+
+  "faq": [
+    {
+      "question": "What do I need to book a car on DriveFinder?",
+      "answer": "To book a car on DriveFinder, you must create a DriveFinder account, be 18 years old or older in the US, 21 years old or older in the UK, 23 years old or older in Canada, have a valid driver’s license, and get approved to drive on DriveFinder."
+    },
+    {
+      "question": "Can I extend my trip?",
+      "answer": "Yes! If you would like to extend your trip please modify your trip in the Turo app and we will approve it right away."
+    }
+  ],
+
+  "location": {
+    "city": "Los Angeles",
+    "airport": "",
+    "address": "",
+    "hotel": "CA 90005"
+  },
+
+  "overview": {
+    "features": "Deluxe Class, Automatic Transmission, Long-term Car",
+    "reviews": "4.98 (90 ratings)"
+  },
+
+  "car": {
+    "title": "BMW i8 2015",
+    "rating": 5.0,
+    "trips": 62,
+    "mpg": 28,
+    "fuelType": "Gas (Premium)",
+    "doors": 2,
+    "seats": 4,
+    "host": {
+      "name": "Rahim",
+      "rating": 5.0,
+      "trips": 2183,
+      "joined": "Aug 2017",
+      "responseTime": "1 minute"
+    },
+
+    "description": "Experience California in a fun and unique way with this Rose Gold BMW i8. This car attracts A LOT of attention so be prepared for phones and cameras taking pictures of you while you drive by. Also, you can park virtually ANYWHERE. You won’t have to pay meters, you can park in the handicap spots ♿️, no red zones, fire hydrants, street sweeper zones (please use discretion). This BMW i8 accelerates from 0 to 100 km/h (62 mph) in 4.4 seconds and has an electronic limited top speed of 250 km/h (155 mph).\n\nThe exotic yet futuristic design established the I8 as the BMW's first step towards a new generation of cars and combined luxury with the plug-in hybrid experience.\n\nPlease, NO SMOKING (Cigarettes, Cigars, Weed, Vaping, E-Cigs, etc.) An additional $250 cleaning fee will be assessed if this rule is violated.\n\nBe safe and have a great drive! We are here to make your trip as easy and enjoyable as possible. Please don't hesitate to reach out with any questions before, during, or after your trip as we're here to help!\n\n*** PLEASE NOTE TURO IS A CAR SHARING COMMUNITY ***\nIn other words, please treat the vehicle as if it were your own. We treat and take care of all of our vehicles as best as we can, so we definitely appreciate when that effort is reciprocated. PLEASE KEEP IT CLEAN",
+    "features": [
+      "Must be 21+ to book",
+      "Automatic transmission",
+      "AUX input",
+      "Backup camera",
+      "Bluetooth",
+      "Convertible",
+      "Heated seats",
+      "Keyless entry",
+      "USB charger",
+      "USB input",
+      "Bluetooth Phone Charger"
+    ],
+
+    "extras": [{ "name": "Prepaid refuel", "price": 110 }],
+
+    "reviews": [
+      {
+        "reviewer": "Lucy F.",
+        "date": "October 22, 2023",
+        "comment": "Super easy pick up and drop off and definitely a great (and fun!) car. Recommend. 😊"
+      },
+      {
+        "reviewer": "Olivia M.",
+        "date": "October 17, 2023",
+        "comment": "Great car, great communication"
+      },
+      {
+        "reviewer": "Amy S.",
+        "date": "October 15, 2023",
+        "comment": "Car was great, pick up and drop off were smooth and communication was timely and thorough. Highly recommend."
+      },
+      {
+        "reviewer": "George H.",
+        "date": "October 8, 2023",
+        "comment": "Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again."
+      },
+      {
+        "reviewer": "Monica S.",
+        "date": "September 22, 2023",
+        "comment": "Perfect. Rahim was very communicative and clear, and the car was exceptional!"
+      }
+    ]
+  },
+
+  "description": {
+    "about": "Experience California in a fun and unique way with this Rose Gold BMW i8...",
+    "rules": "Please, NO SMOKING...",
+    "faqs": "Can I extend my trip? Yes!...",
+    "deluxeClass": "This exclusive car has additional safety checks for guests under 30."
+  },
+
+  "extras": {
+    "mustBe25": true,
+    "automaticTransmission": true,
+    "longTermCar": true
+  },
+
+  "guidelines": {
+    "fuelType": "Premium 91"
+  },
+
+  "ratingsAndReviews": {
+    "overallRating": 4.98,
+    "cleanliness": 4.9,
+    "maintenance": 5.0,
+    "communication": 5.0,
+    "convenience": 5.0,
+    "accuracy": 5.0,
+    "totalRatings": 85
+  },
+
+  "carreviews": [
+    {
+      "username": "Alexander C.",
+      "carModel": "BMW M8 2020",
+      "date": "July 20, 2023",
+      "comment": "A huge thank you to Dima for his amazing BMW M8."
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Jeff A.",
+      "date": "October 26, 2023",
+      "comment": "Just the best customer service !! And really nice experience now even thinking of getting a i8 lol"
+    },
+    {
+      "author": "Alex K.",
+      "date": "October 9, 2023",
+      "comment": "Elijah is a fantastic host and the car is fun to drive and has massive curb appeal"
+    },
+    {
+      "author": "Nick P.",
+      "date": "September 11, 2023",
+      "comment": "Super nice car and fun to drive. Elijah was extremely nice and accommodating. Will definitely be renting again next time I’m in town"
+    },
+    {
+      "author": "Burhan S.",
+      "date": "September 11, 2023",
+      "comment": "Great car, the color is really nice and is a neck breaker. Would use again"
+    },
+    {
+      "author": "Ireen B.",
+      "date": "September 2, 2023",
+      "comment": "Beautiful car, gives you so much attention and everyone wants to take photos. Bro E. was an exceptional and kind host. Will definitely rent again. God bless."
+    }
+  ],
+
+  "trip": {
+    "startDate": "2023-11-06",
+    "endDate": "2023-11-09",
+    "pickupReturnLocation": "Los Angeles, CA 90005",
+    "discount": 19,
+    "cancellationPolicy": "Free cancellation",
+    "distanceIncluded": 300,
+    "feePerAdditionalMile": 1.23,
+    "insurance": "Insurance via Travelers"
+  }
+}
