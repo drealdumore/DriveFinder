@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { OrderSucessfulPopup } from './app/popup/order-successful-popup.component';
 import { CarProductComponent } from './app/popup/car-product.component';
 import { FrontPageComponent } from './front-page/front-page.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FrontPageComponent } from './front-page/front-page.component';
     OrderSucessfulPopup,
     CarProductComponent,
     FrontPageComponent,
+    FaqComponent,
   ],
   imports: [
     BrowserModule,
