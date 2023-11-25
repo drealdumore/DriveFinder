@@ -13,6 +13,7 @@ import { OrderSucessfulPopup } from './app/popup/order-successful-popup.componen
 import { CarProductComponent } from './app/popup/car-product.component';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { FaqComponent } from './faq/faq.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FaqComponent } from './faq/faq.component';
     CarProductComponent,
     FrontPageComponent,
     FaqComponent,
+    ExperienceComponent,
   ],
   imports: [
     BrowserModule,
