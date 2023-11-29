@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:wght@100;300;400;500;800&display=swap");
+
 :root {
   --color-white: #fff;
   --color-secondary: #fcfcfc;
@@ -6,22 +8,34 @@
   --color-ash: #747474;
   --color-error: rgb(157, 12, 12);
 
-
   --bg: #fff;
   --text: #7288a2;
   --gray: #4d5974;
   --lightgray: #e5e5e5;
   --blue: #03b5d2;
+
+  --primary-color: #1ecb15;
+  --primary-color-rgb: 120, 202, 92;
+  --secondary-color: #179510;
+  --secondary-color-rgb: 23, 149, 16;
+
+  --border-default: solid 1px rgba(30, 30, 30, 1);
+  --bg-color-even: #e8e8e8;
+  --bg-color-odd: #f4f4f4;
+  --bg-color-dark: #121212;
+  --body-font-color: #4d5b7c;
+  --dark-body-font-color: rgba(255, 255, 255, 0.75);
+  --gray-color: #acacac;
 }
 
 html {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    background-color: var(--color-black);
+  font-family: "Raleway";
+  background-color: var(--color-black);
 }
 
 button {
-  font-family: inherit;
+  font-family: "Raleway";
+  cursor: pointer;
 }
 
 button:disabled:hover {

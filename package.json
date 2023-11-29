@@ -1,9 +1,9 @@
 {
-  "name": "DriveFinder.",
+  "name": "drivefinder",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o",
+    "start": "ng serve --port 5000 -o",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -18,7 +18,6 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
-    "ngx-slick-carousel": "^15.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

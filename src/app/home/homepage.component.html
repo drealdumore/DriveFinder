@@ -1,7 +1,8 @@
-<nav></nav>
+<navigation></navigation>
 
-<div class="home">
-  <div>
+<div>
+  <div class="background"></div>
+  <div class="home__content">
     <h1 class="heading1">
       DriveFinder -<br />
       <span>
@@ -9,6 +10,17 @@
         Seamless Car Rentals!</span
       >
     </h1>
+
+<div class="search">
+  <input type="text" placeholder="Where">
+  <input type="date" placeholder="From">
+  <input type="date" placeholder="until">
+  <button class="search__svg">
+    <img src="./assets/img/search.svg" alt="search icon">
+  </button>
+  
+</div>
+
     <button [routerLink]="'/auth/signup'" class="home__button">
       Get started
     </button>
