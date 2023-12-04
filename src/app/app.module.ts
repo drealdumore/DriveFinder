@@ -14,7 +14,12 @@ import { CarProductComponent } from './app/popup/car-product.component';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { FaqComponent } from './faq/faq.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { BrandsComponent } from './home/brands/brands.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrevDirective, NextDirective } from './home/brands/brands.scroll.directive';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeTestimonialsComponent } from './home/home-testimonials/home-testimonials.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +32,17 @@ import { ExperienceComponent } from './experience/experience.component';
     FrontPageComponent,
     FaqComponent,
     ExperienceComponent,
+    BrandsComponent,
+    PrevDirective,
+    NextDirective,
+    HomeTestimonialsComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

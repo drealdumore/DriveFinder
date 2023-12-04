@@ -2,7 +2,7 @@
 
 :root {
   --color-white: #fff;
-  --color-secondary: #fcfcfc;
+  --grey-secondary: #4A4A4A;
   --color-grey: #52616a;
   --color-black: #000;
   --color-ash: #747474;
@@ -26,11 +26,16 @@
   --body-font-color: #4d5b7c;
   --dark-body-font-color: rgba(255, 255, 255, 0.75);
   --gray-color: #acacac;
+  --bg: hsl(0 0% 2%);
 }
 
 html {
   font-family: "Raleway";
   background-color: var(--color-black);
+}
+
+input {
+  font-family: "Raleway";
 }
 
 button {

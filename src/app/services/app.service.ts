@@ -1,24 +1,40 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { catchError, Observable, tap, throwError } from 'rxjs';
+import { ICars } from '../app-model';
+import { CarData } from 'src/api/cars/cars';
 
-
-@Injectable( {
-  providedIn: 'root'  
+@Injectable({
+  providedIn: 'root',
 })
-
 export class appService {
-    private productsUrl = 'api/data';
-  
-//   constructor(private http: HttpClient) { }
+  private Url = 'api/cars/datas.json';
 
-//   getProducts(): Observable<Product[]> {
-//     return this.http.get<Product[]>(this.productsUrl)
-//       .pipe(
-//         tap(data => console.log('Products: ', JSON.stringify(data))),
-//         catchError(this.handleError)
-//       );
-//   }
+  constructor(private http: HttpClient) {}
+
+  getCars() {
+    return CarData;
+  }
+
+  // getCars(): Observable<ICars[]> {
+  //   return this.http.get<ICars[]>(this.Url).pipe(
+  //     tap((data) => console.log('cars: ', JSON.stringify(data))),
+  //     catchError(this.handleError)
+  //   );
+  // }
+
+  // private handleError(err: HttpErrorResponse) {
+  //   let errorMessage = '';
+  //   if (err.error instanceof ErrorEvent) {
+  //     // A client-side or network error occurred.
+  //     errorMessage = `An error occurred: ${err.error.message}`;
+  //   } else {
+  //     // The backend returned an unsuccessful response code.
+  //     errorMessage = `Backend returned code ${err.status}: ${err.message}`;
+  //   }
+  //   console.error(errorMessage);
+  //   return throwError(() => errorMessage);
+  // }
 }

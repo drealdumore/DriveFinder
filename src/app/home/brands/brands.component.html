@@ -1,0 +1,31 @@
+
+<section class="brands">
+  <div class="fluid">
+    <div class="slider-wrap">
+      <div class="slider-main">
+        <div class="item" *ngFor="let car of cars">
+          <div class="text">{{ car.brand }}</div>
+          <div class="imgbox">
+            <img [src]="car.img.main" alt="{{ car.name }}" />
+          </div>
+        </div>
+      </div>
+      <div class="sliderbtn__box">
+        <button class="sliderbtn prev" appPrev>
+          <i class="bx bx-chevron-left"></i>
+        </button>
+        <button class="sliderbtn next" appNext>
+          <i class="bx bx-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div *ngFor="let car of cars">
+  <h2>{{ car.name }}</h2>
+
+  <div *ngFor="let additionalImg of car.img.additional">
+    <img [src]="additionalImg" alt="{{ car.name }} - Additional Image" />
+  </div>
+</div> -->
