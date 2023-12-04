@@ -7,11 +7,11 @@
         [attr.aria-expanded]="item.expanded.toString()"
         (click)="toggleAccordion(i)"
       >
-        <span class="accordion-title">{{ item.title }}</span>
+        <span class="accordion-title">{{ item.question }}</span>
         <span class="icon" aria-hidden="true"></span>
       </button>
       <div class="accordion-content" *ngIf="item.expanded">
-        <p>{{ item.content }}</p>
+        <p>{{ item.answer }}</p>
       </div>
     </div>
   </div>

@@ -20,6 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PrevDirective, NextDirective } from './home/brands/brands.scroll.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeTestimonialsComponent } from './home/home-testimonials/home-testimonials.component';
+import { FeaturesComponent } from './features/features.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +38,8 @@ import { HomeTestimonialsComponent } from './home/home-testimonials/home-testimo
     PrevDirective,
     NextDirective,
     HomeTestimonialsComponent,
+    FeaturesComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

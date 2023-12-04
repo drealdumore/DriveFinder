@@ -3,7 +3,7 @@
   justify-content: space-between;
   padding: 0 3rem;
   background-color: var(--color-black);
-  height: 75vh;
+  height: 31rem;
   filter: brightness(60%);
   background-image: url(../../assets/img/benz/benz-main.jpg);
   background-size: cover;
@@ -85,7 +85,6 @@
 }
 
 .explore {
-  color: var(--grey-secondary);
   height: 25rem;
   text-align: center;
   font-size: 1.5rem;
@@ -94,44 +93,8 @@
 .features__session {
   padding-top: 1.2rem;
 }
-.features__h1 {
+.section__heading {
   font-size: 2.5rem;
   text-align: center;
-}
-.features {
-  /* display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.features__div {
-  border-radius: 5%;
-  overflow: hidden;
-  width: 18rem;
-  border: 1px solid var(--color-black);
-  padding: auto;
-}
-
-.feature__img {
-  width: 17rem;
-  height: 10rem;
-}
-
-.feature__block {
-  background-color: var(--color-black);
   color: var(--color-white);
-  height: 10.5rem;
-  padding: 0 1rem;
-}
-
-.feature__heading {
-  padding-top: 1rem;
-}
-
-.feature__p {
-  font-size: 1rem;
 }
