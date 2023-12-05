@@ -1,0 +1,25 @@
+<main>
+  <div class="slider">
+    <div class="slide-track">
+      <div class="testimonial__box" *ngFor="let review of reviews">
+        <div class="img">
+          <img [src]="review.img" alt="{{ review.username }}" />
+        </div>
+        <div class="reviewer">
+          <p>{{ review.username }}</p>
+          <span>Joined {{ review.date }}</span>
+        </div>
+        <div class="stars">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+        </div>
+        <div class="review">
+          {{ review.comment }}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

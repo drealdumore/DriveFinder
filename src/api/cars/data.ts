@@ -1,4 +1,4 @@
-import { IFaq } from 'src/app/app-model';
+import { IFaq, IReview } from 'src/app/app-model';
 
 export const Cars = [
   {
@@ -2480,5 +2480,80 @@ export const Faq: IFaq[] = [
     expanded: false,
     answer:
       'On your Account page, make sure you’ve checked the box to receive email notifications, and enable push notifications from the DriveFinder app in your phone settings — we’ll send you occasional promotions, discounts, and deals! Additionally, frequent travelers in the United States can get rewarded with the loyalty bonus — earn a promo code for one bonus day when you take trips totaling 10 days in a 90-day period!',
+  },
+];
+
+export const Reviews: IReview[] = [
+  {
+    username: 'Chris A.',
+    img: './assets/img/Memojis/Memoji4.png',
+    carModel: 'Mercedes-Benz C-Class 2018',
+    rating: 4.8,
+    date: 'June 20, 2023',
+    comment: 'We will always use his cars for any Los Angeles trips!',
+  },
+  {
+    username: 'Donna M.',
+    img: './assets/img/Memojis/Memoji2.png',
+    carModel: 'Mercedes-Benz E-Class 2016',
+    rating: 4.8,
+    date: 'November 20, 2023',
+    comment: 'Thank you for making the rental process smooth and simple!',
+  },
+  {
+    username: 'Luke B.',
+    img: './assets/img/Memojis/Memoji1.png',
+    carModel: 'Mercedes-Benz CLA-Class 2022',
+    rating: 4.2,
+    date: 'August 20, 2023',
+    comment: 'Great car, communication was fast and easy.',
+  },
+  {
+    username: 'Alexander C.',
+    img: './assets/img/Memojis/Memoji3.png',
+    carModel: 'BMW M8 2020',
+    rating: 4.8,
+    date: 'July 20, 2023',
+    comment: 'A huge thank you to the for his amazing BMW M8.',
+  },
+  {
+    username: 'David H.',
+    img: './assets/img/Memojis/Memoji5.png',
+    carModel: 'BMW 3 Series 2016',
+    rating: 4.8,
+    date: 'November 20, 2023',
+    comment: 'Clean car no issues.',
+  },
+  {
+    username: 'Edward H.',
+    img: './assets/img/Memojis/Memoji6.png',
+    carModel: 'BMW 4 Series 2016',
+    rating: 4.2,
+    date: 'August 20, 2023',
+    comment: 'Had fun driving around Los Angeles in a BMW drop top.',
+  },
+  {
+    username: 'Chris A.',
+    img: './assets/img/Memojis/Memoji9.png',
+    carModel: 'Toyota Supra 2023',
+    rating: 4.8,
+    date: 'June 20, 2023',
+    comment: 'Easy street parking.',
+  },
+  {
+    username: 'Donna M.',
+    img: './assets/img/Memojis/Memoji7.png',
+    carModel: 'Toyota Prius 2008',
+    rating: 4.8,
+    date: 'November 20, 2023',
+    comment: 'Thank you for making the rental process smooth and simple!',
+  },
+  {
+    username: 'Luke B.',
+    img: './assets/img/Memojis/Memoji8.png',
+    carModel: 'Toyota Corolla 2021',
+    rating: 4.2,
+    date: 'August 20, 2023',
+    comment: 'Great car, communication was fast and easy.',
   },
 ];

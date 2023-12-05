@@ -110,3 +110,12 @@ export interface IFaq {
   answer: string;
   expanded: boolean;
 }
+
+export interface IReview {
+  username: string;
+  img: string;
+  carModel: string;
+  rating: number;
+  date: string;
+  comment: string;
+}

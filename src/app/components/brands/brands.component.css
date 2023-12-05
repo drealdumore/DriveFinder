@@ -14,13 +14,15 @@
 
 .fluid {
   padding: 0 3rem;
+  display: flex;
+  justify-content: center;
 }
 
 .slider-wrap {
   position: relative;
   overflow: hidden;
   height: 160px;
-  width: 89%;
+  width: 80%;
   padding: 0 2rem;
 }
 

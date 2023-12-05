@@ -4,7 +4,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { catchError, Observable, tap, throwError } from 'rxjs';
 import { ICars } from '../app-model';
-import { Cars, Faq } from 'src/api/cars/data';
+import { Cars, Faq, Reviews } from 'src/api/cars/data';
 
 @Injectable({
   providedIn: 'root',
@@ -20,6 +20,10 @@ export class appService {
 
   getFaq() {
     return Faq;
+  }
+  
+  getReviews() {
+    return Reviews;
   }
 
   // getCars(): Observable<ICars[]> {

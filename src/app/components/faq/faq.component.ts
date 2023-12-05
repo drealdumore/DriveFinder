@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { appService } from '../services/app.service';
-import { IFaq } from '../app-model';
+import { appService } from '../../services/app.service';
+import { IFaq } from '../../app-model';
 
 @Component({
   selector: 'app-faq',
