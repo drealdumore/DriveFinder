@@ -22,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeTestimonialsComponent } from './components/home-testimonials/home-testimonials.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HeaderHeroComponent } from './header-hero/header-hero.component';
+import { HeaderHeroComponent } from './components/header-hero/header-hero.component';
 @NgModule({
   declarations: [
     AppComponent,

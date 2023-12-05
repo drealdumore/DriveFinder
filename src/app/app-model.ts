@@ -119,3 +119,19 @@ export interface IReview {
   date: string;
   comment: string;
 }
+
+export interface IUser {
+  name: string;
+  img: string;
+  location: string;
+  rating: number;
+  work: string;
+  school: string;
+  languages: string;
+  email: string;
+  phone: string;
+  about: string;
+  icon: string;
+  toDrive: string;
+  Popup: string;
+}

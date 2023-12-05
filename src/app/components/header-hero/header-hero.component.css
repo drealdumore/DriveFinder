@@ -1,0 +1,87 @@
+.background {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    background-color: var(--color-black);
+    height: 31rem;
+    filter: brightness(60%);
+    background-image: url(../../../assets/img/benz/benz-main.jpg);
+    background-size: cover;
+  }
+  
+  .home__content {
+    position: absolute;
+    top: 3rem;
+    left: 4rem;
+  }
+  
+  .home__img {
+    width: 32rem;
+    height: auto;
+  }
+  
+  .heading1 {
+    font-size: 3rem;
+    padding-top: 6rem;
+    color: var(--color-white);
+    padding-bottom: 4rem;
+  }
+  .heading1 span {
+    font-size: 2.8rem;
+  }
+  
+  .search {
+    padding: 10px;
+    background: var(--color-white);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+  }
+  
+  .search input {
+    border: none;
+    outline: none;
+    border-right: 1px solid var(--primary-color);
+    height: 2rem;
+    width: 9rem;
+    font-size: 0.9rem;
+    caret-color: var(--primary-color);
+    padding-left: 5px;
+  }
+  
+  .search input:nth-child(3) {
+    border-right: none;
+  }
+  
+  .search input::placeholder {
+    font-weight: 500;
+  }
+  
+  .search__svg {
+    background: var(--primary-color);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem;
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.4s ease;
+  }
+  
+  .search__svg:hover {
+    background: var(--secondary-color);
+  }
+  
+  .search__svg img {
+    height: 1rem;
+  }
+  .search__svg img {
+    height: 1rem;
+  }
+  
+  
