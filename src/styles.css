@@ -2,9 +2,9 @@
 
 :root {
   --color-white: #fff;
-  --grey-secondary: #4A4A4A;
+  --grey-secondary: #4a4a4a;
   --color-grey: #52616a;
-  --color-black: #000;
+  --color-black: #121212;
   --color-ash: #747474;
   --color-error: rgb(157, 12, 12);
 
@@ -45,4 +45,8 @@ button {
 
 button:disabled:hover {
   cursor: not-allowed;
+}
+
+section {
+  padding-top: 1.2rem;
 }

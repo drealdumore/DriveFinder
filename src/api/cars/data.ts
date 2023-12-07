@@ -4,6 +4,7 @@ export const Cars = [
   {
     brand: 'BMW',
     name: 'BMW i8 2015',
+    category: 'cars',
     rating: '4.97 (90 ratings)',
     pricePerDay: 155,
 
@@ -185,6 +186,7 @@ export const Cars = [
   {
     brand: 'BMW',
     name: 'BMW i8 2019',
+    category: 'convertibles',
     rating: '4.92 (10 ratings)',
     pricePerDay: 120,
 
@@ -373,9 +375,11 @@ export const Cars = [
       insurance: 'Insurance via Travelers',
     },
   },
+
   {
     brand: 'BMW',
     name: 'BMW Z4 2020',
+    category: ' exotic & luxury',
     rating: '4.98 (50 ratings)',
     pricePerDay: 100,
     mpg: {
@@ -576,9 +580,11 @@ export const Cars = [
       insurance: 'Insurance via Travelers',
     },
   },
+
   {
     brand: 'BMW',
     name: 'BMW 4 Series 2021',
+    category: 'SUVs',
     rating: '4.90 (19 ratings)',
     pricePerDay: 86,
 
@@ -786,6 +792,8 @@ export const Cars = [
   {
     brand: 'Benz',
     name: 'Mercedes-Benz G-Class 2019',
+    category: ' classics',
+
     rating: '4.90 (9 ratings)',
     pricePerDay: 506,
 
@@ -802,7 +810,7 @@ export const Cars = [
       detail: 5,
     },
     detail:
-      'The 2019 Mercedes-Benz G-Class offers a perfect blend of rugged off-road capability and luxurious comfort. With its iconic boxy design, powerful engine options, and a lavish interior, this SUV exudes both timeless style and modern sophistication. Whether navigating city streets or conquering challenging terrains, the G-Class delivers a commanding performance. Cutting-edge technology, premium materials, and meticulous craftsmanship define the interior, providing passengers with a first-class driving experience. In summary, the 2019 Mercedes-Benz G-Class is a symbol of prestige, combining off-road prowess with opulent refinement.',
+      'The 2019 Mercedes-Benz G-Class offers a perfect blend of rugged off-road capability and luxurious comfort. With its iconic boxy design, powerful engine options, and a lavish interior, this SUVs exudes both timeless style and modern sophistication. Whether navigating city streets or conquering challenging terrains, the G-Class delivers a commanding performance. Cutting-edge technology, premium materials, and meticulous craftsmanship define the interior, providing passengers with a first-class driving experience. In summary, the 2019 Mercedes-Benz G-Class is a symbol of prestige, combining off-road prowess with opulent refinement.',
     features: [
       {
         icon: 'assets/img/apple-carplay.svg',
@@ -988,9 +996,11 @@ export const Cars = [
       insurance: 'Insurance via Travelers',
     },
   },
+
   {
     brand: 'Benz',
     name: 'Mercedes-Benz C-Class 2017',
+    category: ' car',
     rating: '4.96 (9 ratings)',
     pricePerDay: 200,
 
@@ -1201,9 +1211,11 @@ export const Cars = [
       insurance: 'Insurance via Travelers',
     },
   },
+
   {
     brand: 'Benz',
     name: 'Mercedes-Benz C-Class 2019',
+    category: ' SUVs',
     rating: '4.96 (9 ratings)',
     pricePerDay: 200,
 
@@ -1412,10 +1424,12 @@ export const Cars = [
       insurance: 'Insurance via Travelers',
     },
   },
+
   {
     brand: 'Benz',
     name: 'Mercedes-Benz G-Class 2016',
     rating: '4.96 (19 ratings)',
+    category: ' exptic & luxury',
     pricePerDay: 200,
 
     mpg: {
@@ -1435,7 +1449,7 @@ export const Cars = [
       detail: 5,
     },
     detail:
-      'The 2016 Mercedes-Benz G-Class offers a luxurious and powerful driving experience. Known for its iconic boxy design, this SUV combines rugged off-road capabilities with a plush and sophisticated interior. With a robust V8 engine, advanced technology features, and a reputation for durability, the G-Class delivers a perfect blend of style and performance for those seeking a distinctive and high-end driving experience.',
+      'The 2016 Mercedes-Benz G-Class offers a luxurious and powerful driving experience. Known for its iconic boxy design, this SUVs combines rugged off-road capabilities with a plush and sophisticated interior. With a robust V8 engine, advanced technology features, and a reputation for durability, the G-Class delivers a perfect blend of style and performance for those seeking a distinctive and high-end driving experience.',
     features: [
       {
         icon: 'assets/img/apple-carplay.svg',
@@ -1629,6 +1643,7 @@ export const Cars = [
   {
     brand: 'Toyota',
     name: 'Toyota Prius Prime 2021',
+    category: ' car',
     rating: '4.99 (19 ratings)',
     pricePerDay: 56,
 
@@ -1649,7 +1664,7 @@ export const Cars = [
       detail: 5,
     },
     detail:
-      'The 2019 Mercedes-Benz G-Class offers a perfect blend of rugged off-road capability and luxurious comfort. With its iconic boxy design, powerful engine options, and a lavish interior, this SUV exudes both timeless style and modern sophistication. Whether navigating city streets or conquering challenging terrains, the G-Class delivers a commanding performance. Cutting-edge technology, premium materials, and meticulous craftsmanship define the interior, providing passengers with a first-class driving experience. In summary, the 2019 Mercedes-Benz G-Class is a symbol of prestige, combining off-road prowess with opulent refinement.',
+      'The 2019 Mercedes-Benz G-Class offers a perfect blend of rugged off-road capability and luxurious comfort. With its iconic boxy design, powerful engine options, and a lavish interior, this SUVs exudes both timeless style and modern sophistication. Whether navigating city streets or conquering challenging terrains, the G-Class delivers a commanding performance. Cutting-edge technology, premium materials, and meticulous craftsmanship define the interior, providing passengers with a first-class driving experience. In summary, the 2019 Mercedes-Benz G-Class is a symbol of prestige, combining off-road prowess with opulent refinement.',
     features: [
       {
         icon: 'assets/img/apple-carplay.svg',
@@ -1835,9 +1850,12 @@ export const Cars = [
       insurance: 'Insurance via Travelers',
     },
   },
+
   {
     brand: 'Toyota',
     name: 'Toyota Supra 2021',
+    category: ' classics',
+
     rating: '4.99 (19 ratings)',
     pricePerDay: 56,
 
@@ -2051,6 +2069,8 @@ export const Cars = [
     brand: 'Lexus',
     name: 'Lexus IS 2022',
     rating: '4.90 (19 ratings)',
+    category: ' convertible',
+
     pricePerDay: 126,
 
     mpg: {
@@ -2256,9 +2276,12 @@ export const Cars = [
       insurance: 'Insurance via Travelers',
     },
   },
+
   {
     brand: 'Lexus',
     name: 'Lexus ES 2023',
+    category: ' exotic & luxury',
+
     rating: '4.90 (29 ratings)',
     pricePerDay: 126,
 
@@ -2479,7 +2502,7 @@ export const Faq: IFaq[] = [
     question: 'How do I get discounts when booking a car?',
     expanded: false,
     answer:
-      'On your Account page, make sure you’ve checked the box to receive email notifications, and enable push notifications from the DriveFinder app in your phone settings — we’ll send you occasional promotions, discounts, and deals! Additionally, frequent travelers in the United States can get rewarded with the loyalty bonus — earn a promo code for one bonus day when you take trips totaling 10 days in a 90-day period!',
+      'Many DriveFinder hosts offer discounted prices for weekly and monthly trips, as well as “early bird” discounts for trips booked a week or more in advance. So, get the best deals and lowest rates possible by booking longer trips, at least a week in advance. Commercial Hosts may also offer weekly car rental and monthly car rental deals. On your Account page, make sure you’ve checked the box to receive email notifications, and enable push notifications from the DriveFinder app in your phone settings — we’ll send you occasional promo codes, discounts, and deals! Additionally, frequent travelers on DriveFinder can get rewarded with the loyalty bonus — earn a promo code for one bonus day when you take trips totaling 10 days in a 90-day period!**',
   },
 ];
 
@@ -2555,6 +2578,37 @@ export const Reviews: IReview[] = [
     rating: 4.2,
     date: 'August 20, 2023',
     comment: 'Great car, communication was fast and easy.',
+  },
+];
+
+export const SubReviews: IReview[] = [
+  {
+    username: 'Robert T.',
+    img: './assets/img/Memojis/Memoji4.png',
+    carModel: 'Mercedes-Benz C-Class 2018',
+    rating: 4.8,
+    date: 'Few minutes ago',
+    comment:
+      'Very well managed, prompt reply, everything is more professional than major car rental companies.',
+  },
+
+  {
+    username: 'Jessie Z.',
+    img: './assets/img/Memojis/Memoji3.png',
+    carModel: 'Chevrolet Camaro 2019',
+    rating: 4.8,
+    date: 'Few minutes ago',
+    comment:
+      'Upon arrival, I was picked up from the airport and 30 minutes after writing that I had landed, I was already sitting in this beautiful car',
+  },
+
+  {
+    username: 'Steven B.',
+    img: './assets/img/Memojis/Memoji2.png',
+    carModel: 'Toyota Corolla 2021',
+    rating: 4.2,
+    date: 'Few minutes ago',
+    comment: 'Better option than traditional car rental agency.',
   },
 ];
 

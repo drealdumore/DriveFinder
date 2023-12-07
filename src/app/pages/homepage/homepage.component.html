@@ -1,24 +1,34 @@
-<navigation></navigation>
+<header-hero>
+</header-hero>
 
-<header-hero></header-hero>
-
-<section class="explore">
-  <h2 class="section__heading">Explore Cars by Brands</h2>
-  <brands></brands>
+<section>
+  <section-heading>Explore Cars by Brands</section-heading>
+  <brands [cars]="filteredCars"></brands>
 </section>
 
-<section class="features__session">
-  <h2 class="section__heading">Features</h2>
+<section>
+  <section-heading>Explore Cars by Category</section-heading>
+  <brands [cars]="categorizedCars" [category]="text"></brands>
+</section>
+
+<section>
+  <section-heading>Features</section-heading>
   <main-features></main-features>
 </section>
 
-<section class="home-testimonials">
-  <h2 class="section__heading">Recent Reviews</h2>
-  <home-testimonials></home-testimonials>
+<section>
+  <section-heading>Recent Reviews</section-heading>
+  <main>
+    <div class="slider">
+      <div class="slide-track">
+        <home-testimonials [reviews]="reviews"></home-testimonials>
+      </div>
+    </div>
+  </main>
 </section>
 
-<section class="features__session">
-  <h2 class="section__heading">Faq</h2>
+<section>
+  <section-heading>Faq</section-heading>
   <app-faq></app-faq>
 </section>
 

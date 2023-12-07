@@ -23,6 +23,14 @@ import { HomeTestimonialsComponent } from './components/home-testimonials/home-t
 import { FeaturesComponent } from './components/features/features.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderHeroComponent } from './components/header-hero/header-hero.component';
+import { SectionHeadingComponent } from './components/common/section-heading';
+import { HowItWorksComponent } from './pages/how-it-works/how-it-works.component';
+import { SearchSubComponent } from './components/search-sub/search-sub.component';
+import { ReviewSubComponent } from './components/review-sub/review-sub.component';
+import { HeaderSubComponent } from './components/header-sub/header-sub.component';
+import { StarsComponent } from './components/stars/stars.component';
+import { BrandPageComponent } from './pages/brand-page/brand-page.component';
+import { CarDetailPageComponent } from './pages/car-detail-page/car-detail-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +50,14 @@ import { HeaderHeroComponent } from './components/header-hero/header-hero.compon
     FeaturesComponent,
     FooterComponent,
     HeaderHeroComponent,
+    SectionHeadingComponent,
+    HowItWorksComponent,
+    SearchSubComponent,
+    ReviewSubComponent,
+    HeaderSubComponent,
+    StarsComponent,
+    BrandPageComponent,
+    CarDetailPageComponent
   ],
   imports: [
     BrowserModule,

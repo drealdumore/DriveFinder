@@ -1,5 +1,6 @@
 export interface ICars {
   brand: string;
+  category: string;
   name: string;
   rating: string;
   pricePerDay: number;

@@ -47,6 +47,7 @@
 }
 
 .text {
+  text-transform: capitalize;
   position: absolute;
   top: 50%;
   left: 50%;

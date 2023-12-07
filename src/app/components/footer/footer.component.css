@@ -1,7 +1,6 @@
 .footer {
-  /* background-color: #151515; */
   padding: 40px 60px;
-  border-top: 1px solid #151515;
+  border-top: 1px solid var(--grey-secondary);
 }
 
 .container {
@@ -52,7 +51,7 @@ ul {
 }
 
 .footer-col ul li a {
-  color: #ddd;
+  color: var(--grey-secondary);
   display: block;
   font-size: 1rem;
   font-weight: 300;

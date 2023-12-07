@@ -3,16 +3,18 @@
   justify-content: space-between;
   padding: 0 3rem;
   background-color: var(--color-black);
-  height: 31rem;
+  height: 20rem;
   filter: brightness(60%);
-  background-image: url(../../../assets/img/benz/benz-main.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .home__content {
   position: absolute;
-  top: 3rem;
-  left: 4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -85%);
+  position: absolute;
 }
 
 .home__img {
@@ -25,6 +27,7 @@
   padding-top: 6rem;
   color: var(--color-white);
   padding-bottom: 4rem;
+  text-align: center;
 }
 .heading1 span {
   font-size: 2.8rem;

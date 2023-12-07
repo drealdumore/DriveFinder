@@ -1,13 +1,14 @@
 .nav {
   padding: 0 1rem;
   background: var(--color-black);
-  height: 3.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .logo {
   height: 1.2rem;
+  cursor: pointer;
 }
 
 .top__nav ul {
@@ -29,6 +30,11 @@
   box-shadow: 2px 2px 20px 0px rgba(var(--primary-color-rgb), 0.5);
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
 .link,
 .nav__active {
   display: inline-block;
@@ -40,7 +46,8 @@
   overflow: hidden;
   color: var(--color-white);
   cursor: pointer;
-  padding-bottom: 10px;
+  padding-bottom: 4px;
+  /* padding-bottom: 10px; */
 }
 
 .nav__active:before,

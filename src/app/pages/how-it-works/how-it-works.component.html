@@ -1,0 +1,51 @@
+<header-sub [title]="title" [imgUrl]="backgroundImg"></header-sub>
+
+<section>
+  <div class="works">
+    <div class="img__box">
+      <img src="./assets/img/lexus/Lexus IS 2022-1.jpg" alt="car" />
+    </div>
+    <div class="work">
+      <ol>
+        <li>
+          <div class="content">
+            <h2>Find the perfect car</h2>
+            <p>
+              Enter a location and date and browse thousands of cars shared by
+              local hosts.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h2>Book your trip</h2>
+            <p>
+              Book on the DriveFinder app or online, choose a protection plan,
+              and say hi to your host! Cancel for free up to 24 hours before
+              your trip.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h2>Hit the road</h2>
+            <p>
+              Have the car delivered or pick it up from your host. Check in with
+              the app, grab the keys, and hit the road!
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section>
+  <section-heading>Recent reviews</section-heading>
+  <review-sub [reviews]="reviews"></review-sub>
+</section>
+
+<section>
+  <section-heading>Faq</section-heading>
+  <app-faq></app-faq>
+</section>

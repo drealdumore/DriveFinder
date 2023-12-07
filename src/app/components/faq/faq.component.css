@@ -1,6 +1,7 @@
 .container {
   margin: 0 auto;
   width: 80%;
+  padding-bottom: 3rem;
 }
 
 .accordion .accordion-item {
@@ -101,9 +102,11 @@
 }
 
 .accordion .accordion-content p {
-  font-size: 1rem;
   font-weight: 300;
   margin: 1.3em 0;
   color: var(--color-white);
-  font-size: 15px;
+  font-size: 14px;
+  word-spacing: 1px;
+  line-height: 20px;
+  text-align: justify;
 }
