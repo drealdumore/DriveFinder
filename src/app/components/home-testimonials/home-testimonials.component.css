@@ -10,8 +10,6 @@
   flex-direction: column;
   gap: 6px;
   padding: 1rem;
-  /* background: rgba(255, 255, 255, 0.25); */
-  box-shadow: 0 8px 32px 0 rgba(112, 113, 117, 0.17);
   backdrop-filter: blur(11.5px);
   -webkit-backdrop-filter: blur(11.5px);
   border-radius: 10px;

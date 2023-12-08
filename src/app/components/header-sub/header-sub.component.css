@@ -7,14 +7,16 @@
   filter: brightness(60%);
   background-size: cover;
   background-position: center;
+  border-radius: 10px;
 }
 
 .home__content {
-  position: absolute;
-  top: 50%;
+  top: 18rem;
   left: 50%;
   transform: translate(-50%, -85%);
   position: absolute;
+  display: grid;
+  place-content: center;
 }
 
 .home__img {

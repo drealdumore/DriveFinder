@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { appService } from 'src/app/services/app.service';
 
 @Component({
   selector: 'brands',
@@ -8,5 +7,5 @@ import { appService } from 'src/app/services/app.service';
 })
 export class BrandsComponent {
   @Input() cars: any[] = [];
-  @Input() category: string = '';
+  
 }

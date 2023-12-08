@@ -1,4 +1,10 @@
-import { IFaq, IReview, IUser } from 'src/app/app-model';
+import {
+  IFaq,
+  IReview,
+  IUser,
+  ICarousel,
+  IBrands,
+} from 'src/app/directives/app-model';
 
 export const Cars = [
   {
@@ -25,7 +31,7 @@ export const Cars = [
       detail: 4,
     },
     detail:
-      "Experience California in a fun and unique way with this Rose Gold BMW i8. This car attracts A LOT of attention so be prepared for phones and cameras taking pictures of you while you drive by. Also, you can park virtually ANYWHERE. You won’t have to pay meters, you can park in the handicap spots ♿️, no red zones, fire hydrants, street sweeper zones (please use discretion). This BMW i8 accelerates from 0 to 100 km/h (62 mph) in 4.4 seconds and has an electronic limited top speed of 250 km/h (155 mph).\n\nThe exotic yet futuristic design established the I8 as the BMW's first step towards a new generation of cars and combined luxury with the plug-in hybrid experience.\n\nPlease, NO SMOKING (Cigarettes, Cigars, Weed, Vaping, E-Cigs, etc.) An additional $250 cleaning fee will be assessed if this rule is violated.\n\nBe safe and have a great drive! We are here to make your trip as easy and enjoyable as possible. Please don't hesitate to reach out with any questions before, during, or after your trip as we're here to help!\n\n*** PLEASE NOTE DriveFinder IS A CAR SHARING COMMUNITY ***\nIn other words, please treat the vehicle as if it were your own. We treat and take care of all of our vehicles as best as we can, so we definitely appreciate when that effort is reciprocated. PLEASE KEEP IT CLEAN",
+      "Experience California in a fun and unique way with this Rose Gold BMW i8. This car attracts A LOT of attention so be prepared for phones and cameras taking pictures of you while you drive by. Also, you can park virtually ANYWHERE. You won’t have to pay meters, you can park in the handicap spots ♿️, no red zones, fire hydrants, street sweeper zones (please use discretion). This BMW i8 accelerates from 0 to 100 km/h (62 mph) in 4.4 seconds and has an electronic limited top speed of 250 km/h (155 mph)./n\nThe exotic yet futuristic design established the I8 as the BMW's first step towards a new generation of cars and combined luxury with the plug-in hybrid experience.\n\nPlease, NO SMOKING (Cigarettes, Cigars, Weed, Vaping, E-Cigs, etc.) An additional $250 cleaning fee will be assessed if this rule is violated.\n\nBe safe and have a great drive! We are here to make your trip as easy and enjoyable as possible. Please don't hesitate to reach out with any questions before, during, or after your trip as we're here to help!\n\n*** PLEASE NOTE DriveFinder IS A CAR SHARING COMMUNITY ***\nIn other words, please treat the vehicle as if it were your own. We treat and take care of all of our vehicles as best as we can, so we definitely appreciate when that effort is reciprocated. PLEASE KEEP IT CLEAN",
     features: [
       {
         icon: 'assets/img/25+.svg',
@@ -2506,6 +2512,14 @@ export const Faq: IFaq[] = [
   },
 ];
 
+export const category = [
+  { img: './assets/img/categories/category__classic.jpg', text: 'Classic' },
+  { img: './assets/img/categories/category__convertible.jpg', text: 'Convertible' },
+  { img: './assets/img/categories/category__exotic.jpg', text: 'Exotic & Luxury' },
+  { img: './assets/img/categories/category__suv.jpg', text: 'SUVs' },
+  { img: './assets/img/categories/category__trucks.jpg', text: 'Trucks' },
+];
+
 export const Reviews: IReview[] = [
   {
     username: 'Chris A.',
@@ -2612,6 +2626,51 @@ export const SubReviews: IReview[] = [
   },
 ];
 
+export const Carousel: ICarousel[] = [
+  {
+    imgUrl: './assets/img/Memojis/Memoji4.png',
+    title: 'Find the perfect car to try before you buy',
+    content:
+      'Make sure your future wheels work well with your lifestyle by taking your time in the driver’s seat.',
+    link: '',
+  },
+  {
+    imgUrl: './assets/img/Memojis/Memoji4.png',
+    title: 'Find the perfect car to conquer the great outdoors',
+    content:
+      'Go prepared in a rugged 4x4 to take on winter roads with ease, or a camper van to take you to the trees.',
+    link: '',
+  },
+  {
+    imgUrl: './assets/img/Memojis/Memoji4.png',
+    title: 'Find the perfect car to unwind for the weekend',
+    content:
+      'From daily drivers to spirited sports cars, ditch the grind with convenient nearby cars.',
+    link: '',
+  },
+  {
+    imgUrl: './assets/img/Memojis/Memoji4.png',
+    title: 'Find the perfect car to upgrade your vacation plans',
+    content:
+      'Skip the rental car counter and find the perfect car to complement your vacation vibe.',
+    link: '',
+  },
+  {
+    imgUrl: './assets/img/Memojis/Memoji4.png',
+    title: 'Find the perfect car for scenic corners & curves',
+    content:
+      'Get your fill of high-performance thrills, with the richest selection of luxury and exotic vehicles anywhere.',
+    link: '',
+  },
+  {
+    imgUrl: './assets/img/Memojis/Memoji4.png',
+    title: 'Find the perfect car to make errand day easier',
+    content:
+      'Book a roomy truck or SUV to ease your errand day stress, or to motivate your moving day.',
+    link: '',
+  },
+];
+
 export const Users: IUser[] = [
   {
     name: 'Nick P.',
@@ -2677,5 +2736,237 @@ export const Users: IUser[] = [
     toDrive: 'approved to drive',
     Popup:
       'Approved to drive means Nick has provided their driver’s license number and passed the DriveFinder driver screening process.',
+  },
+];
+
+export const Brands: IBrands[] = [
+  {
+    brandDetail: {
+      brandName: 'BMW',
+      description: {
+        title: 'Drive a BMW',
+        p: 'Refined sports-luxury cars',
+        main1:
+          'No automaker creates luxury vehicles that are equally elegant and fun to drive like BMW does. That’s why they’re a leader among German luxury brands.',
+        main2:
+          'Featuring hardcore track coupes, full-size luxury sedans, and capable SUVs, the BMW model range is diverse. Regardless, all BMW cars are responsive, stylish, and high-tech — BMW claims to build the ultimate driving machine, with good reason. Book a BMW on DriveFinder for a proper Bimmer experience that will elevate any quick day trip to the next level.',
+      },
+      features: [
+        {
+          title: 'Responsive performance',
+          content:
+            'BMW brings you a connected, involved experience few other cars can match. Steering is direct, response from the pedals is immediate, and overall composure is excellent. Even a few minutes of driving a BMW makes it clear it’s not just an average car.',
+        },
+        {
+          title: 'Superb quality',
+          content:
+            'BMW build quality is outstanding. There’s a solidity to BMW cars that’s clear whether you’re one with the interior or admiring from the outside. Materials are well-appointed and German engineering is at its best, giving confidence for any driving occasion.',
+        },
+        {
+          title: 'Diverse options',
+          content:
+            'The BMW lineup continues to grow and diversify. BMW has luxury convertibles, crossovers, coupes, sedans, and wagons to choose from. That means no matter what you need a car for, you’ll be able to find a BMW for a comfortable ride.',
+        },
+      ],
+      button: 'Book a BMW today',
+      legend: {
+        img: 'assets/img/bmw/bmw-main.jpg',
+        content: 'Feel legendary BMW performance',
+        p: 'With decades of experience, BMW builds cars that are far from ordinary. Whether you drive a practical BMW SUV or powerful BMW M car, you’ll be able to tell why BMW is known for luxury road performance. Find the best BMW rental alternatives to drive on DriveFinder if you want to try a fun daily driver, sporty crossover, or luxury convertible — BMW has a car for any occasion.',
+      },
+      top: {
+        heading: 'Top rated BMW',
+        top: 'Top BMW models',
+        button: 'Drive a BMW',
+        topCars: [
+          {
+            name: 'BMW 3 Series',
+            content:
+              'The BMW 3 Series might be the world’s best sports sedan. All 3 Series models place an emphasis on driver experience, along with the size and practicality that makes them a superior choice. Whether you drive a BMW M3 or any other 3 Series model, you’ll know why it’s always been such a popular car.',
+          },
+          {
+            name: 'BMW X5',
+            content:
+              'The BMW X5 is the luxury SUV that started it all. It’s got the sporty credentials that make it a genuine BMW, plus capability and practicality for all of life’s needs. The BMW X5’s cargo capacity and all-wheel drive make it a great choice for family trips or a solo journey.',
+          },
+          {
+            name: 'BMW Z4',
+            content:
+              'Slide into a BMW Z4 and experience a roadster like no other. It’s an iconic model that exudes BMW’s philosophy of performance and sophistication impeccably. Mind-blowing aerodynamics and a turbocharged engine give new meaning to the word cruising from behind the wheel of this luxury sports car.',
+          },
+        ],
+      },
+    },
+
+    brandReviews: [
+      {
+        username: 'Alexander C.',
+        img: 'assets/img/user2.jpg',
+        carModel: 'BMW M8 2020',
+        rating: 4.8,
+        date: 'July 20, 2023',
+        comment: 'A huge thank you to the for his amazing BMW M8.',
+      },
+      {
+        username: 'David H.',
+        img: 'assets/img/user3.jpg',
+        carModel: 'BMW 3 Series 2016',
+        rating: 4.8,
+        date: 'November 20, 2023',
+        comment: 'Clean car no issues.',
+      },
+      {
+        username: 'Edward H.',
+        img: 'assets/img/user1.jpg',
+        carModel: 'BMW 4 Series 2016',
+        rating: 4.2,
+        date: 'August 20, 2023',
+        comment: 'Had fun driving around Los Angeles in a BMW drop top.',
+      },
+    ],
+
+    brandFaq: [
+      {
+        question: 'Can I extend my trip?',
+        answer:
+          'Yes! If you would like to extend your trip please modify your trip in the DriveFinder app and we will approve it right away.',
+      },
+      {
+        question: 'Are there BMWs available near the airport?',
+        answer:
+          'Yes, there are BMWs available on DriveFinder at locations near airports across the US, Canada, and the UK. To save time and hassle, skip the rental car counter and have your BMW delivered to you. Set your hotel or the address of your vacation rental as your pickup location, and after arriving at your destination, take a taxi, Uber, Lyft, or shuttle service to the vehicle’s location.',
+      },
+      {
+        question: 'What BMW models can I book on DriveFinder?',
+        answer:
+          'Browse a wide selection of BMW vehicles for all kinds of occasions and budgets on DriveFinder. Use the “Vehicle makes” filter to search through all available BMWs in your area, or use the “Vehicle models” filter to find a specific BMW model like the BMW 3 Series, BMW X3, BMW X6, BMW X5, BMW 7 Series, BMW Z4, and more. For the lowest prices, use the “budget-friendly” filter to browse economy options.',
+      },
+      {
+        question: 'What sets BMW apart from other German luxury brands?',
+        answer:
+          'BMW, Audi, and Mercedes-Benz are the big three German luxury manufacturers, and all three brands are immensely popular around the world for producing high-quality luxury vehicles with the precision of German engineering. BMW offers a comprehensive vehicle selection across nearly every segment, from luxury SUVs, to hatchbacks, to sports cars, and even electric models in the i4, iX, and more. BMW started out producing aircraft engines, hence the stylized propeller logo. Now a staple vehicle manufacturer around the world, BMW’s bread and butter compared to the other German brands is their sports cars, particularly from BMW’s M division. The M2, M3, M4, and M5 are well-known for offering an impressive balance of usability and hard-nosed performance. These elite vehicles prioritize powerful engines and finely tuned suspensions to offer roaring on-road performance, in fitting with BMW’s slogans of “the ultimate driving machine” and “sheer driving pleasure.”',
+      },
+
+      {
+        question: 'Are there discounts on weekly or monthly trips?',
+        answer:
+          'Yes, many DriveFinder hosts offer discounted prices when you book trips lasting 3+, 7+, or 30+ days. Additionally, hosts can offer “early bird” discounts for trips booked a week or more in advance. So, get the best deals and lowest rates possible by booking longer trips, at least a week in advance.',
+      },
+    ],
+  },
+
+  {
+    brandDetail: {
+      brandName: 'Benz',
+      description: {
+        title: 'Drive a Benz',
+        p: 'Experience luxury and excellence',
+        main1:
+          'When you drive a Mercedes-Benz, it’s immediately clear you’re not in just any premium vehicle.',
+        main2:
+          'It’s been said that luxury is the opposite of vulgarity, and in that sense Mercedes cars epitomize the word. Everything about Mercedes — from the styling to driving experience — is smooth and elegant. Still, with industry-leading technology and performance, they’re far from old-fashioned. Explore Mercedes and book one right here on DriveFinder.',
+      },
+      features: [
+        {
+          title: 'Impressive comforts',
+          content:
+            'The feeling of driving a Mercedes is like no other. Anything you touch — the weight of the steering, the softness of the seats, even the click of control knobs — gives the sensation of opulence and an unmatched level of comfort. That’s the result of nearly a century of precision engineering and craftsmanship.',
+        },
+        {
+          title: 'AMG muscle',
+          content:
+            'For all the luxury cars in the Mercedes lineup, AMG cars provide a savage contrast. The brand turns normal Mercedes vehicles into sporty, dynamic machines that are sure to thrill any driving enthusiast. Find a Mercedes-AMG rental alternative on DriveFinder to get a sense for truly powerful German engineering and performance.',
+        },
+        {
+          title: 'Innovative technology',
+          content:
+            'Mercedes continually pushes the boundaries of what’s possible in a car. Over the years Mercedes has compiled a list of extraordinary firsts: first use of ABS, first installation of airbags, first radar cruise control system. Only time will tell what features in today’s Mercedes will spread across the auto industry.',
+        },
+      ],
+      button: 'Book a Mercedes-Benz today',
+      legend: {
+        img: 'assets/img/benz/benz-main.jpg',
+        content: 'Experience true luxury driving',
+        p: 'Sometimes luxury is a necessity, and a normal car simply won’t do. Whether it’s a car for a wedding, promising date, or vital business meeting, driving a Mercedes is a guaranteed way to impress. Book a Mercedes-Benz on DriveFinder for that important occasion, a leisurely day trip, or an unforgettably fun drive',
+      },
+      top: {
+        heading: 'Top rated Mercedes-Benz',
+        top: 'Top Mercedes models',
+        button: 'Drive a Mercedes-Benz',
+        topCars: [
+          {
+            name: 'Mercedes-Benz C-Class',
+            content:
+              'The Mercedes C-Class may be small, but shares the luxury and technology features of its larger counterparts. The C-Class sedan is the perfect size to get around town with a few passengers, or drive a C63 AMG to feel massive power in a compact body.',
+          },
+          {
+            name: 'Mercedes-Benz G-Class',
+            content:
+              'The G-Class is Mercedes-Benz’s legendary 4x4-turned-luxury-cruiser. The boxy build of the Mercedes G-Wagon makes it instantly recognizable on roads, and it offers a wonderful experience with a smooth ride. Find a Mercedes-AMG G63 or G65 for true AMG power in a luxurious SUV.',
+          },
+          {
+            name: 'Mercedes-Benz GLE-Class',
+            content:
+              'With enough space for family road trips or a smaller excursion, the Mercedes-Benz GLE-Class fuses sophistication and athleticism into a roomy SUV for a luxurious travel experience.',
+          },
+        ],
+      },
+    },
+
+    brandReviews: [
+      {
+        username: 'Chris A.',
+        img: 'assets/img/user1.jpg',
+        carModel: 'Mercedes-Benz C-Class 2018',
+        rating: 4.8,
+        date: 'June 20, 2023',
+        comment: 'We will always use his cars for any Los Angeles trips!',
+      },
+      {
+        username: 'Donna M.',
+        img: 'assets/img/user3.jpg',
+        carModel: 'Mercedes-Benz E-Class 2016',
+        rating: 4.8,
+        date: 'November 20, 2023',
+        comment: 'Thank you for making the rental process smooth and simple!',
+      },
+      {
+        username: 'Luke B.',
+        img: 'assets/img/user1.jpg',
+        carModel: 'Mercedes-Benz CLA-Class 2022',
+        rating: 4.2,
+        date: 'August 20, 2023',
+        comment: 'Great car, communication was fast and easy.',
+      },
+    ],
+
+    brandFaq: [
+      {
+        question: 'Can I extend my trip?',
+        answer:
+          'Yes! If you would like to extend your trip please modify your trip in the DriveFinder app and we will approve it right away.',
+      },
+      {
+        question: 'Are there Mercedes-Benzes available near the airport?',
+        answer:
+          'Yes, there are Mercedes-Benzes available on DriveFinder at locations near airports across the US, Canada, and the UK. To save time and hassle, skip the rental car counter and have your Mercedes-Benz delivered to you. Set your hotel or the address of your vacation rental as your pickup location, and after arriving at your destination, take a taxi, Uber, Lyft, or shuttle service to the vehicle’s location.',
+      },
+      {
+        question: 'What Mercedes-Benz models can I book on DriveFinder?',
+        answer:
+          'Browse a wide selection of Mercedes-Benz vehicles and Mercedes-AMG vehicles for all kinds of occasions and budgets on DriveFinder. Use the “Vehicle makes” filter to search through all available Mercedes-Benz vehicles in your area, or use the “Vehicle models” filter to find a specific Mercedes-Benz model, like the Mercedes-Benz E-Class, Mercedes-Benz C-Class, Mercedes-Benz GLE-Class, Mercedes-Benz G-Class, Mercedes-Benz E-Class, Mercedes-Benz S-Class, Mercedes-Benz GLS-Class, even an exotic vehicle like the AMG GT. For the lowest prices, use the “budget-friendly” filter to browse economy options.',
+      },
+      {
+        question: 'Is there a fee to add additional drivers to my trip?',
+        answer:
+          'There is no fee or additional charge for adding a driver to your trip on DriveFinder. Only the guest who booked the trip (primary driver) can request to add drivers; DriveFinder hosts cannot do it for you. We encourage you to request to add authorized drivers before your trip starts, though guests in the US and Canada can request to add a driver while a trip is in progress with no extra charges.',
+      },
+
+      {
+        question: 'Are there discounts on weekly or monthly trips?',
+        answer:
+          'Yes, many DriveFinder hosts offer discounted prices when you book trips lasting 3+, 7+, or 30+ days. Additionally, hosts can offer “early bird” discounts for trips booked a week or more in advance. So, get the best deals and lowest rates possible by booking longer trips, at least a week in advance.',
+      },
+    ],
   },
 ];

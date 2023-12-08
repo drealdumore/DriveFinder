@@ -2,10 +2,10 @@
   <div class="fluid">
     <div class="slider-wrap">
       <div class="slider-main">
-        <div class="item" *ngFor="let car of cars">
-          <div class="text">{{ car.brand }}</div>
+        <div class="item" *ngFor="let category of categories">
+          <div class="text">{{ category.text }}</div>
           <div class="imgbox">
-            <img [src]="car.img.main" [alt]="car.brand" />
+            <img [src]="category.img" [alt]="category.text" [title]="category.text" />
           </div>
         </div>
       </div>

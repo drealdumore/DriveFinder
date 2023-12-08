@@ -1,7 +1,7 @@
 <main>
   <div class="testimonial__box" *ngFor="let review of reviews">
     <div class="img">
-      <img [src]="review.img" alt="{{ review.username }}" />
+      <img [src]="review.img" [alt]="review.username" />
     </div>
     <div class="reviewer">
       <p>{{ review.username }}</p>
@@ -9,7 +9,7 @@
     </div>
 
     <stars [rating]="review.rating"></stars>
-    
+
     <div class="review">
       {{ review.comment }}
     </div>

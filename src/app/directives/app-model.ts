@@ -1,3 +1,48 @@
+export interface IBrands {
+  brandDetail: {
+    brandName:string;
+    description: {
+      title: string;
+      p: string;
+      main1: string;
+      main2: string;
+    };
+    features: {
+      title: string;
+      content: string;
+    }[];
+    button: string;
+    legend: {
+      img: string;
+      content: string;
+      p: string;
+    };
+    top: {
+      heading: string;
+      top: string;
+      button: string;
+      topCars: {
+        name: string;
+        content: string;
+      }[];
+    };
+  };
+
+  brandReviews: {
+    username: string;
+    img: string;
+    carModel: string;
+    rating: number;
+    date: string;
+    comment: string;
+  }[];
+
+  brandFaq: {
+    question: string;
+    answer: string;
+  }[];
+}
+
 export interface ICars {
   brand: string;
   category: string;
@@ -135,4 +180,11 @@ export interface IUser {
   icon: string;
   toDrive: string;
   Popup: string;
+}
+
+export interface ICarousel {
+  imgUrl: string;
+  title: string;
+  content: string;
+  link: string;
 }

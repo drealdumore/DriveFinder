@@ -50,3 +50,19 @@ button:disabled:hover {
 section {
   padding-top: 1.2rem;
 }
+
+p {
+  margin: 0;
+}
+
+.flex__justify {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+}
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

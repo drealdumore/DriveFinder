@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IReview } from 'src/app/app-model';
+import { IReview } from 'src/app/directives/app-model';
 
 @Component({
   selector: 'review-sub',
