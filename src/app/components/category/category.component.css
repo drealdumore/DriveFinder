@@ -6,14 +6,10 @@
   width: 100%;
   border-radius: 5px;
   height: 10rem;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
-.imgbox img:hover {
-  filter: brightness(95%);
-}
-
-.brands {
+.section {
   padding: 20px 0;
 }
 
@@ -43,7 +39,7 @@
   display: inline-block;
   width: 312px;
   height: 150px;
-  
+
   position: relative;
   margin: 0 12px;
   width: max-content;
@@ -59,7 +55,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--color-white);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .sliderbtn__box {
@@ -69,7 +65,7 @@
   align-items: center;
   position: absolute;
   z-index: 1000;
-  top: 3rem;
+  top: 4rem;
   background: var(--bg-color-even);
 }
 
@@ -79,6 +75,9 @@
   background: none;
   border: none;
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.4s ease;
 }
 

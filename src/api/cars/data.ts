@@ -2520,6 +2520,14 @@ export const category = [
   { img: './assets/img/categories/category__trucks.jpg', text: 'Trucks' },
 ];
 
+export const brand = [
+  { img: './assets/img/benz/benz-main.jpg', text: 'Benz' },
+  { img: './assets/img/bmw/bmw-main.jpg', text: 'Bmw' },
+  { img: './assets/img/lexus/lexus-main.jpg', text: 'Lexus' },
+  { img: './assets/img/toyota/toyota-main.jpg', text: 'Toyota' },
+  { img: './assets/img/categories/category__trucks.jpg', text: 'Trucks' },
+];
+
 export const Reviews: IReview[] = [
   {
     username: 'Chris A.',

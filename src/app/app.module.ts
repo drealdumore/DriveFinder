@@ -33,6 +33,9 @@ import { CarDetailPageComponent } from './pages/car-detail-page/car-detail-page.
 import { CategoryComponent } from './components/category/category.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { BrandCarsComponent } from './components/brand-cars/brand-cars.component';
+import { CarInfoComponent } from './components/car-info/car-info.component';
+import { CarouselMainComponent } from './components/carousel-main/carousel-main.component';
+import { BookingComponent } from './components/booking/booking.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +64,10 @@ import { BrandCarsComponent } from './components/brand-cars/brand-cars.component
     CarDetailPageComponent,
     CategoryComponent,
     CarouselComponent,
-    BrandCarsComponent
+    BrandCarsComponent,
+    CarouselMainComponent,
+    CarInfoComponent,
+    BookingComponent,
   ],
   imports: [
     BrowserModule,

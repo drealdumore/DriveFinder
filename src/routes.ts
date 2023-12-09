@@ -11,7 +11,7 @@ export const appRoutes: Routes = [
   { path: 'auth/login', component: LoginComponent },
   { path: 'auth/signup', component: SignupComponent },
   { path: '', component: HomepageComponent },
-  { path: 'brand', component: BrandPageComponent },
+  { path: 'brand', component: BrandPageComponent },//drivefinder/rent/brand
   { path: 'brand/:brandName/:car', component: CarDetailPageComponent },
   { path: 'how-drivefinder-works', component: HowItWorksComponent },
   { path: 'app', component: FrontPageComponent },

@@ -22,23 +22,22 @@ export class HomepageComponent {
   ngOnInit(): void {
     this.cars = this.appService.getCars();
     this.categorizedCars = this.appService.getCategories();
+    this.filteredCars = this.appService.getbrandcategory();
 
-    this.filteredCars = this.filterCarsByBrand(this.cars);
+    // this.filteredCars = this.filterCarsByBrand(this.cars);
     // this.categorizedCars = this.filterCarsByCategory(this.cars);
-    this.brands = this.appService.getBrands();
-    // console.log(this.brands);
   }
 
-  private filterCarsByBrand(cars: any[]) {
-    const filteredBrands: Set<string> = new Set();
-    return cars.filter((car: { brand: string }) => {
-      if (!filteredBrands.has(car.brand)) {
-        filteredBrands.add(car.brand);
-        return true;
-      }
-      return false;
-    });
-  }
+  // private filterCarsByBrand(cars: any[]) {
+  //   const filteredBrands: Set<string> = new Set();
+  //   return cars.filter((car: { brand: string }) => {
+  //     if (!filteredBrands.has(car.brand)) {
+  //       filteredBrands.add(car.brand);
+  //       return true;
+  //     }
+  //     return false;
+  //   });
+  // }
 
   // private filterCarsByCategory(cars: any[]) {
   //   const filteredCategory: Set<string> = new Set();

@@ -53,6 +53,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--color-white);
+  font-weight: 600;
 }
 
 .sliderbtn__box {
@@ -62,7 +63,7 @@
   align-items: center;
   position: absolute;
   z-index: 1000;
-  top: 3rem;
+  top: 4rem;
   background: var(--bg-color-even);
 }
 
@@ -72,6 +73,9 @@
   background: none;
   border: none;
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.4s ease;
 }
 

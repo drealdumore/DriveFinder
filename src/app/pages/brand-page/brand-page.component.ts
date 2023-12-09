@@ -26,10 +26,14 @@ export class BrandPageComponent implements OnInit {
       alt: 'Find the perfect car to try before you buy',
     },
   ];
+  ebrands: IBrands[] = [];
+
   constructor(private appservice: appService) {}
 
   ngOnInit(): void {
     this.brands = this.appservice.getBrands();
-    console.log(this.brands);
+    // console.log(this.brands);
+
+    this.ebrands = this.appservice.getBrand(0);
   }
 }

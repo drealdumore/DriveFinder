@@ -1,6 +1,4 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, tap, throwError } from 'rxjs';
 import {
   Brands,
   Carousel,
@@ -8,9 +6,10 @@ import {
   Faq,
   Reviews,
   SubReviews,
+  brand,
   category,
 } from 'src/api/cars/data';
-import { IBrands, ICars } from '../directives/app-model';
+import { IBrands } from '../directives/app-model';
 
 @Injectable({
   providedIn: 'root',
@@ -19,9 +18,17 @@ export class appService {
   getBrands(): IBrands[] {
     return Brands;
   }
+  
+  getBrand(id: any): IBrands[] {
+    return Brands;
+  }
 
   getCars() {
     return Cars;
+  }
+
+  getbrandcategory() {
+    return brand;
   }
 
   getCategories() {

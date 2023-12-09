@@ -1,8 +1,8 @@
 <header-hero> </header-hero>
 
-<section>
+<section *ngIf="filteredCars.length > 0">
   <section-heading>Explore Cars by Brands</section-heading>
-  <brands [cars]="filteredCars"></brands>
+  <brands [brands]="filteredCars"></brands>
 </section>
 
 <section>
