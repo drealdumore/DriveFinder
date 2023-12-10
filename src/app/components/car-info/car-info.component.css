@@ -1,6 +1,12 @@
+.box {
+  display: flex;
+  gap: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 main {
   color: white;
-  padding: 0 7rem;
 }
 
 h2 {
@@ -33,15 +39,10 @@ h2 {
   display: flex;
   justify-content: left;
   align-items: center;
-  gap: 1rem;
-  font-size: 1.1rem;
+  gap: 10px;
+  width: max-content;
 }
 
-.plus-icon img {
-  background: white;
-  border-radius: 5%;
-  padding: 1rem;
-}
 
 .four-grid {
   display: grid;

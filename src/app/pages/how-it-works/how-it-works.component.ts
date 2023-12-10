@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IReview } from 'src/app/directives/app-model';
+import { IFaq, IReview } from 'src/app/directives/app-model';
 import { appService } from 'src/app/services/app.service';
 
 @Component({
@@ -12,8 +12,10 @@ export class HowItWorksComponent {
   title: string = 'How DriveFinder works';
   backgroundImg: string = '../../../assets/img/bmw/bmw-main.jpg';
 
-  
+  faq: IFaq[] = [];
+
   constructor(private appService: appService) {
     this.reviews = this.appService.getSubReviews();
+    this.faq = this.appService.getFaq();
   }
 }

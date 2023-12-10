@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IBrands } from 'src/app/directives/app-model';
+import { ActivatedRoute, Params } from '@angular/router';
+import { IBrands, IFaq } from 'src/app/directives/app-model';
 import { appService } from 'src/app/services/app.service';
 
 @Component({
@@ -9,31 +10,24 @@ import { appService } from 'src/app/services/app.service';
 })
 export class BrandPageComponent implements OnInit {
   brands: IBrands[] = [];
-  title: string = 'Rent a brandName';
-  backgroundImg: string = '../../../assets/img/benz/benz-main.jpg';
+  backgroundImg: string = '';
+  faq: IFaq[] = [];
+  brand: IBrands | undefined;
 
-  images = [
-    {
-      img: './assets/img/benz/benz-main.jpg',
-      alt: 'Find the perfect car to try before you buy',
-    },
-    {
-      img: './assets/img/bmw/bmw-main.jpg',
-      alt: 'Find the perfect car to try before you buy',
-    },
-    {
-      img: './assets/img/lexus/lexus-main.jpg',
-      alt: 'Find the perfect car to try before you buy',
-    },
-  ];
-  ebrands: IBrands[] = [];
-
-  constructor(private appservice: appService) {}
+  constructor(private appservice: appService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.brands = this.appservice.getBrands();
-    // console.log(this.brands);
+    // this.brand = this.appservice.getBrand('bmw');
+    this.brand = this.appservice.getBrand(this.route.snapshot.params['brandID']);
+    console.log(this.brand);
 
-    this.ebrands = this.appservice.getBrand(0);
   }
+
+  // ngOnInit(): void {
+  //   this.route.params.subscribe((params: Params) => {
+  //     const brandId = params['id'];
+  //     this.brand = this.appservice.getBrand(brandId);
+  //     console.log(this.brand);
+  //   });
+  // }
 }

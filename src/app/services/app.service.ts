@@ -18,9 +18,12 @@ export class appService {
   getBrands(): IBrands[] {
     return Brands;
   }
-  
-  getBrand(id: any): IBrands[] {
-    return Brands;
+
+  getBrand(id: any) {
+    const lowerCaseId = id.toLowerCase();
+    return Brands.find(
+      (brand) => brand.brandName.toLowerCase() === lowerCaseId
+    );
   }
 
   getCars() {

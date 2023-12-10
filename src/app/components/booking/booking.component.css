@@ -6,11 +6,20 @@
   color: white;
 }
 
+.booking h2 {
+  align-self: flex-start;
+}
+
+.booking h2 span {
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
 .inputs {
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
 input {
@@ -34,7 +43,7 @@ input {
 }
 
 .booking__btn {
-  padding: 5px 2rem;
+  padding: 10px 2rem;
   background: none;
   color: var(--color-ash);
   border: 1px solid var(--color-ash);

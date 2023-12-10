@@ -1,4 +1,7 @@
-<header-sub [title]="title" [imgUrl]="backgroundImg"></header-sub>
+<header-sub
+  [title]="'Rent a ' + brand?.brandName"
+  [imgUrl]="brand?.backgroundImg"
+></header-sub>
 
 <section>
   <p class="small__heading">Top rated cars</p>
@@ -8,71 +11,40 @@
   </div>
 </section>
 
-<!-- <carousel [images]="images" [autoSlide]="false"></carousel> -->
-<carousel-main [images]="images" [autoSlide]="false"></carousel-main>
-<car-info></car-info>
-
 <section>
   <div class="flex__center pad">
     <div class="img-container">
-      <!-- <img src="./assets/img/Memojis/deluxe.jpg" /> -->
-      <img src="./assets/img/convertibles.jpg" />
+      <img [src]="brand?.curvedImg" [alt]="brand?.brandName" />
     </div>
     <div class="content">
-      <h2>Experience true luxury driving</h2>
-      <P class="small__content"
-        >Sometimes luxury is a necessity, and a normal car simply won’t do.
-        Whether it’s a car for a wedding, promising date, or vital business
-        meeting, driving a Mercedes is a guaranteed way to impress. Book a
-        Mercedes-Benz on Turo for that important occasion, a leisurely day trip,
-        or an unforgettably fun drive.</P
-      >
+      <h2>{{ brand?.brandDetail?.legend?.content }}</h2>
+      <P class="small__content">{{ brand?.brandDetail?.legend?.p }}</P>
       <div class="flex__center btn__box">
-        <button class="CTA">Book a brand to drive</button>
+        <button class="CTA">{{ brand?.brandDetail?.button }}</button>
       </div>
     </div>
   </div>
 </section>
 
 <section>
-  <section-heading>Top Mercedes models</section-heading>
+  <section-heading>{{ brand?.brandDetail?.top?.top }}</section-heading>
   <div class="padding__box">
     <div class="three__grid">
-      <div class="grid__item">
-        <p class="small__heading">Mercedes-Benz C-Class</p>
-        <p class="small__content">
-          The Mercedes C-Class may be small, but shares the luxury and
-          technology features of its larger counterparts. The C-Class sedan is
-          the perfect size to get around town with a few passengers, or drive a
-          C63 AMG to feel massive power in a compact body.
-        </p>
-      </div>
-      <div class="grid__item">
-        <p class="small__heading">Mercedes-Benz C-Class</p>
-        <p class="small__content">
-          The Mercedes C-Class may be small, but shares the luxury and
-          technology features of its larger counterparts. The C-Class sedan is
-          the perfect size to get around town with a few passengers, or drive a
-          C63 AMG to feel massive power in a compact body.
-        </p>
-      </div>
-      <div class="grid__item">
-        <p class="small__heading">Mercedes-Benz C-Class</p>
-        <p class="small__content">
-          The Mercedes C-Class may be small, but shares the luxury and
-          technology features of its larger counterparts. The C-Class sedan is
-          the perfect size to get around town with a few passengers, or drive a
-          C63 AMG to feel massive power in a compact body.
-        </p>
+      <div
+        class="grid__item"
+        *ngFor="let rated of brand?.brandDetail?.top?.topCars"
+      >
+        <p class="small__heading">{{ rated.name }}</p>
+        <p class="small__content">{{ rated.content }}</p>
       </div>
     </div>
   </div>
   <div class="flex__center btn__box">
-    <button class="CTA">Book a brand</button>
+    <button class="CTA">{{ brand?.brandDetail?.top?.button }}</button>
   </div>
 </section>
 
 <section>
   <section-heading>Faq</section-heading>
-  <app-faq></app-faq>
+  <app-faq [items]="brand?.brandFaq"></app-faq>
 </section>

@@ -4,6 +4,7 @@ import {
   IUser,
   ICarousel,
   IBrands,
+  IBooking,
 } from 'src/app/directives/app-model';
 
 export const Cars = [
@@ -15,34 +16,34 @@ export const Cars = [
     pricePerDay: 155,
 
     mpg: {
-      icon: 'assets/img/mpg.svg',
+      icon: 'assets/img/icons/mpg.svg',
       detail: '29 MPG',
     },
     fuelType: {
-      icon: 'assets/img/fuel.svg',
+      icon: 'assets/img/icons/fuel.svg',
       detail: 'Hybrid (Premium)',
     },
     doors: {
-      icon: 'assets/img/doors.svg',
+      icon: 'assets/img/icons/doors.svg',
       detail: 2,
     },
     seats: {
-      icon: 'assets/img/seat.svg',
+      icon: 'assets/img/icons/seat.svg',
       detail: 4,
     },
     detail:
       "Experience California in a fun and unique way with this Rose Gold BMW i8. This car attracts A LOT of attention so be prepared for phones and cameras taking pictures of you while you drive by. Also, you can park virtually ANYWHERE. You won’t have to pay meters, you can park in the handicap spots ♿️, no red zones, fire hydrants, street sweeper zones (please use discretion). This BMW i8 accelerates from 0 to 100 km/h (62 mph) in 4.4 seconds and has an electronic limited top speed of 250 km/h (155 mph)./n\nThe exotic yet futuristic design established the I8 as the BMW's first step towards a new generation of cars and combined luxury with the plug-in hybrid experience.\n\nPlease, NO SMOKING (Cigarettes, Cigars, Weed, Vaping, E-Cigs, etc.) An additional $250 cleaning fee will be assessed if this rule is violated.\n\nBe safe and have a great drive! We are here to make your trip as easy and enjoyable as possible. Please don't hesitate to reach out with any questions before, during, or after your trip as we're here to help!\n\n*** PLEASE NOTE DriveFinder IS A CAR SHARING COMMUNITY ***\nIn other words, please treat the vehicle as if it were your own. We treat and take care of all of our vehicles as best as we can, so we definitely appreciate when that effort is reciprocated. PLEASE KEEP IT CLEAN",
     features: [
       {
-        icon: 'assets/img/25+.svg',
+        icon: 'assets/img/icons/25+.svg',
         feature: 'Must be 25+ to book',
       },
       {
-        icon: 'assets/img/longTerm.svg',
+        icon: 'assets/img/icons/longTerm.svg',
         feature: 'Long-term Car',
       },
       {
-        icon: 'assets/img/transmission.svg',
+        icon: 'assets/img/icons/transmission.svg',
         feature: 'Automatic transmission',
       },
     ],
@@ -91,7 +92,7 @@ export const Cars = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: 'assets/img/user2.jpg',
+          img: 'assets/img/users/user2.jpg',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -116,19 +117,19 @@ export const Cars = [
     pickup: [
       {
         select: 'pickup at car location',
-        icon: 'assets/img/car.svg',
+        icon: 'assets/img/icons/car.svg',
         location: 'Los Angeles',
         price: 'free',
       },
       {
         select: 'pickup location',
-        icon: 'assets/img/plane.svg',
+        icon: 'assets/img/icons/plane.svg',
         location: 'Airport',
         price: '$120.00',
       },
       {
         select: 'delivered to you',
-        icon: 'assets/img/deliver.svg',
+        icon: 'assets/img/icons/deliver.svg',
         location: 'Up to 10 miles',
         price: '$120.00',
       },
@@ -152,7 +153,7 @@ export const Cars = [
       {
         reviewer: 'Lucy F.',
         rating: 4.5,
-        img: 'assets/img/user3.jpg',
+        img: 'assets/img/users/user3.jpg',
         date: 'October 22, 2023',
         comment:
           'Super easy pick up and drop off and definitely a great (and fun!) car. Recommend. 😊',
@@ -161,7 +162,7 @@ export const Cars = [
       {
         reviewer: 'Amy S.',
         rating: 4,
-        img: 'assets/img/user1.jpg',
+        img: 'assets/img/users/user1.jpg',
         date: 'October 15, 2023',
         comment:
           'Car was great, pick up and drop off were smooth and communication was timely and thorough. Highly recommend.',
@@ -169,24 +170,12 @@ export const Cars = [
       {
         reviewer: 'George H.',
         rating: 4.1,
-        img: 'assets/img/user2.jpg',
+        img: 'assets/img/users/user2.jpg',
         date: 'October 8, 2023',
         comment:
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
       },
     ],
-    booking: {
-      startDate: '11/06/2023',
-      startTime: '10:00 AM',
-      endDate: '11/09/2023',
-      endTime: '10:00 AM',
-      pickupReturnLocation: 'Los Angeles, CA 90005',
-      discount: 19,
-      cancellationPolicy: 'Free cancellation',
-      distanceIncluded: 300,
-      feePerAdditionalMile: 1.23,
-      insurance: 'Insurance via Travelers',
-    },
   },
 
   {
@@ -197,54 +186,54 @@ export const Cars = [
     pricePerDay: 120,
 
     fuelType: {
-      icon: 'assets/img/fuel.svg',
+      icon: 'assets/img/icons/fuel.svg',
       detail: 'Hybrid (Premium)',
     },
     doors: {
-      icon: 'assets/img/doors.svg',
+      icon: 'assets/img/icons/doors.svg',
       detail: 2,
     },
     seats: {
-      icon: 'assets/img/seat.svg',
+      icon: 'assets/img/icons/seat.svg',
       detail: 2,
     },
     detail:
       "The BMW i8 Roadster is a stunning and futuristic convertible that seamlessly blends high-performance capabilities with sustainable technology. With its sleek and aerodynamic design, this electric sports car is a head-turner, catching the eye with its unique scissor doors and captivating lines.The exterior of the BMW i8 Roadster showcases a perfect balance between elegance and sportiness. The low-slung profile, combined with the striking LED headlights and kidney grille, gives it a distinct and aggressive look. The soft-top roof can be retracted in just 15 seconds, allowing you to enjoy the open-air driving experience at a moment's notice. Safety is a top priority in the BMW i8 Roadster, with features such as stability control, traction control, and advanced braking systems ensuring optimal handling and stability. The car is also equipped with advanced airbags and a rigid carbon fiber chassis, providing maximum protection in the event of a collision.",
     features: [
       {
-        icon: 'assets/img/25+.svg',
+        icon: 'assets/img/icons/25+.svg',
         feature: 'Must be 25+ to book',
       },
       {
-        icon: 'assets/img/apple-carplay.svg',
+        icon: 'assets/img/icons/apple-carplay.svg',
         feature: 'Apple CarPlay',
       },
       {
-        icon: 'assets/img/backup-camera.svg',
+        icon: 'assets/img/icons/backup-camera.svg',
         feature: 'Backup Camera',
       },
       {
-        icon: 'assets/img/bluetooth.svg',
+        icon: 'assets/img/icons/bluetooth.svg',
         feature: 'Bluetooth',
       },
       {
-        icon: 'assets/img/convertible.svg',
+        icon: 'assets/img/icons/convertible.svg',
         feature: 'Convertible',
       },
       {
-        icon: 'assets/img/gps.svg',
+        icon: 'assets/img/icons/gps.svg',
         feature: 'Gps',
       },
       {
-        icon: 'assets/img/keyless.svg',
+        icon: 'assets/img/icons/keyless.svg',
         feature: 'Keyless',
       },
       {
-        icon: 'assets/img/usb.svg',
+        icon: 'assets/img/icons/usb.svg',
         feature: 'USD Input',
       },
       {
-        icon: 'assets/img/transmission.svg',
+        icon: 'assets/img/icons/transmission.svg',
         feature: 'Automatic transmission',
       },
     ],
@@ -285,7 +274,7 @@ export const Cars = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: 'assets/img/user1.jpg',
+          img: 'assets/img/users/user1.jpg',
           date: 'September 11, 2023',
           comment:
             'Loved this car and pickup/drop off was a breeze. Michael explained everything and was very patient. Great time.',
@@ -293,7 +282,7 @@ export const Cars = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: 'assets/img/user3.jpg',
+          img: 'assets/img/users/user3.jpg',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -318,19 +307,19 @@ export const Cars = [
     pickup: [
       {
         select: 'pickup at car location',
-        icon: 'assets/img/car.svg',
+        icon: 'assets/img/icons/car.svg',
         location: 'Los Angeles',
         price: 'free',
       },
       {
         select: 'pickup location',
-        icon: 'assets/img/plane.svg',
+        icon: 'assets/img/icons/plane.svg',
         location: 'Airport',
         price: '$120.00',
       },
       {
         select: 'delivered to you',
-        icon: 'assets/img/deliver.svg',
+        icon: 'assets/img/icons/deliver.svg',
         location: 'Up to 10 miles',
         price: '$120.00',
       },
@@ -354,7 +343,7 @@ export const Cars = [
       {
         reviewer: 'Rob da Bank',
         rating: 4.2,
-        img: 'assets/img/user3.jpg',
+        img: 'assets/img/users/user3.jpg',
         date: 'September 23, 2023',
         comment:
           'Loved this car and pickup/drop off was a breeze. Host explained everything and was very patient. Great time.',
@@ -362,24 +351,12 @@ export const Cars = [
       {
         reviewer: 'Kevin Z.',
         rating: 3.9,
-        img: 'assets/img/user2.jpg',
+        img: 'assets/img/users/user2.jpg',
         date: 'September 11, 2023',
         comment:
           'Very nice car fun to drive. Easy pick up and drop off. Highly recommended',
       },
     ],
-    booking: {
-      startDate: '11/06/2023',
-      startTime: '10:00 AM',
-      endDate: '11/09/2023',
-      endTime: '10:00 AM',
-      pickupReturnLocation: 'Los Angeles, CA 90005',
-      discount: 19,
-      cancellationPolicy: 'Free cancellation',
-      distanceIncluded: 300,
-      feePerAdditionalMile: 1.23,
-      insurance: 'Insurance via Travelers',
-    },
   },
 
   {
@@ -389,66 +366,66 @@ export const Cars = [
     rating: '4.98 (50 ratings)',
     pricePerDay: 100,
     mpg: {
-      icon: 'assets/img/mpg.svg',
+      icon: 'assets/img/icons/mpg.svg',
       detail: '28 MPG',
     },
     fuelType: {
-      icon: 'assets/img/fuel.svg',
+      icon: 'assets/img/icons/fuel.svg',
       detail: 'Gas (Premium)',
     },
     doors: {
-      icon: 'assets/img/doors.svg',
+      icon: 'assets/img/icons/doors.svg',
       detail: 2,
     },
     seats: {
-      icon: 'assets/img/seat.svg',
+      icon: 'assets/img/icons/seat.svg',
       detail: 2,
     },
     detail:
       "The BMW Z4 2020 is a dynamic and stylish convertible that delivers a thrilling driving experience. With its sleek design, powerful engine options, and precise handling, the Z4 offers a perfect blend of performance and luxury. The retractable hardtop adds versatility, allowing you to enjoy open-air driving at the touch of a button. Inside, you'll find a refined interior with advanced technology features, enhancing both comfort and connectivity. Whether cruising on scenic roads or navigating city streets, the BMW Z4 2020 embodies the spirit of driving pleasure and automotive sophistication.",
     features: [
       {
-        icon: 'assets/img/25+.svg',
+        icon: 'assets/img/icons/25+.svg',
         feature: 'Must be 25+ to book',
       },
       {
-        icon: 'assets/img/apple-carplay.svg',
+        icon: 'assets/img/icons/apple-carplay.svg',
         feature: 'Apple CarPlay',
       },
       {
-        icon: 'assets/img/transmission.svg',
+        icon: 'assets/img/icons/transmission.svg',
         feature: 'Automatic transmission',
       },
       {
-        icon: 'assets/img/aux-input.svg',
+        icon: 'assets/img/icons/aux-input.svg',
         feature: 'Aux Input',
       },
       {
-        icon: 'assets/img/backup-camera.svg',
+        icon: 'assets/img/icons/backup-camera.svg',
         feature: 'Backup Camera',
       },
       {
-        icon: 'assets/img/blindspot.svg',
+        icon: 'assets/img/icons/blindspot.svg',
         feature: 'Blind spot Warning',
       },
       {
-        icon: 'assets/img/bluetooth.svg',
+        icon: 'assets/img/icons/bluetooth.svg',
         feature: 'Bluetooth',
       },
       {
-        icon: 'assets/img/convertible.svg',
+        icon: 'assets/img/icons/convertible.svg',
         feature: 'Convertible',
       },
       {
-        icon: 'assets/img/gps.svg',
+        icon: 'assets/img/icons/gps.svg',
         feature: 'Gps',
       },
       {
-        icon: 'assets/img/keyless.svg',
+        icon: 'assets/img/icons/keyless.svg',
         feature: 'Keyless',
       },
       {
-        icon: 'assets/img/usb.svg',
+        icon: 'assets/img/icons/usb.svg',
         feature: 'USB Input',
       },
     ],
@@ -490,7 +467,7 @@ export const Cars = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: 'assets/img/apemultiverse-20220823-0004.jpg',
+          img: 'assets/img/Memojis/Memoji2.png',
           date: 'September 11, 2023',
           comment:
             'Loved this car and pickup/drop off was a breeze. Michael explained everything and was very patient. Great time.',
@@ -498,7 +475,7 @@ export const Cars = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: 'assets/img/apemultiverse-20220823-0004.jpg',
+          img: 'assets/img/Memojis/Memoji4.png',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -523,19 +500,19 @@ export const Cars = [
     pickup: [
       {
         select: 'pickup at car location',
-        icon: 'assets/img/car.svg',
+        icon: 'assets/img/icons/car.svg',
         location: 'Los Angeles',
         price: 'free',
       },
       {
         select: 'pickup location',
-        icon: 'assets/img/plane.svg',
+        icon: 'assets/img/icons/plane.svg',
         location: 'Airport',
         price: '$120.00',
       },
       {
         select: 'delivered to you',
-        icon: 'assets/img/deliver.svg',
+        icon: 'assets/img/icons/deliver.svg',
         location: 'Up to 10 miles',
         price: '$120.00',
       },
@@ -559,7 +536,7 @@ export const Cars = [
       {
         reviewer: 'Rob da Bank',
         rating: 4.2,
-        img: 'assets/img/user3.jpg',
+        img: 'assets/img/users/user3.jpg',
         date: 'September 23, 2023',
         comment:
           'Great rental. This is the second time I’ve rented this car from the host and it was just as great of an experience the second time. Easy and fast communication, flexible on pick up/drop off, great car. Will happily rent with him again.',
@@ -567,24 +544,12 @@ export const Cars = [
       {
         reviewer: 'Kevin Z.',
         rating: 3.9,
-        img: 'assets/img/user2.jpg',
+        img: 'assets/img/users/user2.jpg',
         date: 'September 11, 2023',
         comment:
           'Very nice car fun to drive. Easy pick up and drop off. Highly recommended',
       },
     ],
-    booking: {
-      startDate: '11/06/2023',
-      startTime: '10:00 AM',
-      endDate: '11/09/2023',
-      endTime: '10:00 AM',
-      pickupReturnLocation: 'Los Angeles, CA 90005',
-      discount: 19,
-      cancellationPolicy: 'Free cancellation',
-      distanceIncluded: 300,
-      feePerAdditionalMile: 1.23,
-      insurance: 'Insurance via Travelers',
-    },
   },
 
   {
@@ -595,74 +560,74 @@ export const Cars = [
     pricePerDay: 86,
 
     mpg: {
-      icon: 'assets/img/mpg.svg',
+      icon: 'assets/img/icons/mpg.svg',
       detail: 'Gas (Premium)',
     },
 
     doors: {
-      icon: 'assets/img/doors.svg',
+      icon: 'assets/img/icons/doors.svg',
       detail: 2,
     },
     seats: {
-      icon: 'assets/img/seat.svg',
+      icon: 'assets/img/icons/seat.svg',
       detail: 4,
     },
     detail:
       'BMW M440i is a stunning all-wheel drive coupe of German assembly. The spacious trunk and roomy cabin is perfect for traveling in a group, with the car being designed for four passengers. An elegant, black leather interior design is complemented by titanium white exterior, guaranteeing your trip to be completed in style. The panoramic roof enriches the ride with the catching views around, both for business or traveling related trips.',
     features: [
       {
-        icon: 'assets/img/25+.svg',
+        icon: 'assets/img/icons/25+.svg',
         feature: 'Must be 25+ to book',
       },
       {
-        icon: 'assets/img/apple-carplay.svg',
+        icon: 'assets/img/icons/apple-carplay.svg',
         feature: 'Apple CarPlay',
       },
       {
-        icon: 'assets/img/transmission.svg',
+        icon: 'assets/img/icons/transmission.svg',
         feature: 'Automatic transmission',
       },
       {
-        icon: 'assets/img/aux-input.svg',
+        icon: 'assets/img/icons/aux-input.svg',
         feature: 'Aux Input',
       },
       {
-        icon: 'assets/img/backup-camera.svg',
+        icon: 'assets/img/icons/backup-camera.svg',
         feature: 'Backup Camera',
       },
 
       {
-        icon: 'assets/img/bluetooth.svg',
+        icon: 'assets/img/icons/bluetooth.svg',
         feature: 'Bluetooth',
       },
       {
-        icon: 'assets/img/gps.svg',
+        icon: 'assets/img/icons/gps.svg',
         feature: 'Gps',
       },
 
       {
-        icon: 'assets/img/usb.svg',
+        icon: 'assets/img/icons/usb.svg',
         feature: 'USB Input',
       },
 
       {
-        icon: 'assets/img/longTerm.svg',
+        icon: 'assets/img/icons/longTerm.svg',
         feature: 'Long-term Car',
       },
       {
-        icon: 'assets/img/4-wheel.svg',
+        icon: 'assets/img/icons/4-wheel.svg',
         feature: 'All-wheel drive',
       },
       {
-        icon: 'assets/img/child-seat.svg',
+        icon: 'assets/img/icons/child-seat.svg',
         feature: 'Child seat',
       },
       {
-        icon: 'assets/img/sun-roof.svg',
+        icon: 'assets/img/icons/sun-roof.svg',
         feature: 'Sunroof',
       },
       {
-        icon: 'assets/img/transmission.svg',
+        icon: 'assets/img/icons/transmission.svg',
         feature: 'Automatic transmission',
       },
     ],
@@ -711,7 +676,7 @@ export const Cars = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: 'assets/img/user2.jpg',
+          img: 'assets/img/users/user2.jpg',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -736,19 +701,19 @@ export const Cars = [
     pickup: [
       {
         select: 'pickup at car location',
-        icon: 'assets/img/car.svg',
+        icon: 'assets/img/icons/car.svg',
         location: 'Los Angeles',
         price: 'free',
       },
       {
         select: 'pickup location',
-        icon: 'assets/img/plane.svg',
+        icon: 'assets/img/icons/plane.svg',
         location: 'Airport',
         price: '$120.00',
       },
       {
         select: 'delivered to you',
-        icon: 'assets/img/deliver.svg',
+        icon: 'assets/img/icons/deliver.svg',
         location: 'Up to 10 miles',
         price: '$120.00',
       },
@@ -768,31 +733,19 @@ export const Cars = [
       {
         reviewer: 'Omar ',
         rating: 4.5,
-        img: 'assets/img/user3.jpg',
+        img: 'assets/img/users/user3.jpg',
         date: 'October 22, 2023',
         comment: 'Will be coming back soon. Thanks Darren',
       },
       {
         reviewer: 'Nicholas',
         rating: 4.1,
-        img: 'assets/img/user2.jpg',
+        img: 'assets/img/users/user2.jpg',
         date: 'October 8, 2023',
         comment:
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
       },
     ],
-    booking: {
-      startDate: '11/06/2023',
-      startTime: '10:00 AM',
-      endDate: '11/09/2023',
-      endTime: '10:00 AM',
-      pickupReturnLocation: 'Los Angeles, CA 90005',
-      discount: 19,
-      cancellationPolicy: 'Free cancellation',
-      distanceIncluded: 300,
-      feePerAdditionalMile: 1.23,
-      insurance: 'Insurance via Travelers',
-    },
   },
 
   {
@@ -804,73 +757,73 @@ export const Cars = [
     pricePerDay: 506,
 
     mpg: {
-      icon: 'assets/img/mpg.svg',
+      icon: 'assets/img/icons/mpg.svg',
       detail: 'Gas',
     },
     doors: {
-      icon: 'assets/img/doors.svg',
+      icon: 'assets/img/icons/doors.svg',
       detail: 5,
     },
     seats: {
-      icon: 'assets/img/seat.svg',
+      icon: 'assets/img/icons/seat.svg',
       detail: 5,
     },
     detail:
       'The 2019 Mercedes-Benz G-Class offers a perfect blend of rugged off-road capability and luxurious comfort. With its iconic boxy design, powerful engine options, and a lavish interior, this SUVs exudes both timeless style and modern sophistication. Whether navigating city streets or conquering challenging terrains, the G-Class delivers a commanding performance. Cutting-edge technology, premium materials, and meticulous craftsmanship define the interior, providing passengers with a first-class driving experience. In summary, the 2019 Mercedes-Benz G-Class is a symbol of prestige, combining off-road prowess with opulent refinement.',
     features: [
       {
-        icon: 'assets/img/apple-carplay.svg',
+        icon: 'assets/img/icons/apple-carplay.svg',
         feature: 'Apple CarPlay',
       },
       {
-        icon: 'assets/img/transmission.svg',
+        icon: 'assets/img/icons/transmission.svg',
         feature: 'Automatic transmission',
       },
       {
-        icon: 'assets/img/aux-input.svg',
+        icon: 'assets/img/icons/aux-input.svg',
         feature: 'Aux Input',
       },
       {
-        icon: 'assets/img/backup-camera.svg',
+        icon: 'assets/img/icons/backup-camera.svg',
         feature: 'Backup Camera',
       },
 
       {
-        icon: 'assets/img/bluetooth.svg',
+        icon: 'assets/img/icons/bluetooth.svg',
         feature: 'Bluetooth',
       },
       {
-        icon: 'assets/img/gps.svg',
+        icon: 'assets/img/icons/gps.svg',
         feature: 'Gps',
       },
 
       {
-        icon: 'assets/img/usb.svg',
+        icon: 'assets/img/icons/usb.svg',
         feature: 'USB Input',
       },
 
       {
-        icon: 'assets/img/longTerm.svg',
+        icon: 'assets/img/icons/longTerm.svg',
         feature: 'Long-term Car',
       },
       {
-        icon: 'assets/img/4-wheel.svg',
+        icon: 'assets/img/icons/4-wheel.svg',
         feature: 'All-wheel drive',
       },
       {
-        icon: 'assets/img/child-seat.svg',
+        icon: 'assets/img/icons/child-seat.svg',
         feature: 'Child seat',
       },
       {
-        icon: 'assets/img/pet.svg',
+        icon: 'assets/img/icons/pet.svg',
         feature: 'Pet Friendly',
       },
       {
-        icon: 'assets/img/sun-roof.svg',
+        icon: 'assets/img/icons/sun-roof.svg',
         feature: 'Sunroof',
       },
       {
-        icon: 'assets/img/transmission.svg',
+        icon: 'assets/img/icons/transmission.svg',
         feature: 'Automatic transmission',
       },
     ],
@@ -919,7 +872,7 @@ export const Cars = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: 'assets/img/user2.jpg',
+          img: 'assets/img/users/user2.jpg',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -944,19 +897,19 @@ export const Cars = [
     pickup: [
       {
         select: 'pickup at car location',
-        icon: 'assets/img/car.svg',
+        icon: 'assets/img/icons/car.svg',
         location: 'Los Angeles',
         price: 'free',
       },
       {
         select: 'pickup location',
-        icon: 'assets/img/plane.svg',
+        icon: 'assets/img/icons/plane.svg',
         location: 'Airport',
         price: '$120.00',
       },
       {
         select: 'delivered to you',
-        icon: 'assets/img/deliver.svg',
+        icon: 'assets/img/icons/deliver.svg',
         location: 'Up to 10 miles',
         price: '$120.00',
       },
@@ -976,31 +929,19 @@ export const Cars = [
       {
         reviewer: 'Omar ',
         rating: 4.5,
-        img: 'assets/img/user3.jpg',
+        img: 'assets/img/users/user3.jpg',
         date: 'October 22, 2023',
         comment: 'Will be coming back soon. Thanks Darren',
       },
       {
         reviewer: 'Nicholas',
         rating: 4.1,
-        img: 'assets/img/user2.jpg',
+        img: 'assets/img/users/user2.jpg',
         date: 'October 8, 2023',
         comment:
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
       },
     ],
-    booking: {
-      startDate: '11/06/2023',
-      startTime: '10:00 AM',
-      endDate: '11/09/2023',
-      endTime: '10:00 AM',
-      pickupReturnLocation: 'Los Angeles, CA 90005',
-      discount: 19,
-      cancellationPolicy: 'Free cancellation',
-      distanceIncluded: 300,
-      feePerAdditionalMile: 1.23,
-      insurance: 'Insurance via Travelers',
-    },
   },
 
   {
@@ -1011,81 +952,81 @@ export const Cars = [
     pricePerDay: 200,
 
     mpg: {
-      icon: 'assets/img/mpg.svg',
+      icon: 'assets/img/icons/mpg.svg',
       detail: '24 MPG',
     },
     fuelType: {
-      icon: 'assets/img/mpg.svg',
+      icon: 'assets/img/icons/mpg.svg',
       detail: 'Gas (Premium)',
     },
     doors: {
-      icon: 'assets/img/doors.svg',
+      icon: 'assets/img/icons/doors.svg',
       detail: 4,
     },
     seats: {
-      icon: 'assets/img/seat.svg',
+      icon: 'assets/img/icons/seat.svg',
       detail: 5,
     },
     detail:
       'The 2017 Mercedes-Benz C-Class is a luxury sedan that epitomizes elegance and performance. With a sleek design, advanced technology features, and a powerful engine, it offers a refined driving experience. The C-Class boasts a well-crafted interior, featuring premium materials and cutting-edge infotainment. Equipped with a range of safety features, this sedan ensures a secure and comfortable journey. Experience the perfect blend of style and performance in the Mercedes-Benz C-Class 2017.',
     features: [
       {
-        icon: 'assets/img/apple-carplay.svg',
+        icon: 'assets/img/icons/apple-carplay.svg',
         feature: 'Apple CarPlay',
       },
       {
-        icon: 'assets/img/apple-carplay.svg',
+        icon: 'assets/img/icons/apple-carplay.svg',
         feature: 'Andriod Auto',
       },
       {
-        icon: 'assets/img/transmission.svg',
+        icon: 'assets/img/icons/transmission.svg',
         feature: 'Automatic transmission',
       },
       {
-        icon: 'assets/img/aux-input.svg',
+        icon: 'assets/img/icons/aux-input.svg',
         feature: 'Aux Input',
       },
       {
-        icon: 'assets/img/backup-camera.svg',
+        icon: 'assets/img/icons/backup-camera.svg',
         feature: 'Backup Camera',
       },
 
       {
-        icon: 'assets/img/bluetooth.svg',
+        icon: 'assets/img/icons/bluetooth.svg',
         feature: 'Bluetooth',
       },
       {
-        icon: 'assets/img/gps.svg',
+        icon: 'assets/img/icons/gps.svg',
         feature: 'Gps',
       },
 
       {
-        icon: 'assets/img/usb.svg',
+        icon: 'assets/img/icons/usb.svg',
         feature: 'USB Input',
       },
 
       {
-        icon: 'assets/img/longTerm.svg',
+        icon: 'assets/img/icons/longTerm.svg',
         feature: 'Long-term Car',
       },
       {
-        icon: 'assets/img/4-wheel.svg',
+        icon: 'assets/img/icons/4-wheel.svg',
         feature: 'All-wheel drive',
       },
       {
-        icon: 'assets/img/child-seat.svg',
+        icon: 'assets/img/icons/child-seat.svg',
         feature: 'Child seat',
       },
       {
-        icon: 'assets/img/pet.svg',
+        icon: 'assets/img/icons/pet.svg',
         feature: 'Pet Friendly',
       },
       {
-        icon: 'assets/img/sun-roof.svg',
+        icon: 'assets/img/icons/sun-roof.svg',
         feature: 'Sunroof',
       },
       {
-        icon: 'assets/img/transmission.svg',
+        icon: 'assets/img/icons/transmission.svg',
         feature: 'Automatic transmission',
       },
     ],
@@ -1159,19 +1100,19 @@ export const Cars = [
     pickup: [
       {
         select: 'pickup at car location',
-        icon: 'assets/img/car.svg',
+        icon: 'assets/img/icons/car.svg',
         location: 'Los Angeles',
         price: 'free',
       },
       {
         select: 'pickup location',
-        icon: 'assets/img/plane.svg',
+        icon: 'assets/img/icons/plane.svg',
         location: 'Airport',
         price: '$120.00',
       },
       {
         select: 'delivered to you',
-        icon: 'assets/img/deliver.svg',
+        icon: 'assets/img/icons/deliver.svg',
         location: 'Up to 10 miles',
         price: '$120.00',
       },
@@ -1191,31 +1132,19 @@ export const Cars = [
       {
         reviewer: 'Omar ',
         rating: 4.5,
-        img: 'assets/img/user3.jpg',
+        img: 'assets/img/users/user3.jpg',
         date: 'October 22, 2023',
         comment: 'Will be coming back soon. Thanks Darren',
       },
       {
         reviewer: 'Nicholas',
         rating: 4.1,
-        img: 'assets/img/user2.jpg',
+        img: 'assets/img/users/user2.jpg',
         date: 'October 8, 2023',
         comment:
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
       },
     ],
-    booking: {
-      startDate: '11/06/2023',
-      startTime: '10:00 AM',
-      endDate: '11/09/2023',
-      endTime: '10:00 AM',
-      pickupReturnLocation: 'Los Angeles, CA 90005',
-      discount: 19,
-      cancellationPolicy: 'Free cancellation',
-      distanceIncluded: 300,
-      feePerAdditionalMile: 1.23,
-      insurance: 'Insurance via Travelers',
-    },
   },
 
   {
@@ -1417,18 +1346,6 @@ export const Cars = [
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
       },
     ],
-    booking: {
-      startDate: '11/06/2023',
-      startTime: '10:00 AM',
-      endDate: '11/09/2023',
-      endTime: '10:00 AM',
-      pickupReturnLocation: 'Los Angeles, CA 90005',
-      discount: 19,
-      cancellationPolicy: 'Free cancellation',
-      distanceIncluded: 300,
-      feePerAdditionalMile: 1.23,
-      insurance: 'Insurance via Travelers',
-    },
   },
 
   {
@@ -1632,18 +1549,6 @@ export const Cars = [
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
       },
     ],
-    booking: {
-      startDate: '11/06/2023',
-      startTime: '10:00 AM',
-      endDate: '11/09/2023',
-      endTime: '10:00 AM',
-      pickupReturnLocation: 'Los Angeles, CA 90005',
-      discount: 19,
-      cancellationPolicy: 'Free cancellation',
-      distanceIncluded: 300,
-      feePerAdditionalMile: 1.23,
-      insurance: 'Insurance via Travelers',
-    },
   },
 
   {
@@ -1843,18 +1748,6 @@ export const Cars = [
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
       },
     ],
-    booking: {
-      startDate: '11/06/2023',
-      startTime: '10:00 AM',
-      endDate: '11/09/2023',
-      endTime: '10:00 AM',
-      pickupReturnLocation: 'Los Angeles, CA 90005',
-      discount: 19,
-      cancellationPolicy: 'Free cancellation',
-      distanceIncluded: 300,
-      feePerAdditionalMile: 1.23,
-      insurance: 'Insurance via Travelers',
-    },
   },
 
   {
@@ -2057,18 +1950,6 @@ export const Cars = [
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
       },
     ],
-    booking: {
-      startDate: '11/06/2023',
-      startTime: '10:00 AM',
-      endDate: '11/09/2023',
-      endTime: '10:00 AM',
-      pickupReturnLocation: 'Los Angeles, CA 90005',
-      discount: 19,
-      cancellationPolicy: 'Free cancellation',
-      distanceIncluded: 300,
-      feePerAdditionalMile: 1.23,
-      insurance: 'Insurance via Travelers',
-    },
   },
 
   {
@@ -2269,18 +2150,6 @@ export const Cars = [
           'Anthony was great! Car was awesome! Seamless drop off, literally pulled up, popped the trunk, fist bump and that was it. Never had a quicker, smoother pickup before. Anthony was very flexible and accommodating as my departure kept changing. Rent from this guy! He is top notch!',
       },
     ],
-    booking: {
-      startDate: '11/06/2023',
-      startTime: '10:00 AM',
-      endDate: '11/09/2023',
-      endTime: '10:00 AM',
-      pickupReturnLocation: 'Los Angeles, CA 90005',
-      discount: 19,
-      cancellationPolicy: 'Free cancellation',
-      distanceIncluded: 300,
-      feePerAdditionalMile: 1.23,
-      insurance: 'Insurance via Travelers',
-    },
   },
 
   {
@@ -2452,18 +2321,6 @@ export const Cars = [
           'Anthony was great! Car was awesome! Seamless drop off, literally pulled up, popped the trunk, fist bump and that was it. Never had a quicker, smoother pickup before. Anthony was very flexible and accommodating as my departure kept changing. Rent from this guy! He is top notch!',
       },
     ],
-    booking: {
-      startDate: '11/06/2023',
-      startTime: '10:00 AM',
-      endDate: '11/09/2023',
-      endTime: '10:00 AM',
-      pickupReturnLocation: 'Los Angeles, CA 90005',
-      discount: 19,
-      cancellationPolicy: 'Free cancellation',
-      distanceIncluded: 300,
-      feePerAdditionalMile: 1.23,
-      insurance: 'Insurance via Travelers',
-    },
   },
 ];
 
@@ -2514,8 +2371,14 @@ export const Faq: IFaq[] = [
 
 export const category = [
   { img: './assets/img/categories/category__classic.jpg', text: 'Classic' },
-  { img: './assets/img/categories/category__convertible.jpg', text: 'Convertible' },
-  { img: './assets/img/categories/category__exotic.jpg', text: 'Exotic & Luxury' },
+  {
+    img: './assets/img/categories/category__convertible.jpg',
+    text: 'Convertible',
+  },
+  {
+    img: './assets/img/categories/category__exotic.jpg',
+    text: 'Exotic & Luxury',
+  },
   { img: './assets/img/categories/category__suv.jpg', text: 'SUVs' },
   { img: './assets/img/categories/category__trucks.jpg', text: 'Trucks' },
 ];
@@ -2749,8 +2612,10 @@ export const Users: IUser[] = [
 
 export const Brands: IBrands[] = [
   {
+    brandName: 'BMW',
+    backgroundImg: './assets/img/bmw/bmw-main.jpg',
+    curvedImg: './assets/img/bmw/curved-bmw.jpg',
     brandDetail: {
-      brandName: 'BMW',
       description: {
         title: 'Drive a BMW',
         p: 'Refined sports-luxury cars',
@@ -2836,27 +2701,32 @@ export const Brands: IBrands[] = [
     brandFaq: [
       {
         question: 'Can I extend my trip?',
+        expanded: false,
         answer:
           'Yes! If you would like to extend your trip please modify your trip in the DriveFinder app and we will approve it right away.',
       },
       {
         question: 'Are there BMWs available near the airport?',
+        expanded: false,
         answer:
           'Yes, there are BMWs available on DriveFinder at locations near airports across the US, Canada, and the UK. To save time and hassle, skip the rental car counter and have your BMW delivered to you. Set your hotel or the address of your vacation rental as your pickup location, and after arriving at your destination, take a taxi, Uber, Lyft, or shuttle service to the vehicle’s location.',
       },
       {
         question: 'What BMW models can I book on DriveFinder?',
+        expanded: false,
         answer:
           'Browse a wide selection of BMW vehicles for all kinds of occasions and budgets on DriveFinder. Use the “Vehicle makes” filter to search through all available BMWs in your area, or use the “Vehicle models” filter to find a specific BMW model like the BMW 3 Series, BMW X3, BMW X6, BMW X5, BMW 7 Series, BMW Z4, and more. For the lowest prices, use the “budget-friendly” filter to browse economy options.',
       },
       {
         question: 'What sets BMW apart from other German luxury brands?',
+        expanded: false,
         answer:
           'BMW, Audi, and Mercedes-Benz are the big three German luxury manufacturers, and all three brands are immensely popular around the world for producing high-quality luxury vehicles with the precision of German engineering. BMW offers a comprehensive vehicle selection across nearly every segment, from luxury SUVs, to hatchbacks, to sports cars, and even electric models in the i4, iX, and more. BMW started out producing aircraft engines, hence the stylized propeller logo. Now a staple vehicle manufacturer around the world, BMW’s bread and butter compared to the other German brands is their sports cars, particularly from BMW’s M division. The M2, M3, M4, and M5 are well-known for offering an impressive balance of usability and hard-nosed performance. These elite vehicles prioritize powerful engines and finely tuned suspensions to offer roaring on-road performance, in fitting with BMW’s slogans of “the ultimate driving machine” and “sheer driving pleasure.”',
       },
 
       {
         question: 'Are there discounts on weekly or monthly trips?',
+        expanded: false,
         answer:
           'Yes, many DriveFinder hosts offer discounted prices when you book trips lasting 3+, 7+, or 30+ days. Additionally, hosts can offer “early bird” discounts for trips booked a week or more in advance. So, get the best deals and lowest rates possible by booking longer trips, at least a week in advance.',
       },
@@ -2864,8 +2734,10 @@ export const Brands: IBrands[] = [
   },
 
   {
+    brandName: 'Benz',
+    backgroundImg: './assets/img/benz/benz-main.jpg',
+    curvedImg: './assets/img/benz/curved-benz.jpg',
     brandDetail: {
-      brandName: 'Benz',
       description: {
         title: 'Drive a Benz',
         p: 'Experience luxury and excellence',
@@ -2951,30 +2823,282 @@ export const Brands: IBrands[] = [
     brandFaq: [
       {
         question: 'Can I extend my trip?',
+        expanded: false,
         answer:
           'Yes! If you would like to extend your trip please modify your trip in the DriveFinder app and we will approve it right away.',
       },
       {
         question: 'Are there Mercedes-Benzes available near the airport?',
+        expanded: false,
         answer:
           'Yes, there are Mercedes-Benzes available on DriveFinder at locations near airports across the US, Canada, and the UK. To save time and hassle, skip the rental car counter and have your Mercedes-Benz delivered to you. Set your hotel or the address of your vacation rental as your pickup location, and after arriving at your destination, take a taxi, Uber, Lyft, or shuttle service to the vehicle’s location.',
       },
       {
         question: 'What Mercedes-Benz models can I book on DriveFinder?',
+        expanded: false,
         answer:
           'Browse a wide selection of Mercedes-Benz vehicles and Mercedes-AMG vehicles for all kinds of occasions and budgets on DriveFinder. Use the “Vehicle makes” filter to search through all available Mercedes-Benz vehicles in your area, or use the “Vehicle models” filter to find a specific Mercedes-Benz model, like the Mercedes-Benz E-Class, Mercedes-Benz C-Class, Mercedes-Benz GLE-Class, Mercedes-Benz G-Class, Mercedes-Benz E-Class, Mercedes-Benz S-Class, Mercedes-Benz GLS-Class, even an exotic vehicle like the AMG GT. For the lowest prices, use the “budget-friendly” filter to browse economy options.',
       },
       {
         question: 'Is there a fee to add additional drivers to my trip?',
+        expanded: false,
         answer:
           'There is no fee or additional charge for adding a driver to your trip on DriveFinder. Only the guest who booked the trip (primary driver) can request to add drivers; DriveFinder hosts cannot do it for you. We encourage you to request to add authorized drivers before your trip starts, though guests in the US and Canada can request to add a driver while a trip is in progress with no extra charges.',
       },
 
       {
         question: 'Are there discounts on weekly or monthly trips?',
+        expanded: false,
+        answer:
+          'Yes, many DriveFinder hosts offer discounted prices when you book trips lasting 3+, 7+, or 30+ days. Additionally, hosts can offer “early bird” discounts for trips booked a week or more in advance. So, get the best deals and lowest rates possible by booking longer trips, at least a week in advance.',
+      },
+    ],
+  },
+
+  {
+    brandName: 'Toyota',
+    backgroundImg: './assets/img/toyota/toyota-main.jpg',
+    curvedImg: './assets/img/toyota/curved-toyota.jpg',
+    brandDetail: {
+      description: {
+        title: 'Drive a Toyota',
+        p: 'For all of life’s daily needs',
+        main1:
+          'Toyota is known around the globe for its practical, efficient, and dependable vehicles.',
+        main2:
+          'Japan’s #1 brand builds a wide range of sedans, sports cars, crossovers, and pickup trucks — many available in hybrid form with stellar gas mileage — that can fulfill anyone’s transport needs. Whether you’re looking for a long-term ride or a temporary replacement vehicle, a Toyota can get the job done without fuss.',
+      },
+      features: [
+        {
+          title: 'Hybrid innovation',
+          content:
+            'Toyota both pioneered and popularized hybrids, and remains a leader in the segment today. No longer just limited to the Prius, models with hybrid assistance have expanded across the range, meaning there’s a high-MPG version of most Toyota vehicles.',
+        },
+        {
+          title: 'Budget friendly',
+          content:
+            'Choosing a Toyota is a proven way to keep driving costs low. Toyotas are great on gas, simple to maintain, and rank at the top of the industry in reliability. This all helps make a Toyota inexpensive to drive in both the day-to-day and the long haul, making all those happy families and high customer reviews no surprise.',
+        },
+        {
+          title: 'Surprisingly entertaining',
+          content:
+            'No longer content with being dependable and efficient, Toyota has been making its cars more pleasurable in recent years. The results are evident in the increased agility of newer Camrys and RAV4s, and in the existence of dedicated rear-wheel-drive sports cars like the Supra and 86.',
+        },
+      ],
+      button: 'Book a Toyota today',
+      legend: {
+        img: 'assets/img/benz/toyota-main.jpg',
+        content: 'The smart way to get to where you’re going',
+        p: 'Toyota is among the world’s best-selling automakers, and for good reason. With legendary durability, efficiency, and safety, you can drive a Toyota to take you anywhere.',
+      },
+      top: {
+        heading: 'Top rated Toyota ',
+        top: 'Top Toyota models',
+        button: 'Drive a Toyota ',
+        topCars: [
+          {
+            name: 'Toyota Tacoma',
+            content:
+              'While pickup trucks with sedan underpinnings have been springing up lately, the Tacoma proudly sticks to its tough, traditional roots. With a ladder frame, rear-wheel drive, and the strong and modern V6 found on most models, this rugged truck can haul and cruise in a way the new kids can’t. Pick up a four-wheel-drive TRD model for a worry-free weekend getaway to the mountains, beach, or desert.',
+          },
+          {
+            name: 'Toyota RAV4',
+            content:
+              'Excluding pickup trucks, this is America’s best-selling vehicle, and it’s easy to see why. An agreeable blend of competent handling, class-leading fuel efficiency (27 MPG), and useful back seat and cargo space, the Toyota RAV4 has few weaknesses as an all-around daily driver. Unique in its class, the RAV4 is also available as a hybrid (37 MPG), as well as a plug-in hybrid called the RAV4 Prime, which can go 42 miles on electric power alone.',
+          },
+          {
+            name: 'Toyota Camry',
+            content:
+              'Camrys have always been dependable and comfortable, but try out the current generation (2018+) and you’ll find a stylish sedan with a healthy dose of agility and personality in the mix, giving the driver some enjoyment on family getaways. Its standard engine offers good performance and mileage, and this is among the last sedans to still offer a performance-boosting V6, boasting 301 horsepower. At the other end of the spectrum, the Camry Hybrid tops the class in gas mileage, scoring a lofty 47 MPG.',
+          },
+        ],
+      },
+    },
+
+    brandReviews: [
+      {
+        username: 'Chris A.',
+        img: 'assets/img/user1.jpg',
+        carModel: 'Toyota Supra 2023',
+        rating: 4.8,
+        date: 'June 20, 2023',
+        comment: 'Easy street parking.',
+      },
+      {
+        username: 'Donna M.',
+        img: 'assets/img/user3.jpg',
+        carModel: 'Toyota Prius 2008',
+        rating: 4.8,
+        date: 'November 20, 2023',
+        comment: 'Thank you for making the rental process smooth and simple!',
+      },
+      {
+        username: 'Luke B.',
+        img: 'assets/img/user1.jpg',
+        carModel: 'Toyota Corolla 2021',
+        rating: 4.2,
+        date: 'August 20, 2023',
+        comment: 'Great car, communication was fast and easy.',
+      },
+    ],
+
+    brandFaq: [
+      {
+        question: 'Can I extend my trip?',
+        expanded: false,
+
+        answer:
+          'Yes! If you would like to extend your trip please modify your trip in the DriveFinder app and we will approve it right away.',
+      },
+      {
+        question: 'Are there toyota available near the airport?',
+        expanded: false,
+
+        answer:
+          'Yes, there are toyota available on DriveFinder at locations near airports across the US, Canada, and the UK. To save time and hassle, skip the rental car counter and have your Mercedes-Benz delivered to you. Set your hotel or the address of your vacation rental as your pickup location, and after arriving at your destination, take a taxi, Uber, Lyft, or shuttle service to the vehicle’s location.',
+      },
+
+      {
+        question: 'Is there a fee to add additional drivers to my trip?',
+        expanded: false,
+
+        answer:
+          'There is no fee or additional charge for adding a driver to your trip on DriveFinder. Only the guest who booked the trip (primary driver) can request to add drivers; DriveFinder hosts cannot do it for you. We encourage you to request to add authorized drivers before your trip starts, though guests in the US and Canada can request to add a driver while a trip is in progress with no extra charges.',
+      },
+      {
+        question: 'What Toyota models can I book on DriveFinder?',
+        expanded: false,
+
+        answer:
+          'Browse a wide selection of Toyota vehicles for all kinds of occasions and budgets on DriveFinder. Use the “Vehicle makes” filter to search through all available Toyota in your area, or use the “Vehicle models” filter to find a specific Toyota model like the Toyota Camry, Toyota RAV4, Toyota Highlander, Toyota Tacoma, or Toyota Sienna. For the lowest prices, use the “budget-friendly” filter to browse economy options.',
+      },
+
+      {
+        question: 'Are there discounts on weekly or monthly trips?',
+        expanded: false,
+
+        answer:
+          'Yes, many DriveFinder hosts offer discounted prices when you book trips lasting 3+, 7+, or 30+ days. Additionally, hosts can offer “early bird” discounts for trips booked a week or more in advance. So, get the best deals and lowest rates possible by booking longer trips, at least a week in advance.',
+      },
+    ],
+  },
+
+  {
+    brandName: 'Lexus',
+    backgroundImg: './assets/img/lexus/lexus-main.jpg',
+    curvedImg: './assets/img/lexus/curved-lexus.jpg',
+    brandDetail: {
+      description: {
+        title: 'Drive a Lexus',
+        p: 'Luxurious and performance-driven vehicles',
+        main1:
+          'Lexus is renowned for creating luxurious and performance-driven vehicles that combine cutting-edge technology with exceptional craftsmanship. As a leader in the luxury automotive segment, Lexus offers a range of vehicles that cater to those seeking refinement and exhilarating driving experiences.',
+        main2:
+          "From elegant sedans to powerful SUVs, the Lexus lineup exemplifies a harmonious blend of comfort, style, and advanced features. Whether you're looking for a smooth ride for a night out or a spacious and capable SUV for a family adventure, driving a Lexus ensures you experience the epitome of automotive luxury. Explore the world of Lexus by booking one on DriveFinder and indulge in a driving experience that embodies sophistication and performance.",
+      },
+      features: [
+        {
+          title: 'Impressive comforts',
+          content:
+            'The feeling of driving a Lexus is like no other. Anything you touch — the weight of the steering, the softness of the seats, even the click of control knobs — gives the sensation of opulence and an unmatched level of comfort. That’s the result of nearly a century of precision engineering and craftsmanship.',
+        },
+        {
+          title: 'Innovative technology',
+          content:
+            'Lexus continually pushes the boundaries of what’s possible in a car. Over the years Lexus has compiled a list of extraordinary firsts: first use of ABS, first installation of airbags, first radar cruise control system. Only time will tell what features in today’s Lexus will spread across the auto industry.',
+        },
+      ],
+      button: 'Book a Lexus today',
+      legend: {
+        img: 'assets/img/lexus/benz-main.jpg',
+        content: 'Experience true luxury driving',
+        p: 'Sometimes luxury is a necessity, and a normal car simply won’t do. Whether it’s a car for a wedding, promising date, or vital business meeting, driving a Lexus is a guaranteed way to impress. Book a Lexus on DriveFinder for that important occasion, a leisurely day trip, or an unforgettably fun drive',
+      },
+      top: {
+        heading: 'Top rated Lexus',
+        top: 'Top Lexus models',
+        button: 'Drive a Lexus',
+        topCars: [
+          {
+            name: 'Lexus ES',
+            content:
+              'The Lexus ES is a symbol of luxury and comfort. With its smooth ride, premium materials, and advanced technology features, the Lexus ES provides an exceptional driving experience. Ideal for those who prioritize elegance and performance in a sedan.',
+          },
+          {
+            name: 'Lexus RX',
+            content:
+              'The Lexus RX is a popular luxury SUV known for its refined style and versatile functionality. Combining a spacious interior with advanced safety features, the Lexus RX is perfect for family adventures and daily commuting with a touch of sophistication.',
+          },
+          {
+            name: 'Lexus LC',
+            content:
+              'Step into the Lexus LC for a thrilling coupe experience. This luxury sports car boasts a striking design and exhilarating performance. With its powerful engine and meticulously crafted interior, the Lexus LC delivers a driving experience that stands out on any road.',
+          },
+        ],
+      },
+    },
+
+    brandReviews: [
+      {
+        username: 'Chris A.',
+        img: 'assets/img/user1.jpg',
+        carModel: 'Lexus ES 2021',
+        rating: 4.8,
+        date: 'June 20, 2023',
+        comment: 'The Lexus that I rented from Vitallie is amazing.',
+      },
+      {
+        username: 'Donna M.',
+        img: 'assets/img/user3.jpg',
+        carModel: 'Lexus CT 2015',
+        rating: 4.8,
+        date: 'November 20, 2023',
+        comment: 'Thank you for making the rental process smooth and simple!',
+      },
+      {
+        username: 'Luke B.',
+        img: 'assets/img/user1.jpg',
+        carModel: 'Lexus ES 2023',
+        rating: 4.2,
+        date: 'August 20, 2023',
+        comment: 'Movses’ Lexus ES was amazing!',
+      },
+    ],
+
+    brandFaq: [
+      {
+        question: 'Can I extend my trip?',
+        expanded: false,
+        answer:
+          'Yes! If you would like to extend your trip please modify your trip in the DriveFinder app and we will approve it right away.',
+      },
+
+      {
+        question: 'Is there a fee to add additional drivers to my trip?',
+        expanded: false,
+        answer:
+          'There is no fee or additional charge for adding a driver to your trip on DriveFinder. Only the guest who booked the trip (primary driver) can request to add drivers; DriveFinder hosts cannot do it for you. We encourage you to request to add authorized drivers before your trip starts, though guests in the US and Canada can request to add a driver while a trip is in progress with no extra charges.',
+      },
+
+      {
+        question: 'Are there discounts on weekly or monthly trips?',
+        expanded: false,
         answer:
           'Yes, many DriveFinder hosts offer discounted prices when you book trips lasting 3+, 7+, or 30+ days. Additionally, hosts can offer “early bird” discounts for trips booked a week or more in advance. So, get the best deals and lowest rates possible by booking longer trips, at least a week in advance.',
       },
     ],
   },
 ];
+
+export const Booking: IBooking = {
+  startDate: '11/06/2023',
+  startTime: '10:00 AM',
+  endDate: '11/09/2023',
+  endTime: '10:00 AM',
+  pickupReturnLocation: 'Los Angeles, CA 90005',
+  discount: 19,
+  cancellationPolicy: 'Free cancellation',
+  distanceIncluded: 300,
+  feePerAdditionalMile: 1.23,
+  insurance: 'Insurance via Travelers',
+};

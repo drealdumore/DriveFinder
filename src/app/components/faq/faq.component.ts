@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { appService } from '../../services/app.service';
 import { IFaq } from '../../directives/app-model';
 
@@ -8,16 +8,18 @@ import { IFaq } from '../../directives/app-model';
   styleUrls: ['./faq.component.css'],
 })
 export class FaqComponent {
-  items: IFaq[] = [];
+  @Input() items: IFaq[] | undefined;
 
   toggleAccordion(index: number): void {
-    this.items.forEach((item, i) => {
-      if (i === index) {
-        item.expanded = !item.expanded;
-      } else {
-        item.expanded = false;
-      }
-    });
+    if (this.items) {
+      this.items.forEach((item, i) => {
+        if (i === index) {
+          item.expanded = !item.expanded;
+        } else {
+          item.expanded = false;
+        }
+      });
+    }
   }
 
   constructor(private appService: appService) {

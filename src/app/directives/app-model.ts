@@ -1,6 +1,8 @@
 export interface IBrands {
+  brandName: string;
+  backgroundImg: string;
+  curvedImg: string;
   brandDetail: {
-    brandName:string;
     description: {
       title: string;
       p: string;
@@ -39,6 +41,7 @@ export interface IBrands {
 
   brandFaq: {
     question: string;
+    expanded: boolean,
     answer: string;
   }[];
 }
@@ -136,19 +139,6 @@ export interface ICars {
     date: string;
     comment: string;
   }[];
-
-  booking: {
-    startDate: string;
-    startTime: string;
-    endDate: string;
-    endTime: string;
-    pickupReturnLocation: string;
-    discount: number;
-    cancellationPolicy: string;
-    distanceIncluded: number;
-    feePerAdditionalMile: number;
-    insurance: string;
-  };
 }
 
 export interface IFaq {
@@ -187,4 +177,17 @@ export interface ICarousel {
   title: string;
   content: string;
   link: string;
+}
+
+export interface IBooking {
+  startDate: string;
+  startTime: string;
+  endDate: string;
+  endTime: string;
+  pickupReturnLocation: string;
+  discount: number;
+  cancellationPolicy: string;
+  distanceIncluded: number;
+  feePerAdditionalMile: number;
+  insurance: string;
 }

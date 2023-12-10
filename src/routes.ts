@@ -10,11 +10,12 @@ import { CarDetailPageComponent } from './app/pages/car-detail-page/car-detail-p
 export const appRoutes: Routes = [
   { path: 'auth/login', component: LoginComponent },
   { path: 'auth/signup', component: SignupComponent },
-  { path: '', component: HomepageComponent },
-  { path: 'brand', component: BrandPageComponent },//drivefinder/rent/brand
-  { path: 'brand/:brandName/:car', component: CarDetailPageComponent },
+  { path: 'brand/:brandID', component: BrandPageComponent }, // route to brand page // drivefinder/rent/brand
+  // { path: 'brand/:brandName/:car', component: CarDetailPageComponent },
+  { path: 'brand/:brandID/:carID', component: CarDetailPageComponent }, // route to product page
   { path: 'how-drivefinder-works', component: HowItWorksComponent },
   { path: 'app', component: FrontPageComponent },
-  { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: 'detail', component: CarDetailPageComponent },
+  { path: '', component: HomepageComponent, pathMatch: 'full' },
   { path: '**', component: FrontPageComponent },
 ];
