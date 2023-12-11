@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./brand-cars.component.css'],
 })
 export class BrandCarsComponent {
-  @Input() car: any[] = [];
+  @Input() cars: any[] | undefined;
 }

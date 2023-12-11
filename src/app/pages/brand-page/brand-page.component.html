@@ -3,9 +3,11 @@
   [imgUrl]="brand?.backgroundImg"
 ></header-sub>
 
-<section>
-  <p class="small__heading">Top rated cars</p>
-  <brand-cars></brand-cars>
+<section style="padding-top: 4.2rem;">
+  <p class="small__heading pa">Top rated cars</p>
+  <div class="d" >
+    <brand-cars [cars]="brand?.cars"></brand-cars>
+  </div>
   <div class="flex__center btn__box">
     <button class="CTA">Book a brand</button>
   </div>
@@ -19,7 +21,7 @@
     <div class="content">
       <h2>{{ brand?.brandDetail?.legend?.content }}</h2>
       <P class="small__content">{{ brand?.brandDetail?.legend?.p }}</P>
-      <div class="flex__center btn__box">
+      <div class="flex__justify btn__box">
         <button class="CTA">{{ brand?.brandDetail?.button }}</button>
       </div>
     </div>

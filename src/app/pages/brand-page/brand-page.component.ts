@@ -12,15 +12,16 @@ export class BrandPageComponent implements OnInit {
   brands: IBrands[] = [];
   backgroundImg: string = '';
   faq: IFaq[] = [];
-  brand: IBrands | undefined;
-
+  brand: any;
+  
   constructor(private appservice: appService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    // this.brand = this.appservice.getBrand('bmw');
-    this.brand = this.appservice.getBrand(this.route.snapshot.params['brandID']);
+    // this.brand = this.appservice.getBrand(this.route.snapshot.params['brandID']);
+    this.brand = this.appservice.getBrandies(
+      this.route.snapshot.params['brandID']
+    );
     console.log(this.brand);
-
   }
 
   // ngOnInit(): void {

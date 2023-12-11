@@ -1,109 +1,52 @@
 <section class="box">
-  <main>
+  <main *ngFor="let car of cars">
     <div class="brand">
-      <h2>Mercedes-Benz AMG GT 2019</h2>
-      <p>Benz</p>
+      <h2>{{ car.brandName }}</h2>
     </div>
     <div class="stars">
       <p class="star_p">
         5.0<span><i class="bx bxs-star"></i></span>
       </p>
     </div>
-    <div class="four-grid">
+    <div class="four-grid" *ngFor="let detail of car.topDetails">
       <div class="plus-icon">
-        <img src="./assets/img/icons/mpg.svg" alt="" />
-        <p>18 MPG</p>
-      </div>
-      <div class="plus-icon">
-        <img src="./assets/img/icons/fuel.svg" alt="" />
-        <p>Gas(Premium)</p>
-      </div>
-      <div class="plus-icon">
-        <img src="./assets/img/icons/doors.svg" alt="" />
-        <p>2</p>
-      </div>
-      <div class="plus-icon">
-        <img src="./assets/img/icons/seat.svg" alt="" />
-        <p>4</p>
+        <img [src]="detail.icon" [alt]="detail.type" />
+        <p>{{ detail.detail }}</p>
       </div>
     </div>
 
     <div class="features">
       <p class="bold">description</p>
       <p class="description">
-        The BMW i8 Roadster is a stunning and futuristic convertible that
-        seamlessly blends high-performance capabilities with sustainable
-        technology. With its sleek and aerodynamic design, this electric sports
-        car is a head-turner, catching the eye with its unique scissor doors and
-        captivating lines.The exterior of the BMW i8 Roadster showcases a
-        perfect balance between elegance and sportiness. The low-slung profile,
-        combined with the striking LED headlights and kidney grille, gives it a
-        distinct and aggressive look. The soft-top roof can be retracted in just
-        15 seconds, allowing you to enjoy the open-air driving experience at a
-        moment's notice. Safety is a top priority in the BMW i8 Roadster, with
-        features such as stability control, traction control, and advanced
-        braking systems ensuring optimal handling and stability. The car is also
-        equipped with advanced airbags and a rigid carbon fiber chassis,
-        providing maximum protection in the event of a collision.
+        {{ car.detail }}
       </p>
     </div>
 
-    <div class="features">
+    <div class="features" *ngFor="let feature of car.features">
       <p class="bold">Features</p>
       <div class="two-grid">
         <div class="plus-icon item">
-          <img src="./assets/img/icons/age.svg" alt="" />
-          <p>Must be 30+ to book</p>
-        </div>
-        <div class="plus-icon item">
-          <img src="./assets/img/icons/age.svg" alt="" />
-          <p>Must be 30+ to book</p>
-        </div>
-        <div class="plus-icon item">
-          <img src="./assets/img/icons/age.svg" alt="" />
-          <p>Must be 30+ to book</p>
-        </div>
-        <div class="plus-icon item">
-          <img src="./assets/img/icons/age.svg" alt="" />
-          <p>Must be 30+ to book</p>
-        </div>
-        <div class="plus-icon item">
-          <img src="./assets/img/icons/age.svg" alt="" />
-          <p>Must be 30+ to book</p>
-        </div>
-        <div class="plus-icon item">
-          <img src="./assets/img/icons/age.svg" alt="" />
-          <p>Must be 30+ to book</p>
-        </div>
-        <div class="plus-icon item">
-          <img src="./assets/img/icons/age.svg" alt="" />
-          <p>Must be 30+ to book</p>
-        </div>
-        <div class="plus-icon item">
-          <img src="./assets/img/icons/age.svg" alt="" />
-          <p>Must be 30+ to book</p>
+          <img [src]="feature.icon" [alt]="feature.feature" />
+          <p>{{ feature.feature }}</p>
         </div>
       </div>
     </div>
 
     <div class="extras">
       <p class="bold">Rules</p>
-      <p class="description">Add optional Extras to your trip at checkout.</p>
+      <p class="description">{{ car.description.rules }}</p>
     </div>
 
     <div class="guidelines">
       <p class="bold">guidelines</p>
-      <p class="description">
-        Our office is, Unit L. There are (3) designated stalls for our office in
-        front of the main entry.
-      </p>
+      <p class="description">{{ car.description.guidelines }}/p></p>
     </div>
 
-    <div class="rating">
+    <div class="rating" *ngFor="let rating of car.ratingsAndReviews">
       <p class="bold">rating</p>
       <div class="container">
         <div class="skill-box">
-          <span class="title">overallRating</span>
+          <span class="title">{{rating.basedon}}</span>
 
           <div class="skill-bar">
             <span class="skill-per html">
@@ -111,103 +54,61 @@
             </span>
           </div>
         </div>
-
-        <div class="skill-box">
-          <span class="title">Cleanliness</span>
-
-          <div class="skill-bar">
-            <span class="skill-per css">
-              <span class="tooltip">70%</span>
-            </span>
-          </div>
-        </div>
-        <div class="skill-box">
-          <span class="title">Maintenance</span>
-
-          <div class="skill-bar">
-            <span class="skill-per javascript">
-              <span class="tooltip">50%</span>
-            </span>
-          </div>
-        </div>
-        <div class="skill-box">
-          <span class="title">Communication</span>
-
-          <div class="skill-bar">
-            <span class="skill-per nodejs">
-              <span class="tooltip">30%</span>
-            </span>
-          </div>
-        </div>
       </div>
     </div>
 
-    <div class="host">
+    <div class="host" *ngFor="let host of car.host">
       <h2>Host</h2>
       <div class="host__profile">
-        <h2 class="host-name">ziar</h2>
+        <h2 class="host-name">{{ host.name }}</h2>
         <p class="main_p">
-          3.0<span><i class="bx bxs-star"></i></span>
+          {{ host.rating }}<span><i class="bx bxs-star"></i></span>
         </p>
         <div class="host__flex">
-          <p class="main_p">21 trips</p>
-          <p class="main_p">Joined Aug 2023</p>
+          <p class="main_p">{{ host.trips }} trips</p>
+          <p class="main_p">Joined {{ host.joined }}</p>
         </div>
-        <p class="lite_p">Typically responds in 4 minutes</p>
+        <p class="lite_p">Typically responds in {{ host.responseTime }}</p>
       </div>
     </div>
 
-    <div class="reviews">
+    <div class="reviews" *ngFor="let host of car.host">
       <p class="bold lite">reviews</p>
 
-      <div class="review__box">
+      <div class="review__box" *ngFor="let review of car.reviews">
         <div class="review">
           <div class="img-box">
             <img src="./assets/img/Memojis/Memoji4.png" alt="" />
           </div>
           <div class="review__content">
-            <stars></stars>
-            <p class="small">Karen<span>Aug 2023</span></p>
+            <stars [rating]="review.rating"></stars>
+            <p class="small">
+              {{ review.reviewer }}<span>{{ review.date }}</span>
+            </p>
             <p class="main_p">
-              Peacock was amazing to work with! Very professional, yet chill.
-              Great cars to choose from, in great shape and took good care of us
+              {{ review.comment }}
             </p>
           </div>
         </div>
       </div>
     </div>
   </main>
-<booking></booking>
-
+  <booking></booking>
 </section>
-<div class="modal">
+
+<div class="modal" *ngFor="let car of cars">
   <div class="card">
     <span class="close">&times;</span>
     <h2>Extras</h2>
+    <h2>{{ car.description.deluxeClass.title }}</h2>
     <p class="p">
-      Make your trip unique by adding any of these optional Extras offered by
-      this host.
+      {{ car.description.deluxeClass.CTA }}
     </p>
-    <ul>
+    <ul *ngFor="let deluxe of car.description.deluxeClass.class">
       <li>
-        <p class="bold b">Add something extra</p>
+        <p class="bold b">{{ deluxe.heading }}</p>
         <p class="p">
-          You’ll have the option to add Extras during checkout. After booking,
-          message your host if you have any questions or special requests.
-        </p>
-      </li>
-      <li>
-        <p class="bold b">Add something extra</p>
-        <p class="p">
-          You’ll have the option to add Extras during checkout. After booking,
-          message your host if you have any questions or special requests.
-        </p>
-      </li>
-      <li>
-        <p class="bold b">Add something extra</p>
-        <p class="p">
-          You’ll have the option to add Extras during checkout. After booking,
-          message your host if you have any questions or special requests.
+          {{ deluxe.content }}
         </p>
       </li>
     </ul>

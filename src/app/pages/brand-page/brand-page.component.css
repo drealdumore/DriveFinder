@@ -1,5 +1,5 @@
 .small__heading {
-  font-size: 21px;
+  font-size: 25px;
   font-weight: 900;
   letter-spacing: -0.2px;
   line-height: 28px;
@@ -7,12 +7,17 @@
   color: var(--color-white);
 }
 
+.pa {
+  padding-bottom: 2rem;
+  padding-left: 8rem;
+}
+
 .CTA {
   padding: 9px 1.2rem;
   background: transparent;
   color: var(--grey-secondary);
   border: 1px solid var(--grey-secondary);
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 .CTA:hover {
@@ -53,7 +58,7 @@
   font-weight: 300;
   padding-top: 7px;
   text-transform: none;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .grid__item {
@@ -62,13 +67,13 @@
   transition: all 0.8s ease;
 }
 
-.grid__item:hover {
+/* .grid__item:hover {
   color: white;
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: var(--bg);
   cursor: pointer;
-}
+} */
 
 .img-container {
   position: relative;
@@ -76,14 +81,15 @@
 }
 
 .img-container img {
-  mask-image: url(../../../assets/img/resources/blob.png);
+  /* mask-image: url(../../../assets/img/resources/blob.png);
   -webkit-mask-image: url(../../../assets/img/resources/blob.png);
   mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat; */
   width: 100%;
 }
 
 .pad {
   padding-top: 5rem;
   padding-bottom: 1rem;
+  gap: 1rem;
 }

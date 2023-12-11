@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'car-info',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./car-info.component.css']
 })
 export class CarInfoComponent {
+  @Input() cars: any[] | undefined;
 
 }

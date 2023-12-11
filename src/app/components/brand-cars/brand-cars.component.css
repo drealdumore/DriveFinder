@@ -3,6 +3,7 @@
   gap: 1.2rem;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .car {
@@ -11,8 +12,9 @@
   -webkit-backdrop-filter: blur(9.5px);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 15rem;
-  height: 15rem;
+  width: 16rem;
+  height: 18rem;
+  cursor: pointer;
 }
 
 .img__box {
@@ -22,8 +24,6 @@
   overflow: hidden;
   transition: 0.3s ease;
 }
-
-
 
 .img__box img {
   max-width: 100%;
@@ -36,10 +36,10 @@
 
 .content {
   position: relative;
-  padding: 5px 1rem;
+  padding: 14px 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 3px;
 }
 
 .name {
@@ -56,15 +56,14 @@
 
 .price span {
   color: var(--gray-color);
-  font-weight: 100;
-
+  font-weight: 300;
 }
 
-.rating__box {
+/* .rating__box {
   display: flex;
   align-items: center;
   gap: 3px;
-}
+} */
 
 .rating {
   margin: 0;

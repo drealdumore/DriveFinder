@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
+  Brandies,
   Brands,
   Carousel,
   Cars,
@@ -26,8 +27,20 @@ export class appService {
     );
   }
 
+  getBrandies(id: any) {
+    const lowerCaseId = id.toLowerCase();
+    return Brandies.find(
+      (brand) => brand.brandName.toLowerCase() === lowerCaseId
+    );
+  }
+
   getCars() {
     return Cars;
+  }
+
+  getCar(id: any) {
+    const lowerCaseId = id.toLowerCase();
+    return Cars.find((car) => car.brand.toLowerCase() === lowerCaseId);
   }
 
   getbrandcategory() {

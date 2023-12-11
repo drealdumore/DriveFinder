@@ -11,7 +11,7 @@
 }
 
 .booking h2 span {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 0.9rem;
 }
 
@@ -33,6 +33,11 @@ input {
 .small--input {
   display: flex;
   gap: 1.583rem;
+}
+
+.small--input input {
+  width: 11rem;
+
 }
 
 .booking__main {

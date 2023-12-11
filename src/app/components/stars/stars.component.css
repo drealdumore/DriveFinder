@@ -3,6 +3,7 @@
 }
 
 .stars {
-  color: var(--grey-secondary);
+  /* color: var(--grey-secondary); */
   width: 81px;
+  color: gold;
 }

@@ -41,7 +41,7 @@ export interface IBrands {
 
   brandFaq: {
     question: string;
-    expanded: boolean,
+    expanded: boolean;
     answer: string;
   }[];
 }

@@ -1,20 +1,20 @@
 <div class="cars">
-  <div class="car">
+  <div class="car" *ngFor="let car of cars" >
     <div class="img__box">
-      <img src="/assets/img/bmw/BMW 4 Series 2021-1.jpg" alt="" />
+      <img [src]="car.img" [alt]="car.name" [routerLink]="[car.id]" />
     </div>
     <div class="content">
       <div class="flex__justify">
-        <p class="name">Car Name</p>
-        <p class="price">$250<span>/day</span></p>
+        <p class="name">{{car.name}}</p>
+        <p class="price">${{car.pricePerDay}}<span>/day</span></p>
       </div>
-      <div class="rating__box">
-        <p class="rating">5.0</p>
-        <stars></stars>
+      <div class="rating__box flex__justify">
+        <p class="rating">{{car.rating}}</p>
+        <stars [rating]="car.rating"></stars>
       </div>
       <div class="details">
-        <p>224mph</p>
-        <p>4 Seats</p>
+        <p>{{car.doors.detail}} Doors</p>
+        <p>{{car.seats.detail}} Seats</p>
       </div>
     </div>
   </div>
