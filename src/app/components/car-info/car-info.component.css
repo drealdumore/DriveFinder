@@ -26,6 +26,7 @@ h2 {
   width: max-content;
   text-transform: capitalize;
   padding: 1rem 0;
+  padding-top: 2rem;
 }
 
 .star_p {
@@ -54,10 +55,11 @@ h2 {
 
 .description {
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 16px;
   letter-spacing: 1px;
   text-align: justify;
   width: 100%;
+  line-height: 1.5;
 }
 
 .two-grid {
@@ -164,8 +166,9 @@ h2 {
   padding-bottom: 0px;
 }
 
-.main_p span {
+.main_p {
   padding-left: 2px;
+  /* width: 66%; */
 }
 
 .img-box {
@@ -178,13 +181,15 @@ h2 {
 
 .review {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
   border-bottom: 1px solid var(--grey-secondary);
-  width: 85%;
   padding-bottom: 12px;
   line-height: 1.3rem;
+}
+
+.review__content {
+  width: 75%;
 }
 
 .small {
@@ -210,6 +215,7 @@ h2 {
   width: 100%;
   z-index: 20;
   display: none;
+  backdrop-filter: blur(5px);
 }
 
 .card {
@@ -225,13 +231,15 @@ h2 {
 
 .card h2 {
   padding-top: 2rem;
+  text-transform: capitalize;
 }
+
 
 .p {
   font-size: 0.9rem;
 }
 .b {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 7px 0;
 }
 

@@ -1,5 +1,8 @@
 <div class="booking">
-  <h2>$215 <span>/ day</span></h2>
+  <h2>
+    {{ car.pricePerDay | currency : "USD" : "symbol" : "1.2-2" }}
+    <span>| day</span>
+  </h2>
   <div class="booking__main">
     <div class="inputs">
       <div class="big--input">

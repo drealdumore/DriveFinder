@@ -24,11 +24,4 @@ export class BrandPageComponent implements OnInit {
     console.log(this.brand);
   }
 
-  // ngOnInit(): void {
-  //   this.route.params.subscribe((params: Params) => {
-  //     const brandId = params['id'];
-  //     this.brand = this.appservice.getBrand(brandId);
-  //     console.log(this.brand);
-  //   });
-  // }
 }

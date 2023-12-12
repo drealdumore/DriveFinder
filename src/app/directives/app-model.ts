@@ -46,100 +46,6 @@ export interface IBrands {
   }[];
 }
 
-export interface ICars {
-  brand: string;
-  category: string;
-  name: string;
-  rating: string;
-  pricePerDay: number;
-
-  mpg: {
-    icon: string;
-    detail: string;
-  };
-  fuelType: {
-    icon: string;
-    detail: string;
-  };
-  doors: {
-    icon: string;
-    detail: number;
-  };
-  seats: {
-    icon: string;
-    detail: number;
-  };
-  detail: string;
-  features: {
-    icon: string;
-    feature: string;
-  }[];
-
-  description: {
-    rules: string;
-    guidelines: string;
-    deluxeClass: {
-      title: string;
-      CTA: string;
-      class: {
-        heading: string;
-        content: string;
-      }[];
-    };
-  };
-
-  host: {
-    name: string;
-    rating: number;
-    trips: number;
-    joined: string;
-    responseTime: string;
-    reviews: {
-      author: string;
-      rating: number;
-      img: string;
-      date: string;
-      comment: string;
-    }[];
-  };
-
-  extras: {
-    mustBe25: boolean;
-    automaticTransmission: boolean;
-    longTermCar: boolean;
-  };
-
-  ratingsAndReviews: {
-    basedOn: string;
-    overallRating: number;
-    cleanliness: number;
-    maintenance: number;
-    communication: number;
-    convenience: number;
-    accuracy: number;
-    totalRatings: number;
-  };
-
-  pickup: {
-    select: string;
-    icon: string;
-    location: string;
-    price: string;
-  }[];
-
-  img: {
-    main: string;
-    additional: string[];
-  };
-
-  reviews: {
-    reviewer: string;
-    rating: number;
-    img: string;
-    date: string;
-    comment: string;
-  }[];
-}
 
 export interface IFaq {
   question: string;
@@ -190,4 +96,88 @@ export interface IBooking {
   distanceIncluded: number;
   feePerAdditionalMile: number;
   insurance: string;
+}
+
+export interface ICars {
+  brand: string;
+  id: string;
+  name: string;
+  category: string;
+  rating: string;
+  pricePerDay: number;
+
+  topDetails: {
+    type: string;
+    icon: string;
+    detail: string | number;
+  }[];
+
+  detail: string;
+
+  features: {
+    icon: string;
+    feature: string;
+  }[];
+
+  description: {
+    rules: string;
+    guidelines: string;
+    deluxeClass: {
+      title: string;
+      CTA: string;
+      class: {
+        heading: string;
+        content: string;
+      }[];
+    };
+  };
+
+  host: {
+    name: string;
+    rating: number;
+    trips: number;
+    joined: string;
+    responseTime: string;
+    reviews: {
+      author: string;
+      rating: number;
+      img: string;
+      date: string;
+      comment: string;
+    }[];
+  };
+
+  extras: {
+    mustBe25: boolean;
+    automaticTransmission: boolean;
+    longTermCar: boolean;
+  };
+
+  ratingsAndBasedOn: {
+    basedOn: string;
+    overallRating: number;
+    totalRatings: number;
+  };
+
+  ratingsAndReviews: {
+    label: string;
+    value: string;
+  }[];
+
+  pickup: {
+    select: string;
+    icon: string;
+    location: string;
+    price: string;
+  }[];
+
+  img: string[];
+
+  reviews: {
+    reviewer: string;
+    rating: number;
+    img: string;
+    date: string;
+    comment: string;
+  }[];
 }

@@ -6,6 +6,7 @@ import { FrontPageComponent } from './app/pages/front-page/front-page.component'
 import { HowItWorksComponent } from './app/pages/how-it-works/how-it-works.component';
 import { BrandPageComponent } from './app/pages/brand-page/brand-page.component';
 import { CarDetailPageComponent } from './app/pages/car-detail-page/car-detail-page.component';
+import { Error404Component } from './app/components/404.component';
 
 export const appRoutes: Routes = [
   { path: 'auth/login', component: LoginComponent },
@@ -16,5 +17,7 @@ export const appRoutes: Routes = [
   { path: 'app', component: FrontPageComponent },
   { path: 'detail', component: CarDetailPageComponent },
   { path: '', component: HomepageComponent, pathMatch: 'full' },
-  { path: '**', component: FrontPageComponent },
+  // { path: '**', component: FrontPageComponent },
+  { path: '**', component: Error404Component },
+  // { path: '404', component: Error404Component },
 ];

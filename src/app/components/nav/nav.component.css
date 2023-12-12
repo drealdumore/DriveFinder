@@ -1,10 +1,11 @@
 .nav {
   padding: 0 1rem;
   background: var(--color-black);
-  height: 2.5rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid var(--grey-secondary);
 }
 .logo {
   height: 1.2rem;

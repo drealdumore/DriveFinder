@@ -40,7 +40,7 @@ export class appService {
 
   getCar(id: any) {
     const lowerCaseId = id.toLowerCase();
-    return Cars.find((car) => car.brand.toLowerCase() === lowerCaseId);
+    return Cars.find((car) => car.id.toLowerCase() === lowerCaseId);
   }
 
   getbrandcategory() {
@@ -67,3 +67,5 @@ export class appService {
     return Carousel;
   }
 }
+
+

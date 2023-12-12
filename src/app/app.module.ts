@@ -36,6 +36,7 @@ import { BrandCarsComponent } from './components/brand-cars/brand-cars.component
 import { CarInfoComponent } from './components/car-info/car-info.component';
 import { CarouselMainComponent } from './components/carousel-main/carousel-main.component';
 import { BookingComponent } from './components/booking/booking.component';
+import { Error404Component } from './components/404.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +69,7 @@ import { BookingComponent } from './components/booking/booking.component';
     CarouselMainComponent,
     CarInfoComponent,
     BookingComponent,
+    Error404Component,
   ],
   imports: [
     BrowserModule,

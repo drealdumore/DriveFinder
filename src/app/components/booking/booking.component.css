@@ -12,7 +12,7 @@
 
 .booking h2 span {
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 20px;
 }
 
 .inputs {
@@ -59,4 +59,27 @@ input {
 .booking__btn:hover {
   color: var(--color-white);
   border: 1px solid var(--color-white);
+}
+
+
+.host__profile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.host__flex {
+  display: flex;
+  gap: 3rem;
+}
+
+.host-name {
+  font-weight: 500;
+  text-transform: capitalize;
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+
+.main_p span {
+  padding-left: 2px;
 }

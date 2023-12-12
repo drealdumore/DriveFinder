@@ -1,11 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'car-info',
   templateUrl: './car-info.component.html',
-  styleUrls: ['./car-info.component.css']
+  styleUrls: ['./car-info.component.css'],
 })
 export class CarInfoComponent {
-  @Input() cars: any[] | undefined;
-
+  @Input() car: any;
 }
