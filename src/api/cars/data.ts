@@ -107,7 +107,7 @@ export const Cars: ICars[] = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: './assets/img/users/nick p.jpg',
+          img: './assets/img/Memojis/Memoji2.png',
           date: 'September 11, 2023',
           comment:
             'Super nice car and fun to drive. Elijah was extremely nice and accommodating. Will definitely be renting again next time I’m in town',
@@ -115,7 +115,7 @@ export const Cars: ICars[] = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: './assets/img/users/user2.jpg',
+          img: './assets/img/Memojis/Memoji9.png',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -196,7 +196,7 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Lucy F.',
         rating: 4.5,
-        img: './assets/img/users/user3.jpg',
+        img: './assets/img/Memojis/Memoji3.png',
         date: 'October 22, 2023',
         comment:
           'Super easy pick up and drop off and definitely a great (and fun!) car. Recommend. 😊',
@@ -205,7 +205,7 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Amy S.',
         rating: 4,
-        img: './assets/img/users/user1.jpg',
+        img: './assets/img/Memojis/Memoji7.png',
         date: 'October 15, 2023',
         comment:
           'Car was great, pick up and drop off were smooth and communication was timely and thorough. Highly recommend.',
@@ -213,7 +213,7 @@ export const Cars: ICars[] = [
       {
         reviewer: 'George H.',
         rating: 4.1,
-        img: './assets/img/users/user2.jpg',
+        img: './assets/img/Memojis/Memoji9.png',
         date: 'October 8, 2023',
         comment:
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
@@ -324,7 +324,7 @@ export const Cars: ICars[] = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: './assets/img/users/user1.jpg',
+          img: './assets/img/Memojis/Memoji1.png',
           date: 'September 11, 2023',
           comment:
             'Loved this car and pickup/drop off was a breeze. Michael explained everything and was very patient. Great time.',
@@ -332,7 +332,7 @@ export const Cars: ICars[] = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: './assets/img/users/user3.jpg',
+          img: './assets/img/Memojis/Memoji8.png',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -413,7 +413,7 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Rob da Bank',
         rating: 4.2,
-        img: './assets/img/users/user3.jpg',
+        img: './assets/img/Memojis/Memoji1.png',
         date: 'September 23, 2023',
         comment:
           'Loved this car and pickup/drop off was a breeze. Host explained everything and was very patient. Great time.',
@@ -421,7 +421,7 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Kevin Z.',
         rating: 3.9,
-        img: './assets/img/users/user2.jpg',
+        img: './assets/img/Memojis/Memoji9.png',
         date: 'September 11, 2023',
         comment:
           'Very nice car fun to drive. Easy pick up and drop off. Highly recommended',
@@ -635,7 +635,7 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Rob da Bank',
         rating: 4.2,
-        img: './assets/img/users/user3.jpg',
+        img: './assets/img/Memojis/Memoji1.png',
         date: 'September 23, 2023',
         comment:
           'Great rental. This is the second time I’ve rented this car from the host and it was just as great of an experience the second time. Easy and fast communication, flexible on pick up/drop off, great car. Will happily rent with him again.',
@@ -643,7 +643,7 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Kevin Z.',
         rating: 3.9,
-        img: './assets/img/users/user2.jpg',
+        img: './assets/img/Memojis/Memoji4.png',
         date: 'September 11, 2023',
         comment:
           'Very nice car fun to drive. Easy pick up and drop off. Highly recommended',
@@ -773,7 +773,7 @@ export const Cars: ICars[] = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: './assets/img/users/nick p.jpg',
+          img: './assets/img/Memojis/Memoji2.png',
           date: 'September 11, 2023',
           comment:
             'Super nice car and fun to drive. Elijah was extremely nice and accommodating. Will definitely be renting again next time I’m in town',
@@ -781,7 +781,7 @@ export const Cars: ICars[] = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: './assets/img/users/user2.jpg',
+          img: './assets/img/Memojis/Memoji6.png',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -858,14 +858,14 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Omar ',
         rating: 4.5,
-        img: './assets/img/users/user3.jpg',
+        img: './assets/img/Memojis/Memoji1.png',
         date: 'October 22, 2023',
         comment: 'Will be coming back soon. Thanks Darren',
       },
       {
         reviewer: 'Nicholas',
         rating: 4.1,
-        img: './assets/img/users/user2.jpg',
+        img: './assets/img/Memojis/Memoji10.png',
         date: 'October 8, 2023',
         comment:
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
@@ -996,7 +996,7 @@ export const Cars: ICars[] = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: './assets/img/users/nick p.jpg',
+          img: './assets/img/Memojis/Memoji2.png',
           date: 'September 11, 2023',
           comment:
             'Super nice car and fun to drive. Elijah was extremely nice and accommodating. Will definitely be renting again next time I’m in town',
@@ -1004,7 +1004,7 @@ export const Cars: ICars[] = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: './assets/img/users/user2.jpg',
+          img: './assets/img/Memojis/Memoji3.png',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -1080,14 +1080,14 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Omar ',
         rating: 4.5,
-        img: './assets/img/users/user3.jpg',
+        img: './assets/img/Memojis/Memoji8.png',
         date: 'October 22, 2023',
         comment: 'Will be coming back soon. Thanks Darren',
       },
       {
         reviewer: 'Nicholas',
         rating: 4.1,
-        img: './assets/img/users/user2.jpg',
+        img: './assets/img/Memojis/Memoji9.png',
         date: 'October 8, 2023',
         comment:
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
@@ -1225,7 +1225,7 @@ export const Cars: ICars[] = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: './assets/img/users/nick p.jpg',
+          img: './assets/img/Memojis/Memoji10.png',
           date: 'September 11, 2023',
           comment:
             'Anzbelika was a great host, very understanding and very professional. I had a accident with the car and she was very understanding given the circumstances. I will make sure to be renting again when I’m in LA based off the great customer service.',
@@ -1233,7 +1233,7 @@ export const Cars: ICars[] = [
         {
           author: 'DriveFinder',
           rating: 4.9,
-          img: '',
+          img: './assets/img/Memojis/Memoji2.png',
           date: 'September 11, 2023',
           comment:
             'The host cancelled this trip 2 hours before it started. This message was automatically posted by DriveFinder.',
@@ -1309,14 +1309,14 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Omar ',
         rating: 4.5,
-        img: './assets/img/users/user3.jpg',
+        img: './assets/img/Memojis/Memoji1.png',
         date: 'October 22, 2023',
         comment: 'Will be coming back soon. Thanks Darren',
       },
       {
         reviewer: 'Nicholas',
         rating: 4.1,
-        img: './assets/img/users/user2.jpg',
+        img: './assets/img/Memojis/Memoji5.png',
         date: 'October 8, 2023',
         comment:
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
@@ -1451,7 +1451,7 @@ export const Cars: ICars[] = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: './assets/img/users/nick p.jpg',
+          img: './assets/img/Memojis/Memoji2.png',
           date: 'September 11, 2023',
           comment:
             'Anzbelika was a great host, very understanding and very professional. I had a accident with the car and she was very understanding given the circumstances. I will make sure to be renting again when I’m in LA based off the great customer service.',
@@ -1459,7 +1459,7 @@ export const Cars: ICars[] = [
         {
           author: 'Megan',
           rating: 4.9,
-          img: '',
+          img: './assets/img/Memojis/Memoji7.png',
           date: 'September 11, 2023',
           comment: 'You did good 👍 Appreciate the responsiveness.',
         },
@@ -1683,7 +1683,7 @@ export const Cars: ICars[] = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: './assets/img/users/nick p.jpg',
+          img: './assets/img/Memojis/Memoji2.png',
           date: 'September 11, 2023',
           comment:
             'Anzbelika was a great host, very understanding and very professional. I had a accident with the car and she was very understanding given the circumstances. I will make sure to be renting again when I’m in LA based off the great customer service.',
@@ -1691,7 +1691,7 @@ export const Cars: ICars[] = [
         {
           author: 'DriveFinder',
           rating: 4.9,
-          img: '',
+          img: './assets/img/Memojis/Memoji3.png',
           date: 'September 11, 2023',
           comment:
             'The host cancelled this trip 2 hours before it started. This message was automatically posted by DriveFinder.',
@@ -1909,7 +1909,7 @@ export const Cars: ICars[] = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: './assets/img/users/nick p.jpg',
+          img: './assets/img/Memojis/Memoji2.png',
           date: 'September 11, 2023',
           comment:
             'Super nice car and fun to drive. Elijah was extremely nice and accommodating. Will definitely be renting again next time I’m in town',
@@ -1917,7 +1917,7 @@ export const Cars: ICars[] = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: './assets/img/user2.jpg',
+          img: './assets/img/Memojis/Memoji7.png',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -1993,14 +1993,14 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Omar ',
         rating: 4.5,
-        img: './assets/img/user3.jpg',
+        img: './assets/img/Memojis/Memoji4.png',
         date: 'October 22, 2023',
         comment: 'Will be coming back soon. Thanks Darren',
       },
       {
         reviewer: 'Nicholas',
         rating: 4.1,
-        img: './assets/img/user2.jpg',
+        img: './assets/img/Memojis/Memoji9.png',
         date: 'October 8, 2023',
         comment:
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
@@ -2135,7 +2135,7 @@ export const Cars: ICars[] = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: './assets/img/users/nick p.jpg',
+          img: './assets/img/Memojis/Memoji2.png',
           date: 'September 11, 2023',
           comment:
             'Super nice car and fun to drive. Elijah was extremely nice and accommodating. Will definitely be renting again next time I’m in town',
@@ -2143,7 +2143,7 @@ export const Cars: ICars[] = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: './assets/img/user2.jpg',
+          img: './assets/img/Memojis/Memoji3.png',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -2222,14 +2222,14 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Omar ',
         rating: 4.5,
-        img: './assets/img/user3.jpg',
+        img: './assets/img/Memojis/Memoji3.png',
         date: 'October 22, 2023',
         comment: 'Will be coming back soon. Thanks Darren',
       },
       {
         reviewer: 'Nicholas',
         rating: 4.1,
-        img: './assets/img/user2.jpg',
+        img: './assets/img/Memojis/Memoji7.png',
         date: 'October 8, 2023',
         comment:
           'Great car. Really fun to drive. Cali vibes for sure. Rahim was super nice and helpful and picking up the car is really easy from LAX. 100% would rent again.',
@@ -2365,7 +2365,7 @@ export const Cars: ICars[] = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: './assets/img/users/nick p.jpg',
+          img: './assets/img/Memojis/Memoji2.png',
           date: 'September 11, 2023',
           comment:
             'Super nice car and fun to drive. Elijah was extremely nice and accommodating. Will definitely be renting again next time I’m in town',
@@ -2373,7 +2373,7 @@ export const Cars: ICars[] = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: './assets/img/user2.jpg',
+          img: './assets/img/Memojis/Memoji6.png',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -2449,14 +2449,14 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Omar ',
         rating: 4.5,
-        img: './assets/img/user3.jpg',
+        img: './assets/img/Memojis/Memoji1.png',
         date: 'October 22, 2023',
         comment: 'Will be coming back soon. Thanks Darren',
       },
       {
         reviewer: 'Nicholas',
         rating: 4.1,
-        img: './assets/img/user2.jpg',
+        img: './assets/img/Memojis/Memoji3.png',
         date: 'October 8, 2023',
         comment:
           'Anthony was great! Car was awesome! Seamless drop off, literally pulled up, popped the trunk, fist bump and that was it. Never had a quicker, smoother pickup before. Anthony was very flexible and accommodating as my departure kept changing. Rent from this guy! He is top notch!',
@@ -2563,7 +2563,7 @@ export const Cars: ICars[] = [
         {
           author: 'Nick P.',
           rating: 3,
-          img: './assets/img/users/nick p.jpg',
+          img: './assets/img/Memojis/Memoji4.png',
           date: 'September 11, 2023',
           comment:
             'Super nice car and fun to drive. Elijah was extremely nice and accommodating. Will definitely be renting again next time I’m in town',
@@ -2571,7 +2571,7 @@ export const Cars: ICars[] = [
         {
           author: 'Burhan S.',
           rating: 4.9,
-          img: './assets/img/user2.jpg',
+          img: './assets/img/Memojis/Memoji5.png',
           date: 'September 11, 2023',
           comment:
             'Great car, the color is really nice and is a neck breaker. Would use again',
@@ -2647,14 +2647,14 @@ export const Cars: ICars[] = [
       {
         reviewer: 'Omar ',
         rating: 4.5,
-        img: './assets/img/user3.jpg',
+        img: './assets/img/Memojis/Memoji6.png',
         date: 'October 22, 2023',
         comment: 'Will be coming back soon. Thanks Darren',
       },
       {
         reviewer: 'Nicholas',
         rating: 4.1,
-        img: './assets/img/user2.jpg',
+        img: './assets/img/Memojis/Memoji9.png',
         date: 'October 8, 2023',
         comment:
           'Anthony was great! Car was awesome! Seamless drop off, literally pulled up, popped the trunk, fist bump and that was it. Never had a quicker, smoother pickup before. Anthony was very flexible and accommodating as my departure kept changing. Rent from this guy! He is top notch!',
@@ -2884,7 +2884,7 @@ export const Carousel: ICarousel[] = [
 export const Users: IUser[] = [
   {
     name: 'Nick P.',
-    img: './assets/img/users/nick p.jpg',
+    img: './assets/img/Memojis/Memoji2.png',
     location: '',
     rating: 5.0,
     work: '',

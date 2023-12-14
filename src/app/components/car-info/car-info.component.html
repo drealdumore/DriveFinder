@@ -79,7 +79,7 @@
       <div class="review__box" *ngFor="let review of car.reviews">
         <div class="review">
           <div class="img-box">
-            <img src="./assets/img/Memojis/Memoji4.png" alt="" />
+            <img [src]="review.img" alt="" />
           </div>
           <div class="review__content">
             <stars [rating]="review.rating"></stars>
