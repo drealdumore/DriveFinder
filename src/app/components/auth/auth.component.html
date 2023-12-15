@@ -1,0 +1,163 @@
+<div class="container">
+  <video autoplay loop muted playsinline>
+    <source
+      src="../../../assets/img/resources/over-the-crater-3370-1080p.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+  <div class="form-container" *ngIf="!authToggle">
+    <div class="top">
+      <p class="title">Log in</p>
+      <p class="p">to continue to DriveFinder.</p>
+    </div>
+
+    <div class="auth__container">
+      <div class="buttons-container">
+        <div class="google-login-button" (click)="loginWithGoogle()">
+          <img src="./assets/img/icons/google.svg" alt="google icon" />
+
+          <span>Continue with Google</span>
+        </div>
+      </div>
+
+      <div class="separator-container">
+        <div class="separator-line"></div>
+        <div class="separator-text">or</div>
+        <div class="separator-line"></div>
+      </div>
+
+      <form class="form" [formGroup]="signupForm" (ngSubmit)="signinWithEmail()">
+        <div class="input-group">
+          <label class="user-label">Email Address</label>
+          <input
+            type="email"
+            required
+            class="input"
+            formControlName="email"
+            [ngClass]="{'is-invalid': signupForm.get('email')?.errors?.['email']}"
+          />
+        </div>
+
+        <div class="input-group">
+          <label class="user-label">Password</label>
+          <input
+            type="email"
+            required
+            class="input"
+            formControlName="password"
+            [ngClass]="{'is-invalid': signupForm.get('email')?.errors?.['email']}"
+          />
+        </div>
+
+        <button (click)="signinWithEmail()"
+          class="form-btn"
+          [title]="
+            signupForm.valid
+              ? 'Create account'
+              : 'Disabled until form data is valid'
+          "
+          [disabled]="!signupForm.valid"
+        >
+          Log in
+        </button>
+      </form>
+
+      <span class="error-span">
+        <span *ngIf="signupForm.get('email')?.errors?.['email']">
+          Incorrect email, make sure the format is correct (name@domain.com)
+        </span>
+        <span *ngIf="errorMessage">{{ errorMessage }}</span>
+
+      </span>
+
+      <p class="sign-up-label">
+        Don't have an account?
+        <span (click)="authToggleFn()" class="sign-up-link">Sign up</span>
+      </p>
+    </div>
+  </div>
+
+
+  <!-- //////////// -->
+  <!-- //////////// -->
+  <!-- //////////// -->
+  <!-- //////////// -->
+
+  <div class="form-container" *ngIf="authToggle">
+    <div class="top">
+      <p class="title">Create an Account</p>
+      <p class="p">to continue to DriveFinder.</p>
+    </div>
+
+    <div class="auth__container">
+      <div class="buttons-container">
+        <div class="google-login-button" (click)="loginWithGoogle()">
+          <img src="./assets/img/icons/google.svg" alt="google icon" />
+
+          <span>Continue with Google</span>
+        </div>
+      </div>
+
+      <div class="separator-container">
+        <div class="separator-line"></div>
+        <div class="separator-text">or</div>
+        <div class="separator-line"></div>
+      </div>
+
+      <form class="form" [formGroup]="signupForm" (ngSubmit)="registerWithEmail()">
+        <div class="input-group">
+          <label class="user-label">Email Address</label>
+          <input
+            type="email"
+            required
+            class="input"
+            formControlName="email"
+            [ngClass]="{'is-invalid': signupForm.get('email')?.errors?.['email']}"
+          />
+        </div>
+
+        <div class="input-group">
+          <label class="user-label">Password</label>
+          <input
+            type="email"
+            required
+            class="input"
+            formControlName="password"
+            [ngClass]="{'is-invalid': signupForm.get('email')?.errors?.['email']}"
+          />
+        </div>
+
+        <button (click)="registerWithEmail()"
+          class="form-btn"
+          [title]="
+            signupForm.valid
+              ? 'Create account'
+              : 'Disabled until form data is valid'
+          "
+          [disabled]="!signupForm.valid"
+        >
+        Create Account
+        </button>
+      </form>
+
+      <span class="error-span">
+        <span *ngIf="signupForm.get('email')?.errors?.['email']">
+          Incorrect email, make sure the format is correct (name@domain.com)
+        </span>
+        <span *ngIf="errorMessage">{{ errorMessage }}</span>
+
+      </span>
+
+      <p class="sign-up-label">
+        Already have an account?
+        <span (click)="authToggleFn()" class="sign-up-link">Sign in</span>
+      </p>
+    </div>
+  </div>
+
+
+</div>
+
+
+<!-- form container a fades away and disaper while b fades in and stay. -->

@@ -8,8 +8,7 @@
 .form-container {
   width: 350px;
   height: 31rem;
-  /* background-color: var(--color-white); */
-  border: 1px solid var(--color-secondary);
+  border: 1px solid var(--grey-secondary);
   border-radius: 10px;
   box-sizing: border-box;
   padding: 20px 30px;

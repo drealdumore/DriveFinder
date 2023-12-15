@@ -5,12 +5,10 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from 'src/routes';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OrderSucessfulPopup } from './components/order-successful-popup.component';
-import { FrontPageComponent } from './pages/front-page/front-page.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { BrandsComponent } from './components/brands/brands.component';
@@ -37,15 +35,17 @@ import { CarInfoComponent } from './components/car-info/car-info.component';
 import { CarouselMainComponent } from './components/carousel-main/carousel-main.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { Error404Component } from './components/404.component';
+import { AuthComponent } from './components/auth/auth.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomepageComponent,
     LoginComponent,
-    SignupComponent,
     OrderSucessfulPopup,
-    FrontPageComponent,
     FaqComponent,
     ExperienceComponent,
     BrandsComponent,
@@ -70,6 +70,7 @@ import { Error404Component } from './components/404.component';
     CarInfoComponent,
     BookingComponent,
     Error404Component,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +78,8 @@ import { Error404Component } from './components/404.component';
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

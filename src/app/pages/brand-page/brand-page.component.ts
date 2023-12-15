@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { IBrands, IFaq } from 'src/app/directives/app-model';
+import { IBrand, IFaq } from 'src/app/directives/app-model';
 import { appService } from 'src/app/services/app.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { appService } from 'src/app/services/app.service';
   styleUrls: ['./brand-page.component.css'],
 })
 export class BrandPageComponent implements OnInit {
-  brands: IBrands[] = [];
+  brands: IBrand[] = [];
   backgroundImg: string = '';
   faq: IFaq[] = [];
   brand: any;
@@ -18,7 +18,7 @@ export class BrandPageComponent implements OnInit {
 
   ngOnInit(): void {
     // this.brand = this.appservice.getBrand(this.route.snapshot.params['brandID']);
-    this.brand = this.appservice.getBrandies(
+    this.brand = this.appservice.getBrands(
       this.route.snapshot.params['brandID']
     );
     console.log(this.brand);

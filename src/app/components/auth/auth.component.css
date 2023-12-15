@@ -1,0 +1,216 @@
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.input {
+  border-radius: 0.2rem;
+  width: 100%;
+  border: 1px solid var(--color-white);
+  outline: 0 !important;
+  box-sizing: border-box;
+  padding: 12px 15px;
+  background-color: transparent;
+  transition: all 0.4s;
+  color: var(--color-white);
+}
+
+.form-btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background: var(--color-black);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: all 0.8s;
+  font-size: 1rem;
+}
+
+.form-btn:hover {
+  box-shadow: none;
+  background: var(--color-ash);
+  border: 1px solid var(--color-white);
+}
+
+.sign-up-label {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-ash);
+}
+
+.sign-up-link {
+  margin-left: 1px;
+  font-size: 1rem;
+  text-decoration: underline;
+  color: var(--color-black);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all .4s ease;
+}
+
+.sign-up-link:hover {
+  color: var(--color-white);
+}
+
+.buttons-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px;
+  gap: 15px;
+  font-family: inherit;
+}
+
+.apple-login-button,
+.google-login-button {
+  border-radius: 0.2rem;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  gap: 5px;
+}
+
+.google-login-button {
+  color: var(--color-black);
+  background-color: var(--color-white);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.input:focus ~ label,
+.input:valid ~ label,
+.input:invalid ~ label {
+  transform: translateY(-50%) scale(0.8);
+  background-color: var(--color-black);
+  padding: 0 0.2em;
+  color: var(--color-white);
+}
+
+.page-link {
+  text-decoration: underline;
+  margin: 0;
+  text-align: end;
+  color: var(--color-ash);
+}
+
+.page-link-label {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.page-link-label:hover {
+  color: var(--color-white);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.error-span span {
+  color: var(--color-error);
+  position: absolute;
+  right: 0rem;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.is-invalid {
+  border: 1px solid var(--color-error);
+  color: var(--color-error);
+}
+
+.container {
+  padding: 0;
+  position: relative;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  filter: brightness(73%);
+}
+
+.form-container {
+  width: 350px;
+  height: auto;
+  /* border: 1px solid var(--grey-secondary); */
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  position: absolute;
+  top: 7rem;
+  right: 8%;
+  background: var(--dark-body-font-color);
+}
+
+.top {
+  margin: 0;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.p {
+  font-size: 15px;
+  color: var(--color-ash);
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input {
+  border-radius: 0.2rem;
+  width: 100%;
+  border: 1px solid var(--grey-secondary);
+  outline: 0 !important;
+  box-sizing: border-box;
+  padding: 12px 15px;
+  background-color: transparent;
+  transition: all 0.4s;
+  color: var(--grey-secondary);
+  font-weight: 600;
+}
+
+.separator-container {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.separator-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #fff;
+  margin: 0 10px;
+}
+
+.separator-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.auth__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

@@ -1,50 +1,50 @@
-export interface IBrands {
-  brandName: string;
-  backgroundImg: string;
-  curvedImg: string;
-  brandDetail: {
-    description: {
-      title: string;
-      p: string;
-      main1: string;
-      main2: string;
-    };
-    features: {
-      title: string;
-      content: string;
-    }[];
-    button: string;
-    legend: {
-      img: string;
-      content: string;
-      p: string;
-    };
-    top: {
-      heading: string;
-      top: string;
-      button: string;
-      topCars: {
-        name: string;
-        content: string;
-      }[];
-    };
-  };
+// export interface IBrands {
+//   brandName: string;
+//   backgroundImg: string;
+//   curvedImg: string;
+//   brandDetail: {
+//     description: {
+//       title: string;
+//       p: string;
+//       main1: string;
+//       main2: string;
+//     };
+//     features: {
+//       title: string;
+//       content: string;
+//     }[];
+//     button: string;
+//     legend: {
+//       img: string;
+//       content: string;
+//       p: string;
+//     };
+//     top: {
+//       heading: string;
+//       top: string;
+//       button: string;
+//       topCars: {
+//         name: string;
+//         content: string;
+//       }[];
+//     };
+//   };
 
-  brandReviews: {
-    username: string;
-    img: string;
-    carModel: string;
-    rating: number;
-    date: string;
-    comment: string;
-  }[];
+//   brandReviews: {
+//     username: string;
+//     img: string;
+//     carModel: string;
+//     rating: number;
+//     date: string;
+//     comment: string;
+//   }[];
 
-  brandFaq: {
-    question: string;
-    expanded: boolean;
-    answer: string;
-  }[];
-}
+//   brandFaq: {
+//     question: string;
+//     expanded: boolean;
+//     answer: string;
+//   }[];
+// }
 
 
 export interface IFaq {
@@ -180,4 +180,88 @@ export interface ICars {
     date: string;
     comment: string;
   }[];
+}
+
+
+export interface IBrandDetailDescription {
+  title: string;
+  p: string;
+  main1: string;
+  main2: string;
+}
+
+export interface IBrandDetailFeature {
+  title: string;
+  content: string;
+}
+
+export interface IBrandDetail {
+  description: IBrandDetailDescription;
+  features: IBrandDetailFeature[];
+  button: string;
+  legend: {
+    img: string;
+    content: string;
+    p: string;
+  };
+  top: {
+    heading: string;
+    top: string;
+    button: string;
+    topCars: {
+      name: string;
+      content: string;
+    }[];
+  };
+}
+
+export interface IBrandReview {
+  username: string;
+  img: string;
+  carModel: string;
+  rating: number;
+  date: string;
+  comment: string;
+}
+
+export interface IBrandFaq {
+  question: string;
+  expanded: boolean;
+  answer: string;
+}
+
+export interface IBrandCars {
+  brand: string;
+  id: string;
+  img: string;
+  category: string,
+  name: string;
+  rating: string;
+  pricePerDay: number;
+  mpg?: {
+    icon: string;
+    detail: string;
+  };
+  fuelType?: {
+    icon: string;
+    detail: string;
+  };
+  doors: {
+    icon: string;
+    detail: number;
+  };
+  seats: {
+    icon: string;
+    detail: number;
+  };
+}
+
+export interface IBrand {
+  brandName: string;
+  backgroundImg: string;
+  curvedImg: string;
+  brandDetail: IBrandDetail;
+  brandReviews: IBrandReview[];
+  brandFaq: IBrandFaq[];
+  cars: IBrandCars[];
 }

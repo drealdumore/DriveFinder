@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
-  Brandies,
+  // Brandies,
   Brands,
   Carousel,
   Cars,
@@ -10,26 +10,26 @@ import {
   brand,
   category,
 } from 'src/api/cars/data';
-import { IBrands } from '../directives/app-model';
+// import { IBrands } from '../directives/app-model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class appService {
-  getBrands(): IBrands[] {
-    return Brands;
-  }
+  // getBrands(): IBrands[] {
+  //   return Brands;
+  // }
 
-  getBrand(id: any) {
+  // getBrand(id: any) {
+  //   const lowerCaseId = id.toLowerCase();
+  //   return Brands.find(
+  //     (brand) => brand.brandName.toLowerCase() === lowerCaseId
+  //   );
+  // }
+
+  getBrands(id: any) {
     const lowerCaseId = id.toLowerCase();
     return Brands.find(
-      (brand) => brand.brandName.toLowerCase() === lowerCaseId
-    );
-  }
-
-  getBrandies(id: any) {
-    const lowerCaseId = id.toLowerCase();
-    return Brandies.find(
       (brand) => brand.brandName.toLowerCase() === lowerCaseId
     );
   }
