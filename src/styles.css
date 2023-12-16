@@ -47,8 +47,14 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  background: brown;
+  
+}
+
 button:disabled:hover {
   cursor: not-allowed;
+
 }
 
 section {

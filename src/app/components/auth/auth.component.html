@@ -27,7 +27,7 @@
         <div class="separator-line"></div>
       </div>
 
-      <form class="form" [formGroup]="signupForm" (ngSubmit)="signinWithEmail()">
+      <form class="form" [formGroup]="loginForm" (ngSubmit)="signinWithEmail()">
         <div class="input-group">
           <label class="user-label">Email Address</label>
           <input
@@ -35,49 +35,82 @@
             required
             class="input"
             formControlName="email"
-            [ngClass]="{'is-invalid': signupForm.get('email')?.errors?.['email']}"
+            [ngClass]="{'is-invalid': loginForm.get('email')?.errors?.['email']}"
+
           />
+          <span class="error-span">
+            <!-- <span *ngIf="loginForm.get('email')?.errors?.['email']">
+              Incorrect email, make sure the format is correct (name@domain.com)
+            </span> -->
+            <span *ngIf="loginForm.get('email')?.errors?.['email']">
+              Please enter a valid email address.
+            </span>
+          </span>
         </div>
 
         <div class="input-group">
           <label class="user-label">Password</label>
-          <input
-            type="email"
-            required
-            class="input"
-            formControlName="password"
-            [ngClass]="{'is-invalid': signupForm.get('email')?.errors?.['email']}"
-          />
+          <div class="input-box">
+            <input
+              style="padding-right: 2.5rem"
+              type="{{ showPassword ? 'text' : 'password' }}"
+              required
+              class="input"
+              formControlName="password"
+              [ngClass]="{'is-invalid': loginForm.get('password')?.errors?.['password']}"
+            />
+            <span class="eye-span" (click)="togglePasswordVisibility()">
+              <img
+                *ngIf="showPassword; else closedEye"
+                class="eye"
+                src="/assets/img/icons/eye.svg"
+              />
+              <ng-template #closedEye>
+                <img src="/assets/img/icons/eye-closed.svg" class="eye" />
+              </ng-template>
+            </span>
+
+            <span class="error-span">
+              <span *ngIf="loginForm.get('password')?.errors?.['required']">
+                Password is required.
+              </span>
+              <span *ngIf="loginForm.get('password')?.errors?.['minlength']">
+                Password must be at least 3 characters long.
+              </span>
+              <span *ngIf="loginForm.get('password')?.errors?.['maxlength']">
+                Password cannot be more than 9 characters long.
+              </span>
+            </span>
+          </div>
+
+          <div class="flex-row">
+            <div class="row">
+              <input type="checkbox" formControlName="rememberMe" />
+              <label>Remember me </label>
+            </div>
+            <span class="span">Forgot password?</span>
+          </div>
         </div>
 
-        <button (click)="signinWithEmail()"
+        <button
           class="form-btn"
           [title]="
-            signupForm.valid
-              ? 'Create account'
+            loginForm.valid
+              ? 'Login to your account'
               : 'Disabled until form data is valid'
           "
-          [disabled]="!signupForm.valid"
+          [disabled]="!loginForm.valid"
         >
           Log in
         </button>
       </form>
-
-      <span class="error-span">
-        <span *ngIf="signupForm.get('email')?.errors?.['email']">
-          Incorrect email, make sure the format is correct (name@domain.com)
-        </span>
-        <span *ngIf="errorMessage">{{ errorMessage }}</span>
-
-      </span>
-
-      <p class="sign-up-label">
-        Don't have an account?
-        <span (click)="authToggleFn()" class="sign-up-link">Sign up</span>
-      </p>
     </div>
-  </div>
 
+    <p class="sign-up-label">
+      Don't have an account?
+      <span (click)="authToggleFn()" class="sign-up-link">Sign up</span>
+    </p>
+  </div>
 
   <!-- //////////// -->
   <!-- //////////// -->
@@ -105,7 +138,11 @@
         <div class="separator-line"></div>
       </div>
 
-      <form class="form" [formGroup]="signupForm" (ngSubmit)="registerWithEmail()">
+      <form
+        class="form"
+        [formGroup]="signupForm"
+        (ngSubmit)="registerWithEmail()"
+      >
         <div class="input-group">
           <label class="user-label">Email Address</label>
           <input
@@ -115,20 +152,61 @@
             formControlName="email"
             [ngClass]="{'is-invalid': signupForm.get('email')?.errors?.['email']}"
           />
+          <span class="error-span">
+            <span *ngIf="signupForm.get('email')?.errors?.['email']">
+              Incorrect email, make sure the format is correct (name@domain.com)
+            </span>
+          </span>
         </div>
 
         <div class="input-group">
           <label class="user-label">Password</label>
-          <input
-            type="email"
-            required
-            class="input"
-            formControlName="password"
-            [ngClass]="{'is-invalid': signupForm.get('email')?.errors?.['email']}"
-          />
+          <div class="input-box">
+            <input
+              type="{{ showPassword ? 'text' : 'password' }}"
+              required
+              class="input"
+              formControlName="password"
+              [ngClass]="{'is-invalid': signupForm.get('[password]')?.errors?.['[password]']}"
+            />
+            <span class="eye-span" (click)="togglePasswordVisibility()">
+              <img
+                *ngIf="showPassword; else closedEye"
+                class="eye"
+                src="/assets/img/icons/eye.svg"
+              />
+              <ng-template #closedEye>
+                <img src="/assets/img/icons/eye-closed.svg" class="eye" />
+              </ng-template>
+            </span>
+          </div>
         </div>
 
-        <button (click)="registerWithEmail()"
+        <div class="input-group">
+          <label class="user-label">Confirm Password</label>
+          <div class="input-box">
+            <input
+              type="{{ showConfirmPassword ? 'text' : 'password' }}"
+              required
+              class="input"
+              formControlName="confirmPassword"
+              [ngClass]="{'is-invalid': signupForm.get('confirmPassword')?.errors?.['confirmPassword']}"
+            />
+            <span class="eye-span" (click)="toggleConfirmPasswordVisibility()">
+              <img
+                *ngIf="showConfirmPassword; else closedEye"
+                class="eye"
+                src="/assets/img/icons/eye.svg"
+              />
+              <ng-template #closedEye>
+                <img src="/assets/img/icons/eye-closed.svg" class="eye" />
+              </ng-template>
+            </span>
+          </div>
+        </div>
+
+
+        <button
           class="form-btn"
           [title]="
             signupForm.valid
@@ -137,27 +215,18 @@
           "
           [disabled]="!signupForm.valid"
         >
-        Create Account
+          Create Account
         </button>
       </form>
-
-      <span class="error-span">
-        <span *ngIf="signupForm.get('email')?.errors?.['email']">
-          Incorrect email, make sure the format is correct (name@domain.com)
-        </span>
-        <span *ngIf="errorMessage">{{ errorMessage }}</span>
-
-      </span>
-
-      <p class="sign-up-label">
-        Already have an account?
-        <span (click)="authToggleFn()" class="sign-up-link">Sign in</span>
-      </p>
     </div>
+    <p class="sign-up-label">
+      Already have an account?
+      <span (click)="authToggleFn()" class="sign-up-link">Sign in</span>
+    </p>
   </div>
-
-
 </div>
 
-
 <!-- form container a fades away and disaper while b fades in and stay. -->
+<!-- IF GO TO SIGN UP IS CLICK
+1. CURRENT CONTAINE SLIDES LEFT small like 3px AND fades
+2. NEW CONTAINER SLIDES IN FROM THE RIGH small like 3px AND STAY WELL -->

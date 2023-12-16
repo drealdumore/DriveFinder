@@ -40,7 +40,6 @@ import { Component } from '@angular/core';
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 8%;
       }
 
       p {
@@ -96,18 +95,18 @@ import { Component } from '@angular/core';
       }
       @keyframes stroke {
         0% {
-          fill: rgba(83, 80, 80, 0);
+          fill: var(--color-black);
           stroke: rgba(255, 255, 255, 1);
           stroke-dashoffset: 25%;
           stroke-dasharray: 0 50%;
           stroke-width: 2;
         }
         70% {
-          fill: rgba(83, 80, 80, 0);
+          fill: var(--color-black);
           stroke: rgba(255, 255, 255, 1);
         }
         80% {
-          fill: rgba(83, 80, 80, 0);
+          fill: var(--color-black);
           stroke: rgba(255, 255, 255, 1);
           stroke-width: 3;
         }
