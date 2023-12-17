@@ -1,5 +1,5 @@
 <div class="container">
-  <video autoplay loop muted playsinline>
+  <video autoplay loop muted>
     <source
       src="../../../assets/img/resources/over-the-crater-3370-1080p.mp4"
       type="video/mp4"
@@ -36,7 +36,6 @@
             class="input"
             formControlName="email"
             [ngClass]="{'is-invalid': loginForm.get('email')?.errors?.['email']}"
-
           />
           <span class="error-span">
             <!-- <span *ngIf="loginForm.get('email')?.errors?.['email']">
@@ -51,27 +50,34 @@
         <div class="input-group">
           <label class="user-label">Password</label>
           <div class="input-box">
-            <input
-              style="padding-right: 2.5rem"
-              type="{{ showPassword ? 'text' : 'password' }}"
-              required
-              class="input"
-              formControlName="password"
-              [ngClass]="{'is-invalid': loginForm.get('password')?.errors?.['password']}"
-            />
-            <span class="eye-span" (click)="togglePasswordVisibility()">
-              <img
-                *ngIf="showPassword; else closedEye"
-                class="eye"
-                src="/assets/img/icons/eye.svg"
+            <div class="password">
+              <input
+                style="padding-right: 8px; border: none"
+                type="{{ showPassword ? 'text' : 'password' }}"
+                required
+                class="input"
+                formControlName="password"
+                [ngClass]="{'is-invalid': loginForm.get('password')?.errors?.['required']}"
               />
-              <ng-template #closedEye>
-                <img src="/assets/img/icons/eye-closed.svg" class="eye" />
-              </ng-template>
-            </span>
+              <span class="eye-span" (click)="togglePasswordVisibility()">
+                <img
+                  *ngIf="showPassword; else closedEye"
+                  class="eye"
+                  src="/assets/img/icons/eye.svg"
+                />
+                <ng-template #closedEye>
+                  <img src="/assets/img/icons/eye-closed.svg" class="eye" />
+                </ng-template>
+              </span>
+            </div>
 
             <span class="error-span">
-              <span *ngIf="loginForm.get('password')?.errors?.['required']">
+              <span
+                *ngIf="
+                  loginForm.get('password')?.hasError('required') &&
+                  loginForm.get('password')?.touched
+                "
+              >
                 Password is required.
               </span>
               <span *ngIf="loginForm.get('password')?.errors?.['minlength']">
@@ -154,57 +160,123 @@
           />
           <span class="error-span">
             <span *ngIf="signupForm.get('email')?.errors?.['email']">
-              Incorrect email, make sure the format is correct (name@domain.com)
+              Please enter a valid email address.
             </span>
           </span>
         </div>
 
-        <div class="input-group">
-          <label class="user-label">Password</label>
-          <div class="input-box">
-            <input
-              type="{{ showPassword ? 'text' : 'password' }}"
-              required
-              class="input"
-              formControlName="password"
-              [ngClass]="{'is-invalid': signupForm.get('[password]')?.errors?.['[password]']}"
-            />
-            <span class="eye-span" (click)="togglePasswordVisibility()">
-              <img
-                *ngIf="showPassword; else closedEye"
-                class="eye"
-                src="/assets/img/icons/eye.svg"
-              />
-              <ng-template #closedEye>
-                <img src="/assets/img/icons/eye-closed.svg" class="eye" />
-              </ng-template>
-            </span>
+        <div formGroupName="emailGroup">
+          <div class="input-group">
+            <label class="user-label">Password</label>
+            <div class="input-box">
+              <div
+                class="password"
+                [ngClass]="{
+                  'is-invalid':
+                    signupForm.get('emailGroup')?.errors ||
+                    ((signupForm.get('emailGroup.password')?.touched ||
+                      signupForm.get('emailGroup.password')?.dirty) &&
+                      !signupForm.get('emailGroup.password')?.valid)
+                }"
+              >
+                <input
+                  style="padding-right: 8px; border: none"
+                  type="{{ showPassword ? 'text' : 'password' }}"
+                  required
+                  class="input"
+                  formControlName="password"
+                />
+                <span class="eye-span" (click)="togglePasswordVisibility()">
+                  <img
+                    *ngIf="showPassword; else closedEye"
+                    class="eye"
+                    src="/assets/img/icons/eye.svg"
+                  />
+                  <ng-template #closedEye>
+                    <img src="/assets/img/icons/eye-closed.svg" class="eye" />
+                  </ng-template>
+                </span>
+              </div>
+              <span class="error-span">
+                <span
+                  *ngIf="
+                    signupForm
+                      .get('emailGroup.password')
+                      ?.hasError('required') &&
+                    signupForm.get('emailGroup.password')?.touched
+                  "
+                >
+                  Password is required.
+                </span>
+                <span
+                  *ngIf="signupForm.get('emailGroup.password')?.errors?.['minlength']"
+                >
+                  Password must be at least 3 characters long.
+                </span>
+                <span
+                  *ngIf="signupForm.get('emailGroup.password')?.errors?.['maxlength']"
+                >
+                  Password cannot be more than 9 characters long.
+                </span>
+              </span>
+            </div>
           </div>
         </div>
 
-        <div class="input-group">
-          <label class="user-label">Confirm Password</label>
-          <div class="input-box">
-            <input
-              type="{{ showConfirmPassword ? 'text' : 'password' }}"
-              required
-              class="input"
-              formControlName="confirmPassword"
-              [ngClass]="{'is-invalid': signupForm.get('confirmPassword')?.errors?.['confirmPassword']}"
-            />
-            <span class="eye-span" (click)="toggleConfirmPasswordVisibility()">
-              <img
-                *ngIf="showConfirmPassword; else closedEye"
-                class="eye"
-                src="/assets/img/icons/eye.svg"
-              />
-              <ng-template #closedEye>
-                <img src="/assets/img/icons/eye-closed.svg" class="eye" />
-              </ng-template>
-            </span>
+        <div formGroupName="emailGroup">
+          <div class="input-group">
+            <label class="user-label">Confirm Password</label>
+            <div class="input-box">
+              <div
+                class="password"
+                [ngClass]="{
+                  'is-invalid':
+                    signupForm.get('emailGroup')?.errors ||
+                    ((signupForm.get('emailGroup.confirmPassword')?.touched ||
+                      signupForm.get('emailGroup.confirmPassword')?.dirty) &&
+                      !signupForm.get('emailGroup.confirmPassword')?.valid)
+                }"
+              >
+                <input
+                  style="padding-right: 8px; border: none"
+                  type="{{ showConfirmPassword ? 'text' : 'password' }}"
+                  required
+                  class="input"
+                  formControlName="confirmPassword"
+                  [ngClass]="{
+                    'is-invalid': signupForm
+                      .get('emailGroup.confirmPassword')
+                      ?.hasError('match')
+                  }"
+                />
+
+                <span
+                  class="eye-span"
+                  (click)="toggleConfirmPasswordVisibility()"
+                >
+                  <img
+                    *ngIf="showConfirmPassword; else closedEye"
+                    class="eye"
+                    src="/assets/img/icons/eye.svg"
+                  />
+                  <ng-template #closedEye>
+                    <img src="/assets/img/icons/eye-closed.svg" class="eye" />
+                  </ng-template>
+                </span>
+              </div>
+              <span class="error-span">
+                <span
+                  *ngIf="
+                    signupForm.get('emailGroup')?.errors?.['passwordMatcherError'] &&
+                    signupForm.get('emailGroup.confirmPassword')?.touched
+                  "
+                >
+                  The confirmation does not match the password.
+                </span>
+              </span>
+            </div>
           </div>
         </div>
-
 
         <button
           class="form-btn"

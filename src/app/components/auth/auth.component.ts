@@ -1,7 +1,25 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  AbstractControl,
+} from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
+
+
+function passwordMatcher(password: string, confirmPassword: string) {
+  return function (form: AbstractControl) {
+    const passwordValue = form.get(password)?.value;
+    const confirmPasswordValue = form.get(confirmPassword)?.value;
+
+    if (passwordValue === confirmPasswordValue) {
+      return null;
+    }
+    return { passwordMatcherError: true };
+  };
+}
 
 @Component({
   selector: 'app-auth',
@@ -23,16 +41,38 @@ export class AuthComponent {
   ) {}
 
   ngOnInit(): void {
-    this.signupForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(3)]],
-      confirmPassword: ['', [Validators.required, Validators.minLength(3)]],
-    });
-
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(9)]],
+      password: [
+        '',
+        [Validators.required, Validators.minLength(3), Validators.maxLength(9)],
+      ],
       rememberMe: true,
+    });
+
+    this.signupForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      emailGroup: this.fb.group(
+        {
+          password: [
+            '',
+            [
+              Validators.required,
+              Validators.minLength(3),
+              Validators.maxLength(9),
+            ],
+          ],
+          confirmPassword: [
+            '',
+            [
+              Validators.required,
+              Validators.minLength(3),
+              Validators.maxLength(9),
+            ],
+          ],
+        },
+        [passwordMatcher('password', 'confirmPassword')]
+      ),
     });
   }
 
@@ -102,7 +142,7 @@ export class AuthComponent {
       })
       .catch((error: any) => {
         console.error(error);
-        this.toastr.error(this.errorMessage);
+
         if (error.code === 'auth/user-not-found') {
           this.errorMessage =
             'User not found. Please check your email or sign up for an account.';
@@ -111,10 +151,15 @@ export class AuthComponent {
             'Invalid email address. Please enter a valid email.';
         } else if (error.code === 'auth/wrong-password') {
           this.errorMessage = 'Incorrect password. Please try again.';
+        } else if (error.code === 'auth/invalid-credential') {
+          this.errorMessage =
+            'User not found. Please check your email or sign up for an account.';
         } else {
           this.errorMessage =
             'An error occurred during login. Please try again later.';
         }
+
+        this.toastr.error(this.errorMessage);
       });
   }
 }

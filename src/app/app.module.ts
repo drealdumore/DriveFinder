@@ -40,6 +40,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
 import { ToastrModule } from 'ngx-toastr';
+import { AppUiComponent } from './app-ui/app-ui.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,6 +73,7 @@ import { ToastrModule } from 'ngx-toastr';
     BookingComponent,
     Error404Component,
     AuthComponent,
+    AppUiComponent,
   ],
   imports: [
     BrowserModule,

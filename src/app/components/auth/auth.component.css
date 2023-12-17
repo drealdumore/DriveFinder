@@ -3,18 +3,6 @@ label {
   font-weight: 500;
 }
 
-.input {
-  border-radius: 0.2rem;
-  width: 100%;
-  border: 1px solid var(--color-white);
-  outline: 0 !important;
-  box-sizing: border-box;
-  padding: 12px 15px;
-  background-color: transparent;
-  transition: all 0.4s;
-  color: var(--color-white);
-}
-
 .form-btn {
   padding: 10px 15px;
   border-radius: 5px;
@@ -81,9 +69,12 @@ label {
   background-color: var(--color-white);
   cursor: pointer;
   font-size: 15px;
+  transition: filter .4s ease;
 }
 
-
+.google-login-button:hover {
+  filter: drop-shadow(2px 4px 6px grey);
+}
 
 .page-link {
   text-decoration: underline;
@@ -117,8 +108,6 @@ label {
   font-size: 12px;
   bottom: 5.6rem;
 }
-
-
 
 .container {
   padding: 0;
@@ -180,6 +169,7 @@ video {
   transition: all 0.4s;
   color: var(--grey-secondary);
   font-weight: 600;
+  
 }
 
 .separator-container {
@@ -208,24 +198,17 @@ video {
 }
 
 .eye {
-  position: absolute;
-  bottom: 1.15rem;
-  transform: translateY(-40%);
   width: 1.2rem;
 }
 
 .eye-span {
-  position: absolute;
-  /* bottom: -38%; */
-  bottom: 3%;
-  right: 34px;
+  padding-top: 5px;
   cursor: pointer;
 }
 
 .input-box {
   position: relative;
 }
-
 
 .flex-row {
   display: flex;
@@ -247,7 +230,7 @@ video {
   color: var(--grey-secondary);
   font-weight: 500;
   cursor: pointer;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .span:hover {
@@ -258,8 +241,19 @@ video {
   display: flex;
 }
 
-.error-border {
-  border: 1px solid var(--color-error);
+
+.password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+  border-radius: 0.2rem;
+  border: 1px solid var(--grey-secondary);
+  transition: all 0.4s;
+}
+
+.password:focus-within {
+  border: 1.5px solid var(--color-black);
 }
 
 
