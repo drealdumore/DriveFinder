@@ -10,23 +10,11 @@ import {
   brand,
   category,
 } from 'src/api/cars/data';
-// import { IBrands } from '../directives/app-model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class appService {
-  // getBrands(): IBrands[] {
-  //   return Brands;
-  // }
-
-  // getBrand(id: any) {
-  //   const lowerCaseId = id.toLowerCase();
-  //   return Brands.find(
-  //     (brand) => brand.brandName.toLowerCase() === lowerCaseId
-  //   );
-  // }
-
   getBrands(id: any) {
     const lowerCaseId = id.toLowerCase();
     return Brands.find(
