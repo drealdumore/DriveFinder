@@ -17,11 +17,9 @@ export class BrandPageComponent implements OnInit {
   constructor(private appservice: appService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    // this.brand = this.appservice.getBrand(this.route.snapshot.params['brandID']);
     this.brand = this.appservice.getBrands(
       this.route.snapshot.params['brandID']
     );
-    console.log(this.brand);
   }
 
 }

@@ -2,9 +2,6 @@
 
 <section>
   <div class="works">
-    <div class="img__box">
-      <img src="./assets/img/lexus/Lexus IS 2022-1.jpg" alt="car" />
-    </div>
     <div class="work">
       <ol>
         <li>
@@ -42,7 +39,7 @@
 
 <section>
   <section-heading>Recent reviews</section-heading>
-  <review-sub [reviews]="reviews"></review-sub>
+  <review-sub [reviews]="reviews$ | async"></review-sub>
 </section>
 
 <section>

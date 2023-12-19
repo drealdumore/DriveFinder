@@ -6,8 +6,8 @@ import {
   AbstractControl,
 } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { debounceTime } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
-
 
 function passwordMatcher(password: string, confirmPassword: string) {
   return function (form: AbstractControl) {
@@ -32,7 +32,25 @@ export class AuthComponent {
   loginForm!: FormGroup;
   errorMessage: string = '';
   showPassword: boolean = false;
-  showConfirmPassword: boolean = false;
+  passwordMessage: string = '';
+  emailMessage: string = '';
+
+  loginPasswordMessage: string = '';
+  loginEmailMessage: string = '';
+
+  signupPasswordMessage: string = '';
+  signupEmailMessage: string = '';
+
+  passwordValidationMessages: { [key: string]: string } = {
+    required: 'Password is required.',
+    minlength: 'Password must be at least 3 characters long.',
+    maxlength: 'Password cannot be more than 9 characters long.',
+  };
+
+  emailValidationMessages: { [key: string]: string } = {
+    required: 'Email address is required.',
+    email: 'Please enter a valid email address.',
+  };
 
   constructor(
     private fb: FormBuilder,
@@ -52,28 +70,69 @@ export class AuthComponent {
 
     this.signupForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      emailGroup: this.fb.group(
-        {
-          password: [
-            '',
-            [
-              Validators.required,
-              Validators.minLength(3),
-              Validators.maxLength(9),
-            ],
-          ],
-          confirmPassword: [
-            '',
-            [
-              Validators.required,
-              Validators.minLength(3),
-              Validators.maxLength(9),
-            ],
-          ],
-        },
-        [passwordMatcher('password', 'confirmPassword')]
-      ),
+      password: [
+        '',
+        [Validators.required, Validators.minLength(3), Validators.maxLength(9)],
+      ],
     });
+
+    this.subscribeToPasswordChanges(this.signupForm);
+    this.subscribeToPasswordChanges(this.loginForm);
+
+    // this.subscribeToEmailChanges(this.signupForm);
+    // this.subscribeToEmailChanges(this.loginForm);
+
+    this.subscribeToEmailChanges(this.signupForm, 'email');
+    this.subscribeToEmailChanges(this.loginForm, 'email');
+  }
+
+  private setPasswordMessage(c: AbstractControl): void {
+    this.passwordMessage = '';
+    if ((c.touched || c.dirty) && c.errors) {
+      this.passwordMessage = Object.keys(c.errors)
+        .map((key) => this.passwordValidationMessages[key])
+        .join(' ');
+    }
+  }
+
+  private setEmailMessage(c: AbstractControl): void {
+    this.emailMessage = '';
+    if ((c.touched || c.dirty) && c.errors) {
+      this.emailMessage = Object.keys(c.errors)
+        .map((key) => this.emailValidationMessages[key])
+        .join(' ');
+    }
+  }
+
+  private subscribeToPasswordChanges(form: FormGroup): void {
+    const passwordControl = form.get('password');
+    if (passwordControl) {
+      passwordControl.valueChanges
+        .pipe(debounceTime(500))
+        .subscribe((value) => {
+          this.setPasswordMessage(passwordControl);
+        });
+    }
+  }
+
+  // private subscribeToEmailChanges(form: FormGroup): void {
+  //   const emailControl = form.get('email');
+  //   // change this so it will get the value like signupupform.get('email)
+  //   if (emailControl) {
+  //     emailControl.valueChanges.pipe(debounceTime(500)).subscribe((value) => {
+  //       this.setEmailMessage(emailControl);
+  //     });
+  //   }
+  // }
+
+  private subscribeToEmailChanges(form: FormGroup, controlName: string): void {
+    const emailControl = form.get(controlName);
+
+    if (emailControl) {
+      emailControl.valueChanges.pipe(debounceTime(500)).subscribe((value) => {
+        this.setEmailMessage(emailControl);
+      });
+    }
   }
 
   authToggleFn() {
@@ -82,10 +141,6 @@ export class AuthComponent {
 
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
-  }
-
-  toggleConfirmPasswordVisibility() {
-    this.showConfirmPassword = !this.showConfirmPassword;
   }
 
   loginWithGoogle() {

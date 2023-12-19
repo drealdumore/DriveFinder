@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
-import { LoginComponent } from './components/login/login.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from 'src/routes';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -40,13 +39,14 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
 import { ToastrModule } from 'ngx-toastr';
-import { AppUiComponent } from './app-ui/app-ui.component';
+import { TrustSafetyComponent } from './pages/trust-safety/trust-safety.component';
+import { SafetyComponent } from './components/safety/safety.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomepageComponent,
-    LoginComponent,
     OrderSucessfulPopup,
     FaqComponent,
     ExperienceComponent,
@@ -73,7 +73,9 @@ import { AppUiComponent } from './app-ui/app-ui.component';
     BookingComponent,
     Error404Component,
     AuthComponent,
-    AppUiComponent,
+    TrustSafetyComponent,
+    SafetyComponent,
+    
   ],
   imports: [
     BrowserModule,

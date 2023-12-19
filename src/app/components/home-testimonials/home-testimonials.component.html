@@ -1,4 +1,4 @@
-<div class="items">
+<div class="items" *ngIf="reviews">
   <div class="testimonial__box" *ngFor="let review of reviews">
     <div class="img">
       <img [src]="review.img" [alt]="review.username" />

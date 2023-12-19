@@ -1,21 +1,26 @@
 <div class="cars">
-  <div class="car" *ngFor="let car of cars"  >
+  <a
+    href="'/' + car.id"
+    class="car"
+    *ngFor="let car of cars"
+    [routerLink]="[car.id]"
+  >
     <div class="img__box">
-      <img [src]="car.img" [alt]="car.name" [routerLink]="[car.id]" />
+      <img [src]="car.img" [alt]="car.name" />
     </div>
     <div class="content">
       <div class="flex__justify">
-        <p class="name">{{car.name}}</p>
-        <p class="price">${{car.pricePerDay}}<span>/day</span></p>
+        <p class="name">{{ car.name }}</p>
+        <p class="price">${{ car.pricePerDay }}<span>/day</span></p>
       </div>
       <div class="rating__box flex__justify">
-        <p class="rating">{{car.rating}}</p>
+        <p class="rating">{{ car.rating }}</p>
         <stars [rating]="car.rating"></stars>
       </div>
       <div class="details">
-        <p>{{car.doors.detail}} Doors</p>
-        <p>{{car.seats.detail}} Seats</p>
+        <p>{{ car.doors.detail }} Doors</p>
+        <p>{{ car.seats.detail }} Seats</p>
       </div>
     </div>
-  </div>
+  </a>
 </div>

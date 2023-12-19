@@ -7,6 +7,7 @@ import { IReview } from 'src/app/directives/app-model';
   styleUrls: ['./review-sub.component.css']
 })
 export class ReviewSubComponent {
-  @Input() reviews: IReview[] = [];
+  @Input() reviews: any
+  // @Input() reviews: IReview[] = [];
 
 }

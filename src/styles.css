@@ -15,10 +15,19 @@
   --lightgray: #e5e5e5;
   --blue: #03b5d2;
 
+  --body-font-color: #1ecb15;
+  --primary-color: #4d5b7c;
+  --primary-color: #3e4d70;
+  --primary-color-rgb: 77, 91, 124;
+  --secondary-color: #363f53;
+  --secondary-color-rgb: 91, 124, 77;
+
+  /* 
   --primary-color: #1ecb15;
   --primary-color-rgb: 120, 202, 92;
   --secondary-color: #179510;
   --secondary-color-rgb: 23, 149, 16;
+  --body-font-color: #4d5b7c; */
 
   --border-default: solid 1px rgba(30, 30, 30, 1);
   --bg-color-even: #e8e8e8;
@@ -38,7 +47,6 @@ html {
 
 input {
   font-family: "Lato";
-
 }
 
 button {
@@ -49,12 +57,10 @@ button {
 
 button:disabled {
   background: brown;
-  
 }
 
 button:disabled:hover {
   cursor: not-allowed;
-
 }
 
 section {

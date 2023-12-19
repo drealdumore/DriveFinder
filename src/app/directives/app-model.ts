@@ -1,52 +1,3 @@
-// export interface IBrands {
-//   brandName: string;
-//   backgroundImg: string;
-//   curvedImg: string;
-//   brandDetail: {
-//     description: {
-//       title: string;
-//       p: string;
-//       main1: string;
-//       main2: string;
-//     };
-//     features: {
-//       title: string;
-//       content: string;
-//     }[];
-//     button: string;
-//     legend: {
-//       img: string;
-//       content: string;
-//       p: string;
-//     };
-//     top: {
-//       heading: string;
-//       top: string;
-//       button: string;
-//       topCars: {
-//         name: string;
-//         content: string;
-//       }[];
-//     };
-//   };
-
-//   brandReviews: {
-//     username: string;
-//     img: string;
-//     carModel: string;
-//     rating: number;
-//     date: string;
-//     comment: string;
-//   }[];
-
-//   brandFaq: {
-//     question: string;
-//     expanded: boolean;
-//     answer: string;
-//   }[];
-// }
-
-
 export interface IFaq {
   question: string;
   answer: string;
@@ -96,6 +47,16 @@ export interface IBooking {
   distanceIncluded: number;
   feePerAdditionalMile: number;
   insurance: string;
+}
+
+export interface IBrand {
+  brandName: string;
+  backgroundImg: string;
+  curvedImg: string;
+  brandDetail: IBrandDetail;
+  brandReviews: IBrandReview[];
+  brandFaq: IBrandFaq[];
+  cars: IBrandCars[];
 }
 
 export interface ICars {
@@ -183,6 +144,7 @@ export interface ICars {
 }
 
 
+
 export interface IBrandDetailDescription {
   title: string;
   p: string;
@@ -234,7 +196,7 @@ export interface IBrandCars {
   brand: string;
   id: string;
   img: string;
-  category: string,
+  category: string;
   name: string;
   rating: string;
   pricePerDay: number;
@@ -254,14 +216,4 @@ export interface IBrandCars {
     icon: string;
     detail: number;
   };
-}
-
-export interface IBrand {
-  brandName: string;
-  backgroundImg: string;
-  curvedImg: string;
-  brandDetail: IBrandDetail;
-  brandReviews: IBrandReview[];
-  brandFaq: IBrandFaq[];
-  cars: IBrandCars[];
 }

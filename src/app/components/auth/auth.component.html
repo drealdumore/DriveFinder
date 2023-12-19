@@ -35,14 +35,14 @@
             required
             class="input"
             formControlName="email"
-            [ngClass]="{'is-invalid': loginForm.get('email')?.errors?.['email']}"
+            [ngClass]="{ 'is-invalid': emailMessage }"
           />
           <span class="error-span">
-            <!-- <span *ngIf="loginForm.get('email')?.errors?.['email']">
+            <!-- <span *ngIf="">
               Incorrect email, make sure the format is correct (name@domain.com)
             </span> -->
-            <span *ngIf="loginForm.get('email')?.errors?.['email']">
-              Please enter a valid email address.
+            <span>
+              {{ emailMessage }}
             </span>
           </span>
         </div>
@@ -50,14 +50,13 @@
         <div class="input-group">
           <label class="user-label">Password</label>
           <div class="input-box">
-            <div class="password">
+            <div class="password" [ngClass]="{ 'is-invalid': passwordMessage }">
               <input
                 style="padding-right: 8px; border: none"
                 type="{{ showPassword ? 'text' : 'password' }}"
                 required
                 class="input"
                 formControlName="password"
-                [ngClass]="{'is-invalid': loginForm.get('password')?.errors?.['required']}"
               />
               <span class="eye-span" (click)="togglePasswordVisibility()">
                 <img
@@ -72,19 +71,8 @@
             </div>
 
             <span class="error-span">
-              <span
-                *ngIf="
-                  loginForm.get('password')?.hasError('required') &&
-                  loginForm.get('password')?.touched
-                "
-              >
-                Password is required.
-              </span>
-              <span *ngIf="loginForm.get('password')?.errors?.['minlength']">
-                Password must be at least 3 characters long.
-              </span>
-              <span *ngIf="loginForm.get('password')?.errors?.['maxlength']">
-                Password cannot be more than 9 characters long.
+              <span>
+                {{ passwordMessage }}
               </span>
             </span>
           </div>
@@ -156,125 +144,49 @@
             required
             class="input"
             formControlName="email"
-            [ngClass]="{'is-invalid': signupForm.get('email')?.errors?.['email']}"
+            [ngClass]="{ 'is-invalid': emailMessage }"
           />
           <span class="error-span">
-            <span *ngIf="signupForm.get('email')?.errors?.['email']">
-              Please enter a valid email address.
+            <span>
+              {{ emailMessage }}
             </span>
           </span>
         </div>
 
-        <div formGroupName="emailGroup">
-          <div class="input-group">
-            <label class="user-label">Password</label>
-            <div class="input-box">
-              <div
-                class="password"
-                [ngClass]="{
-                  'is-invalid':
-                    signupForm.get('emailGroup')?.errors ||
-                    ((signupForm.get('emailGroup.password')?.touched ||
-                      signupForm.get('emailGroup.password')?.dirty) &&
-                      !signupForm.get('emailGroup.password')?.valid)
-                }"
-              >
-                <input
-                  style="padding-right: 8px; border: none"
-                  type="{{ showPassword ? 'text' : 'password' }}"
-                  required
-                  class="input"
-                  formControlName="password"
+        <div class="input-group">
+          <label class="user-label">Password</label>
+          <div class="input-box">
+            <div
+              class="password"
+              [ngClass]="{
+                'is-invalid': passwordMessage
+              }"
+            >
+              <input
+                style="padding-right: 8px; border: none"
+                type="{{ showPassword ? 'text' : 'password' }}"
+                required
+                class="input"
+                formControlName="password"
+              />
+
+              <span class="eye-span" (click)="togglePasswordVisibility()">
+                <img
+                  *ngIf="showPassword; else closedEye"
+                  class="eye"
+                  src="/assets/img/icons/eye.svg"
                 />
-                <span class="eye-span" (click)="togglePasswordVisibility()">
-                  <img
-                    *ngIf="showPassword; else closedEye"
-                    class="eye"
-                    src="/assets/img/icons/eye.svg"
-                  />
-                  <ng-template #closedEye>
-                    <img src="/assets/img/icons/eye-closed.svg" class="eye" />
-                  </ng-template>
-                </span>
-              </div>
-              <span class="error-span">
-                <span
-                  *ngIf="
-                    signupForm
-                      .get('emailGroup.password')
-                      ?.hasError('required') &&
-                    signupForm.get('emailGroup.password')?.touched
-                  "
-                >
-                  Password is required.
-                </span>
-                <span
-                  *ngIf="signupForm.get('emailGroup.password')?.errors?.['minlength']"
-                >
-                  Password must be at least 3 characters long.
-                </span>
-                <span
-                  *ngIf="signupForm.get('emailGroup.password')?.errors?.['maxlength']"
-                >
-                  Password cannot be more than 9 characters long.
-                </span>
+                <ng-template #closedEye>
+                  <img src="/assets/img/icons/eye-closed.svg" class="eye" />
+                </ng-template>
               </span>
             </div>
-          </div>
-        </div>
 
-        <div formGroupName="emailGroup">
-          <div class="input-group">
-            <label class="user-label">Confirm Password</label>
-            <div class="input-box">
-              <div
-                class="password"
-                [ngClass]="{
-                  'is-invalid':
-                    signupForm.get('emailGroup')?.errors ||
-                    ((signupForm.get('emailGroup.confirmPassword')?.touched ||
-                      signupForm.get('emailGroup.confirmPassword')?.dirty) &&
-                      !signupForm.get('emailGroup.confirmPassword')?.valid)
-                }"
-              >
-                <input
-                  style="padding-right: 8px; border: none"
-                  type="{{ showConfirmPassword ? 'text' : 'password' }}"
-                  required
-                  class="input"
-                  formControlName="confirmPassword"
-                  [ngClass]="{
-                    'is-invalid': signupForm
-                      .get('emailGroup.confirmPassword')
-                      ?.hasError('match')
-                  }"
-                />
-
-                <span
-                  class="eye-span"
-                  (click)="toggleConfirmPasswordVisibility()"
-                >
-                  <img
-                    *ngIf="showConfirmPassword; else closedEye"
-                    class="eye"
-                    src="/assets/img/icons/eye.svg"
-                  />
-                  <ng-template #closedEye>
-                    <img src="/assets/img/icons/eye-closed.svg" class="eye" />
-                  </ng-template>
-                </span>
-              </div>
-              <span class="error-span">
-                <span
-                  *ngIf="
-                    signupForm.get('emailGroup')?.errors?.['passwordMatcherError'] &&
-                    signupForm.get('emailGroup.confirmPassword')?.touched
-                  "
-                >
-                  The confirmation does not match the password.
-                </span>
+            <span class="error-span">
+              <span>
+                {{ passwordMessage }}
               </span>
-            </div>
+            </span>
           </div>
         </div>
 
@@ -291,12 +203,25 @@
         </button>
       </form>
     </div>
+
     <p class="sign-up-label">
       Already have an account?
       <span (click)="authToggleFn()" class="sign-up-link">Sign in</span>
     </p>
   </div>
 </div>
+
+
+<!-- At least 8 characters long (and less than 100 characters)
+Contains at least 1 number
+Contains at least 1 lowercase letter
+Contains at least 1 uppercase letter
+Contains a special character (e.g. @ !) -->
+
+
+
+<!-- fix the validation so it works for only onee form and when switched 
+to another form, it doest display the error of the previous form -->
 
 <!-- form container a fades away and disaper while b fades in and stay. -->
 <!-- IF GO TO SIGN UP IS CLICK

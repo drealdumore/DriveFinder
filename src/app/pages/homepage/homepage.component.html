@@ -20,7 +20,10 @@
   <main>
     <div class="slider">
       <div class="slide-track">
-        <home-testimonials [reviews]="reviews"></home-testimonials>
+        <home-testimonials
+          *ngIf="reviews$"
+          [reviews]="reviews$ | async"
+        ></home-testimonials>
       </div>
     </div>
   </main>

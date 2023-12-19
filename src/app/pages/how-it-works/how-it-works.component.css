@@ -10,14 +10,6 @@ section {
   padding: 0 5rem;
 }
 
-.img__box {
-  display: none;
-}
-
-.works img {
-  width: 90%;
-}
-
 .work {
   width: 60%;
 }

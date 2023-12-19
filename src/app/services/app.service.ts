@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable, catchError, from, of, tap } from 'rxjs';
 import {
-  // Brandies,
   Brands,
   Carousel,
   Cars,
@@ -10,6 +10,7 @@ import {
   brand,
   category,
 } from 'src/api/cars/data';
+import { IReview } from '../directives/app-model';
 
 @Injectable({
   providedIn: 'root',
@@ -43,17 +44,18 @@ export class appService {
     return Faq;
   }
 
-  getReviews() {
-    return Reviews;
+
+  getReviews(): Observable<IReview[]> {
+    return of(Reviews).pipe(
+      tap((data) => console.log(JSON.stringify(data)))
+    );
   }
 
-  getSubReviews() {
-    return SubReviews;
+  getSubReviews(): Observable<IReview[]> {
+    return of(SubReviews)
   }
 
   getCarousel() {
     return Carousel;
   }
 }
-
-

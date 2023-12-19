@@ -8,20 +8,14 @@ import { appService } from 'src/app/services/app.service';
   styleUrls: ['./car-detail-page.component.css'],
 })
 export class CarDetailPageComponent {
-
   car: any;
-
 
   constructor(private appservice: appService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.car = this.appservice.getCar(
-      this.route.snapshot.params['carID']
-    );
-    console.log(this.car.img);
+    this.car = this.appservice.getCar(this.route.snapshot.params['carID']);
 
-
-    // get the name from the car sub 
+    // get the name from the car sub
     //displayed in the brand page and use it as the query for searching the cars
 
     // create interface for brand and cars with the new data.
