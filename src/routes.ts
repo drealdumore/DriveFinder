@@ -6,6 +6,7 @@ import { CarDetailPageComponent } from './app/pages/car-detail-page/car-detail-p
 import { Error404Component } from './app/components/404.component';
 import { AuthComponent } from './app/components/auth/auth.component';
 import { TrustSafetyComponent } from './app/pages/trust-safety/trust-safety.component';
+import { WeddingComponent } from './app/pages/wedding/wedding.component';
 
 export const appRoutes: Routes = [
   { path: 'authentication', component: AuthComponent },
@@ -13,6 +14,7 @@ export const appRoutes: Routes = [
   { path: 'brand/:brandID/:carID', component: CarDetailPageComponent }, // route to product page
   { path: 'how-drivefinder-works', component: HowItWorksComponent },
   { path: 'trust-&-safety', component: TrustSafetyComponent },
+  { path: 'rentals/weddings', component: WeddingComponent },
   { path: '', component: HomepageComponent, pathMatch: 'full' },
   { path: '**', component: Error404Component },
   // { path: '404', component: Error404Component },

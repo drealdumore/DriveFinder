@@ -1,0 +1,110 @@
+<div class="flex__center">
+  <div class="three-grid">
+    <article class="grid-item" *ngFor="let category of categories">
+      <div class="img-box">
+        <img [src]="category.img" [alt]="category.text" />
+      </div>
+      <h2 class="heading">{{ category.text }}</h2>
+      <p>
+        {{ category.content }}
+      </p>
+    </article>
+  </div>
+</div>
+
+<section style="padding-bottom: 2rem">
+  <section-heading>
+    Upgrade your wedding car
+    <p class="small">
+      Elevate your ceremony exit game and find that just-right wedding whip to
+      match your style.
+    </p>
+  </section-heading>
+
+  <div class="flex__center">
+    <div class="three-grid">
+      <article class="item">
+        <h2>Endless options</h2>
+        <p>
+          From classic beauties to extravagant head-turners, choose from
+          thousands of unique cars you won't find anywhere else.
+        </p>
+      </article>
+      <article class="item">
+        <h2>Convenient delivery options</h2>
+        <p>
+          Book ahead and get your car delivered when you need it - many hosts
+          offer delivery to custom locations or popular points of interest like
+          hotels.
+        </p>
+      </article>
+      <article class="item">
+        <h2>You're covered</h2>
+        <p>
+          Keep your big day worry-free. Choose a protection plan that's right
+          for you, and get 24/7 support and roadside assistance included.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom: 2rem">
+  <section-heading>
+    What newlyweds are saying
+    <p class="small">Making wedding day extra memorable</p>
+  </section-heading>
+
+  <div class="flex__center">
+    <div class="two-grid">
+      <article class="grid-item">
+        <div class="img-box">
+          <img src="./assets/img/resources/galaxie.png" alt="" />
+        </div>
+        <stars></stars>
+        <h2 class="heading">Christopher's 1962 Ford Galaxie</h2>
+        <p>
+          Christopher was super nice! Responded so fast to our emails and
+          questions! He was so easy to deal with. My fiancé (husband now) and I
+          used used his car for our wedding day! We got so many compliments...
+        </p>
+      </article>
+      <article class="grid-item">
+        <div class="img-box">
+          <img src="./assets/img/resources/eldorado.png" alt="" />
+        </div>
+        <stars></stars>
+        <h2 class="heading">Khalid's 1976 Cadillac Eldorado</h2>
+        <p>
+          I booked Khalid's car for my getaway car for my wedding. It was
+          seriously one of the best decisions we made for our wedding plans. It
+          was a hit and ended up being the focal point of our wedding...
+        </p>
+      </article>
+      <article class="grid-item">
+        <div class="img-box">
+          <img src="./assets/img/resources/ferrari.png" alt="" />
+        </div>
+        <stars></stars>
+        <h2 class="heading">Jeff's 2007 Ferrari F430</h2>
+        <p>
+          This make my wedding barat amazing!! This car is beautiful and well
+          taken care of car. It was a dream to drive this car and it was a best
+          experiences I could have had. This car is awesome !!!
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom: 2rem">
+  <section-heading>
+    Your chariot awaits
+    <p class="small">
+      Book the perfect car rental alternative for your ceremony getaway
+    </p>
+  </section-heading>
+  <span class="flex__center" style="padding: 3rem 0">
+    <button><a href="/">Drive Now</a></button>
+  </span>
+</section>

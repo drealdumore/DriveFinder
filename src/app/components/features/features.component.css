@@ -146,12 +146,12 @@ article h3 {
 
 article p {
   margin: 0;
-  text-wrap: pretty;
-  background: linear-gradient(hsl(0 0% 80%), hsl(0 0% 50%));
-  color: transparent;
+  /* text-wrap: pretty; */
+  /* background: linear-gradient(hsl(0 0% 80%), hsl(0 0% 50%));
+  color: transparent; */
   color: hsl(0 0% 80%);
-  background-clip: text;
-  font-weight: 80;
+  /* background-clip: text;
+  font-weight: 80; */
 }
 
 article svg {

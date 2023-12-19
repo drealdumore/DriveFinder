@@ -41,6 +41,9 @@ import { environment } from 'src/environments/environment';
 import { ToastrModule } from 'ngx-toastr';
 import { TrustSafetyComponent } from './pages/trust-safety/trust-safety.component';
 import { SafetyComponent } from './components/safety/safety.component';
+import { WeddingComponent } from './pages/wedding/wedding.component';
+import { WeddingsComponent } from './components/weddings/weddings.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +78,9 @@ import { SafetyComponent } from './components/safety/safety.component';
     AuthComponent,
     TrustSafetyComponent,
     SafetyComponent,
+    WeddingComponent,
+    WeddingsComponent,
+    LoaderComponent,
     
   ],
   imports: [

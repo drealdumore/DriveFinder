@@ -8,7 +8,7 @@ import { IFaq } from '../../directives/app-model';
 })
 export class TrustSafetyComponent {
   title: string = 'Travel safely';
-  backgroundImg: string = 'assets/img/resources/trust-&-safety.jpeg';
+  backgroundImg: string = 'assets/img/resources/reading-map.jpg';
 
   faq: IFaq[] = [];
 

@@ -2710,14 +2710,20 @@ export const Faq: IFaq[] = [
 ];
 
 export const category = [
-  { img: './assets/img/categories/category__classic.jpg', text: 'Classic' },
+  {
+    img: './assets/img/categories/category__classic.jpg',
+    text: 'Classics',
+    content: 'Class up your escape with an elegant vintage wedding car',
+  },
   {
     img: './assets/img/categories/category__convertible.jpg',
     text: 'Convertible',
+    content: 'Ride off into the sunset in an epic drop top',
   },
   {
     img: './assets/img/categories/category__exotic.jpg',
     text: 'Exotic & Luxury',
+    content: 'Finish with a dramatic splash in a super swanky exotic',
   },
   { img: './assets/img/categories/category__suv.jpg', text: 'SUVs' },
   { img: './assets/img/categories/category__trucks.jpg', text: 'Trucks' },
@@ -3429,7 +3435,6 @@ export const Users: IUser[] = [
 //     ],
 //   },
 // ];
-
 
 export const Booking: IBooking = {
   startDate: '11/06/2023',
