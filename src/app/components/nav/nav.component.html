@@ -1,14 +1,9 @@
 <div class="nav">
   <a href="/">
-
-    <img
-      src="../assets/img/logos/logo.png"
-      alt="logo"
-      class="logo"
-    />
+    <img src="../assets/img/logos/logo.png" alt="logo" class="logo" />
   </a>
 
-  <nav class="top__nav">
+  <nav class="top__nav" *ngIf="!isAuthenticated">
     <ul>
       <li class="link" routerLinkActive="nav__active">
         <a href="">About Us</a>
@@ -26,10 +21,23 @@
     </ul>
   </nav>
 
-  <button class="top__nav--btn">
-    <a href="/authentication">Drive Now</a>
+  <button class="top__nav--btn" (click)="openModal()" *ngIf="!isAuthenticated">
+    Drive Now
   </button>
+
+  <div class="img-box" (click)="Sub = true">
+    <img src="/assets/img/icons/user.svg" alt="" />
+  </div>
 </div>
+
+<div class="sub" *ngIf="Sub">
+  <user-sub></user-sub>
+  <!-- fix the toggle or use the modal servic so that when i click on anywhere apart from it, it closes -->
+</div>
+
+<!-- <auth *ngIf="modalService.modalState$ | async" ></auth> -->
+<auth *ngIf="(modalService.modalState$ | async) && !isAuthenticated"></auth>
 
 <!-- hide nav items and button when logged in. it can be displayed 
 under the dropdown of the user gmail pic -->
+

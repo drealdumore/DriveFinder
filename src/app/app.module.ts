@@ -43,7 +43,9 @@ import { TrustSafetyComponent } from './pages/trust-safety/trust-safety.componen
 import { SafetyComponent } from './components/safety/safety.component';
 import { WeddingComponent } from './pages/wedding/wedding.component';
 import { WeddingsComponent } from './components/weddings/weddings.component';
-import { LoaderComponent } from './components/loader/loader.component';
+import { LoaderComponent } from './loader/loader.component';
+import { UserMainComponent } from './components/user-main/user-main.component';
+import { UserSubComponent } from './components/user-sub/user-sub.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +83,8 @@ import { LoaderComponent } from './components/loader/loader.component';
     WeddingComponent,
     WeddingsComponent,
     LoaderComponent,
+    UserSubComponent,
+    UserMainComponent,
     
   ],
   imports: [

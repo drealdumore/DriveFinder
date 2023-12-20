@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
               <text x="50%" y="50%" dy=".35em" text-anchor="middle">404</text>
             </svg>
           </div>
-          <p>Sorry, we are still working on this page😞</p>
-          <a routerLink="/playlist" class="btn-404">
+          <p>Sorry, we couldn't find the page you're looking for 😞</p>
+          <a routerLink="/" class="btn-404">
             <span class="btn-text">Go Back to App</span>
           </a>
         </div>
@@ -46,7 +46,7 @@ import { Component } from '@angular/core';
         margin-bottom: 2rem;
       }
       .btn-text {
-        z-index: 1000;
+        z-index: 10;
         position: relative;
       }
       .btn-404 {
@@ -59,25 +59,6 @@ import { Component } from '@angular/core';
         border-radius: 10px;
       }
 
-      .btn-404::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 2px;
-        background-color: var(--color-black);
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 0.4s;
-        border-radius: 10px;
-      }
-
-      .btn-404:hover::before {
-        transform: scaleY(1);
-        width: 100%;
-        border-radius: 10px;
-      }
 
       h1 {
         font-size: 4rem;

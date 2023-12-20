@@ -46,9 +46,10 @@ export class appService {
 
 
   getReviews(): Observable<IReview[]> {
-    return of(Reviews).pipe(
-      tap((data) => console.log(JSON.stringify(data)))
-    );
+    return of(Reviews)
+    // return of(Reviews).pipe(
+    //   tap((data) => console.log(JSON.stringify(data)))
+    // );
   }
 
   getSubReviews(): Observable<IReview[]> {

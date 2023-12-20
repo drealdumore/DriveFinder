@@ -17,9 +17,8 @@ export class HomepageComponent {
   constructor(private appService: appService) {}
 
   ngOnInit(): void {
-    this.reviews$ = this.appService.getReviews().pipe(tap(data => console.log(data)
-    ))
-    
+    this.reviews$ = this.appService.getReviews();
+
     this.categorizedCars = this.appService.getCategories();
     this.filteredCars = this.appService.getbrandcategory();
   }

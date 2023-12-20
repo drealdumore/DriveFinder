@@ -9,7 +9,6 @@ import { TrustSafetyComponent } from './app/pages/trust-safety/trust-safety.comp
 import { WeddingComponent } from './app/pages/wedding/wedding.component';
 
 export const appRoutes: Routes = [
-  { path: 'authentication', component: AuthComponent },
   { path: 'brand/:brandID', component: BrandPageComponent }, // route to brand page // drivefinder/rent/brand
   { path: 'brand/:brandID/:carID', component: CarDetailPageComponent }, // route to product page
   { path: 'how-drivefinder-works', component: HowItWorksComponent },

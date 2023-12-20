@@ -8,6 +8,7 @@ import {
 import { ToastrService } from 'ngx-toastr';
 import { debounceTime } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
+import { ModalService } from 'src/app/services/modal.service';
 
 function passwordMatcher(password: string, confirmPassword: string) {
   return function (form: AbstractControl) {
@@ -22,7 +23,7 @@ function passwordMatcher(password: string, confirmPassword: string) {
 }
 
 @Component({
-  selector: 'app-auth',
+  selector: 'auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css'],
 })
@@ -32,8 +33,6 @@ export class AuthComponent {
   loginForm!: FormGroup;
   errorMessage: string = '';
   showPassword: boolean = false;
-  passwordMessage: string = '';
-  emailMessage: string = '';
 
   loginPasswordMessage: string = '';
   loginEmailMessage: string = '';
@@ -55,8 +54,13 @@ export class AuthComponent {
   constructor(
     private fb: FormBuilder,
     private auth: AuthService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private modalService: ModalService
   ) {}
+
+  close() {
+    this.modalService.closeModal();
+  }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -76,65 +80,92 @@ export class AuthComponent {
       ],
     });
 
-    this.subscribeToPasswordChanges(this.signupForm);
-    this.subscribeToPasswordChanges(this.loginForm);
+    this.subscribeTosignupPasswordChanges(this.signupForm);
+    this.subscribeTologinPasswordChanges(this.loginForm);
 
-    // this.subscribeToEmailChanges(this.signupForm);
-    // this.subscribeToEmailChanges(this.loginForm);
-
-    this.subscribeToEmailChanges(this.signupForm, 'email');
-    this.subscribeToEmailChanges(this.loginForm, 'email');
+    this.subscribeTosignupEmailChanges(this.signupForm);
+    this.subscribeTologinEmailChanges(this.loginForm);
   }
 
-  private setPasswordMessage(c: AbstractControl): void {
-    this.passwordMessage = '';
+  // Password messages
+  private setloginPasswordMessage(c: AbstractControl): void {
+    this.loginPasswordMessage = '';
     if ((c.touched || c.dirty) && c.errors) {
-      this.passwordMessage = Object.keys(c.errors)
+      this.loginPasswordMessage = Object.keys(c.errors)
         .map((key) => this.passwordValidationMessages[key])
         .join(' ');
     }
   }
 
-  private setEmailMessage(c: AbstractControl): void {
-    this.emailMessage = '';
+  private setsignupPasswordMessage(c: AbstractControl): void {
+    this.signupPasswordMessage = '';
     if ((c.touched || c.dirty) && c.errors) {
-      this.emailMessage = Object.keys(c.errors)
+      this.signupPasswordMessage = Object.keys(c.errors)
+        .map((key) => this.passwordValidationMessages[key])
+        .join(' ');
+    }
+  }
+
+  // Email messages
+  private setloginEmailMessage(c: AbstractControl): void {
+    this.loginEmailMessage = '';
+    if ((c.touched || c.dirty) && c.errors) {
+      this.loginEmailMessage = Object.keys(c.errors)
         .map((key) => this.emailValidationMessages[key])
         .join(' ');
     }
   }
 
-  private subscribeToPasswordChanges(form: FormGroup): void {
+  private setsignupEmailMessage(c: AbstractControl): void {
+    this.signupEmailMessage = '';
+    if ((c.touched || c.dirty) && c.errors) {
+      this.signupEmailMessage = Object.keys(c.errors)
+        .map((key) => this.emailValidationMessages[key])
+        .join(' ');
+    }
+  }
+
+  private subscribeTologinPasswordChanges(form: FormGroup): void {
     const passwordControl = form.get('password');
     if (passwordControl) {
       passwordControl.valueChanges
         .pipe(debounceTime(500))
         .subscribe((value) => {
-          this.setPasswordMessage(passwordControl);
+          this.setloginPasswordMessage(passwordControl);
         });
     }
   }
 
-  // private subscribeToEmailChanges(form: FormGroup): void {
-  //   const emailControl = form.get('email');
-  //   // change this so it will get the value like signupupform.get('email)
-  //   if (emailControl) {
-  //     emailControl.valueChanges.pipe(debounceTime(500)).subscribe((value) => {
-  //       this.setEmailMessage(emailControl);
-  //     });
-  //   }
-  // }
+  private subscribeTosignupPasswordChanges(form: FormGroup): void {
+    const passwordControl = form.get('password');
+    if (passwordControl) {
+      passwordControl.valueChanges
+        .pipe(debounceTime(500))
+        .subscribe((value) => {
+          this.setsignupPasswordMessage(passwordControl);
+        });
+    }
+  }
 
-  private subscribeToEmailChanges(form: FormGroup, controlName: string): void {
-    const emailControl = form.get(controlName);
-
+  private subscribeTologinEmailChanges(form: FormGroup): void {
+    const emailControl = form.get('email');
     if (emailControl) {
       emailControl.valueChanges.pipe(debounceTime(500)).subscribe((value) => {
-        this.setEmailMessage(emailControl);
+        this.setloginEmailMessage(emailControl);
       });
     }
   }
 
+  private subscribeTosignupEmailChanges(form: FormGroup): void {
+    const emailControl = form.get('email');
+    if (emailControl) {
+      emailControl.valueChanges.pipe(debounceTime(500)).subscribe((value) => {
+        this.setsignupEmailMessage(emailControl);
+      });
+    }
+  }
+
+  // to change between signup form or login form
   authToggleFn() {
     this.authToggle = !this.authToggle;
   }
@@ -217,4 +248,43 @@ export class AuthComponent {
         this.toastr.error(this.errorMessage);
       });
   }
+
+  // private subscribeToEmailChanges(form: FormGroup): void {
+  //   const emailControl = form.get('email');
+  //   // change this so it will get the value like signupupform.get('email)
+  //   if (emailControl) {
+  //     emailControl.valueChanges.pipe(debounceTime(500)).subscribe((value) => {
+  //       this.setEmailMessage(emailControl);
+  //     });
+  //   }
+  // }
+
+  // private setEmailMessage(c: AbstractControl): void {
+  //   this.emailMessage = '';
+  //   if ((c.touched || c.dirty) && c.errors) {
+  //     this.emailMessage = Object.keys(c.errors)
+  //       .map((key) => this.emailValidationMessages[key])
+  //       .join(' ');
+  //   }
+  // }
+
+  // private setPasswordMessage(c: AbstractControl): void {
+  //   this.passwordMessage = '';
+  //   if ((c.touched || c.dirty) && c.errors) {
+  //     this.passwordMessage = Object.keys(c.errors)
+  //       .map((key) => this.passwordValidationMessages[key])
+  //       .join(' ');
+  //   }
+  // }
+
+  // private subscribeToPasswordChanges(form: FormGroup): void {
+  //   const passwordControl = form.get('password');
+  //   if (passwordControl) {
+  //     passwordControl.valueChanges
+  //       .pipe(debounceTime(500))
+  //       .subscribe((value) => {
+  //         this.setPasswordMessage(passwordControl);
+  //       });
+  //   }
+  // }
 }

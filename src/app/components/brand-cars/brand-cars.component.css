@@ -15,6 +15,7 @@
   width: 16rem;
   height: 18rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .img__box {
