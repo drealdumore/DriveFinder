@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, catchError, from, of, tap } from 'rxjs';
+import { Observable, map, of, tap } from 'rxjs';
 import {
   Brands,
   Carousel,
@@ -10,53 +10,67 @@ import {
   brand,
   category,
 } from 'src/api/cars/data';
-import { IReview } from '../directives/app-model';
+import {
+  IBrand,
+  ICarousel,
+  ICars,
+  IFaq,
+  IReview,
+  SortItem,
+} from '../directives/app-model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class appService {
-  getBrands(id: any) {
+  getBrand(id: any): Observable<IBrand> {
     const lowerCaseId = id.toLowerCase();
-    return Brands.find(
-      (brand) => brand.brandName.toLowerCase() === lowerCaseId
+    return of(Brands).pipe(
+      map(
+        (brands) =>
+          brands.find((brand) => brand.brandName.toLowerCase() === lowerCaseId)!
+      )
     );
   }
 
-  getCars() {
-    return Cars;
-  }
-
-  getCar(id: any) {
+  getCategory(id: any): Observable<ICars> {
     const lowerCaseId = id.toLowerCase();
-    return Cars.find((car) => car.id.toLowerCase() === lowerCaseId);
+    return of(Cars).pipe(
+      map(
+        (cars) =>
+          cars.find((car) => car.category.toLowerCase() === lowerCaseId)!
+      )
+    );
   }
 
-  getbrandcategory() {
-    return brand;
+  getCar(id: any): Observable<ICars> {
+    const lowerCaseId = id.toLowerCase();
+    return of(Cars).pipe(
+      map((cars) => cars.find((car) => car.id.toLowerCase() === lowerCaseId)!)
+    );
   }
 
-  getCategories() {
-    return category;
+  getBrandcategory(): Observable<SortItem[]> {
+    return of(brand);
   }
 
-  getFaq() {
-    return Faq;
+  getCategories(): Observable<SortItem[]> {
+    return of(category);
   }
 
+  getFaq(): Observable<IFaq[]> {
+    return of(Faq);
+  }
 
   getReviews(): Observable<IReview[]> {
-    return of(Reviews)
-    // return of(Reviews).pipe(
-    //   tap((data) => console.log(JSON.stringify(data)))
-    // );
+    return of(Reviews);
   }
 
   getSubReviews(): Observable<IReview[]> {
-    return of(SubReviews)
+    return of(SubReviews);
   }
 
-  getCarousel() {
-    return Carousel;
+  getCarousel(): Observable<ICarousel[]> {
+    return of(Carousel);
   }
 }

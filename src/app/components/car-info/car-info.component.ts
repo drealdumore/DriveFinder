@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ICars } from 'src/app/directives/app-model';
 
 @Component({
   selector: 'car-info',
@@ -6,5 +7,5 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./car-info.component.css'],
 })
 export class CarInfoComponent {
-  @Input() car: any;
+  @Input() car: ICars | null | undefined;
 }

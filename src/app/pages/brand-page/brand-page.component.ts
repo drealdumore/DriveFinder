@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { IBrand, IFaq } from 'src/app/directives/app-model';
 import { appService } from 'src/app/services/app.service';
 
@@ -9,17 +9,21 @@ import { appService } from 'src/app/services/app.service';
   styleUrls: ['./brand-page.component.css'],
 })
 export class BrandPageComponent implements OnInit {
-  brands: IBrand[] = [];
   backgroundImg: string = '';
   faq: IFaq[] = [];
-  brand: any;
-  
+  brand: IBrand | undefined;
+
   constructor(private appservice: appService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.brand = this.appservice.getBrands(
-      this.route.snapshot.params['brandID']
+    const brandID = this.route.snapshot.params['brandID'];
+    this.appservice.getBrand(brandID).subscribe(
+      (brand) => {
+        this.brand = brand;
+      },
+      (error) => {
+        console.error('Error loading brand:', error);
+      }
     );
   }
-
 }

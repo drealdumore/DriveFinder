@@ -13,12 +13,12 @@ export class HowItWorksComponent implements OnInit {
   title: string = 'How DriveFinder works';
   backgroundImg: string = 'assets/img/bmw/bmw-main.jpg';
 
-  faq: IFaq[] = [];
+  faq$: Observable<IFaq[]> | undefined;
 
   constructor(private appService: appService) {}
 
   ngOnInit(): void {
     this.reviews$ = this.appService.getSubReviews();
-    this.faq = this.appService.getFaq();
+    this.faq$ = this.appService.getFaq();
   }
 }

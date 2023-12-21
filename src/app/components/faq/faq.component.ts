@@ -1,14 +1,14 @@
 import { Component, Input } from '@angular/core';
-import { appService } from '../../services/app.service';
 import { IFaq } from '../../directives/app-model';
 
 @Component({
-  selector: 'app-faq',
+  selector: 'faq',
   templateUrl: './faq.component.html',
   styleUrls: ['./faq.component.css'],
 })
 export class FaqComponent {
-  @Input() items: IFaq[] | undefined;
+  @Input()
+  items: IFaq[] | null | undefined= [];
 
   toggleAccordion(index: number): void {
     if (this.items) {
@@ -20,9 +20,5 @@ export class FaqComponent {
         }
       });
     }
-  }
-
-  constructor(private appService: appService) {
-    this.items = this.appService.getFaq();
   }
 }

@@ -117,8 +117,6 @@ label {
 
 .error-span span {
   color: var(--color-error);
-  /* position: absolute;
-  right: 0rem; */
   text-align: center;
   font-size: 12px;
   bottom: 5.6rem;

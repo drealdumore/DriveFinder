@@ -217,3 +217,9 @@ export interface IBrandCars {
     detail: number;
   };
 }
+
+export interface SortItem {
+  img: string;
+  text: string;
+  content?: string; 
+}

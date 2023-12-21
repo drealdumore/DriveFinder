@@ -1,15 +1,14 @@
-<section class="box">
+<section class="box" *ngIf="car">
   <main>
     <div class="brand">
       <h2>{{ car.name }}</h2>
-      <p>{{ car.brandName }}</p>
-
     </div>
     <div class="stars">
-      <p class="star_p">{{car.rating}}<span><i class="bx bxs-star"></i></span>
+      <p class="star_p">
+        {{ car.rating }}<span><i class="bx bxs-star"></i></span>
       </p>
     </div>
-    <div class="four-grid" >
+    <div class="four-grid">
       <div class="plus-icon" *ngFor="let detail of car.topDetails">
         <img [src]="detail.icon" [alt]="detail.type" />
         <p>{{ detail.detail }}</p>
@@ -23,7 +22,7 @@
       </p>
     </div>
 
-    <div class="features" >
+    <div class="features">
       <p class="bold">Features</p>
       <div class="two-grid">
         <div class="plus-icon item" *ngFor="let feature of car.features">
@@ -43,7 +42,7 @@
       <p class="description">{{ car.description.guidelines }}</p>
     </div>
 
-    <div class="rating" >
+    <div class="rating">
       <p class="bold">rating</p>
       <div class="container">
         <div class="skill-box" *ngFor="let rating of car.ratingsAndReviews">
@@ -94,10 +93,10 @@
       </div>
     </div>
   </main>
-  <booking [car]="this.car" ></booking>
+  <booking [car]="this.car"></booking>
 </section>
 
-<div class="modal">
+<div class="modal" *ngIf="car">
   <div class="card">
     <span class="close">&times;</span>
     <h2>{{ car.description.deluxeClass.title }}</h2>

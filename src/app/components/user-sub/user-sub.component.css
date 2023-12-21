@@ -43,7 +43,7 @@ article {
 
 .icon {
   height: 1.4rem;
-  background: var(--color-white);
+  /* background: var(--color-white); */
   padding: 4px;
   border-radius: 50px;
   border: 1px solid transparent;

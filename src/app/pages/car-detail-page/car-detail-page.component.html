@@ -1,3 +1,2 @@
-<!-- <carousel-main [images]="car.img" [autoSlide]="false"></carousel-main> -->
-<carousel-main [images]="car.img"></carousel-main>
-<car-info [car]="this.car"></car-info>
+<carousel-main *ngIf="car$ | async as car" [images]="car.img"></carousel-main>
+<car-info [car]="car$ | async"></car-info>

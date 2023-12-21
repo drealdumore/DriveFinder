@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { SortItem } from 'src/app/directives/app-model';
 
 @Component({
   selector: 'category',
@@ -6,6 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./category.component.css'],
 })
 export class CategoryComponent {
-  @Input() categories: any[] = [];
-  @Input() category: string = '';
+  @Input() categories: SortItem[] | null = [];
 }

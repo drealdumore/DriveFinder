@@ -25,15 +25,19 @@
     Drive Now
   </button>
 
-  <div class="img-box" (click)="Sub = true">
+  <!-- <div class="img-box" > -->
+  <div class="img-box" (click)="Sub = true" *ngIf="isAuthenticated">
     <img src="/assets/img/icons/user.svg" alt="" />
   </div>
 </div>
 
-<div class="sub" *ngIf="Sub">
+<!-- <div class="sub" *ngIf="Sub && isAuthenticated"> -->
+<div class="sub" *ngIf="isAuthenticated">
   <user-sub></user-sub>
   <!-- fix the toggle or use the modal servic so that when i click on anywhere apart from it, it closes -->
 </div>
+
+<!-- <user-main></user-main> -->
 
 <!-- <auth *ngIf="modalService.modalState$ | async" ></auth> -->
 <auth *ngIf="(modalService.modalState$ | async) && !isAuthenticated"></auth>

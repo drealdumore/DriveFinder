@@ -1,5 +1,5 @@
 <div class="flex__center">
-  <div class="three-grid">
+  <div class="three-grid" *ngIf="categories$ | async as categories">
     <article class="grid-item" *ngFor="let category of categories">
       <div class="img-box">
         <img [src]="category.img" [alt]="category.text" />

@@ -20,7 +20,9 @@ import {
   IBrand,
   IBooking,
   ICars,
+  SortItem,
 } from 'src/app/directives/app-model';
+
 
 export const Cars: ICars[] = [
   {
@@ -621,14 +623,14 @@ export const Cars: ICars[] = [
     ],
 
     img: [
-      './assets/img/bmw/BMW i8 2019-1.jpg',
-      './assets/img/bmw/BMW i8 2019-2.jpg',
-      './assets/img/bmw/BMW i8 2019-3.jpg',
-      './assets/img/bmw/BMW i8 2019-4.jpg',
-      './assets/img/bmw/BMW i8 2019-5.jpg',
-      './assets/img/bmw/BMW i8 2019-6.jpg',
-      './assets/img/bmw/BMW i8 2019-7.jpg',
-      './assets/img/bmw/BMW i8 2019-8.jpg',
+      './assets/img/bmw/BMW Z4 2020-1.jpg',
+      './assets/img/bmw/BMW Z4 2020-2.jpg',
+      './assets/img/bmw/BMW Z4 2020-3.jpg',
+      './assets/img/bmw/BMW Z4 2020-4.jpg',
+      './assets/img/bmw/BMW Z4 2020-5.jpg',
+      './assets/img/bmw/BMW Z4 2020-6.jpg',
+      './assets/img/bmw/BMW Z4 2020-7.jpg',
+      './assets/img/bmw/BMW Z4 2020-8.jpg',
     ],
 
     reviews: [
@@ -2709,7 +2711,7 @@ export const Faq: IFaq[] = [
   },
 ];
 
-export const category = [
+export const category:SortItem[] = [
   {
     img: './assets/img/categories/category__classic.jpg',
     text: 'Classics',
@@ -2729,7 +2731,7 @@ export const category = [
   { img: './assets/img/categories/category__trucks.jpg', text: 'Trucks' },
 ];
 
-export const brand = [
+export const brand:SortItem[] = [
   { img: './assets/img/benz/benz-main.jpg', text: 'Benz' },
   { img: './assets/img/bmw/bmw-main.jpg', text: 'Bmw' },
   { img: './assets/img/lexus/lexus-main.jpg', text: 'Lexus' },
@@ -2956,486 +2958,6 @@ export const Users: IUser[] = [
   },
 ];
 
-// export const Brands: IBrands[] = [
-//   {
-//     brandName: 'BMW',
-//     backgroundImg: './assets/img/bmw/bmw-main.jpg',
-//     curvedImg: './assets/img/bmw/curved-bmw.jpg',
-//     brandDetail: {
-//       description: {
-//         title: 'Drive a BMW',
-//         p: 'Refined sports-luxury cars',
-//         main1:
-//           'No automaker creates luxury vehicles that are equally elegant and fun to drive like BMW does. That’s why they’re a leader among German luxury brands.',
-//         main2:
-//           'Featuring hardcore track coupes, full-size luxury sedans, and capable SUVs, the BMW model range is diverse. Regardless, all BMW cars are responsive, stylish, and high-tech — BMW claims to build the ultimate driving machine, with good reason. Book a BMW on DriveFinder for a proper Bimmer experience that will elevate any quick day trip to the next level.',
-//       },
-//       features: [
-//         {
-//           title: 'Responsive performance',
-//           content:
-//             'BMW brings you a connected, involved experience few other cars can match. Steering is direct, response from the pedals is immediate, and overall composure is excellent. Even a few minutes of driving a BMW makes it clear it’s not just an average car.',
-//         },
-//         {
-//           title: 'Superb quality',
-//           content:
-//             'BMW build quality is outstanding. There’s a solidity to BMW cars that’s clear whether you’re one with the interior or admiring from the outside. Materials are well-appointed and German engineering is at its best, giving confidence for any driving occasion.',
-//         },
-//         {
-//           title: 'Diverse options',
-//           content:
-//             'The BMW lineup continues to grow and diversify. BMW has luxury convertibles, crossovers, coupes, sedans, and wagons to choose from. That means no matter what you need a car for, you’ll be able to find a BMW for a comfortable ride.',
-//         },
-//       ],
-//       button: 'Book a BMW today',
-//       legend: {
-//         img: './assets/img/bmw/bmw-main.jpg',
-//         content: 'Feel legendary BMW performance',
-//         p: 'With decades of experience, BMW builds cars that are far from ordinary. Whether you drive a practical BMW SUV or powerful BMW M car, you’ll be able to tell why BMW is known for luxury road performance. Find the best BMW rental alternatives to drive on DriveFinder if you want to try a fun daily driver, sporty crossover, or luxury convertible — BMW has a car for any occasion.',
-//       },
-//       top: {
-//         heading: 'Top rated BMW',
-//         top: 'Top BMW models',
-//         button: 'Drive a BMW',
-//         topCars: [
-//           {
-//             name: 'BMW 3 Series',
-//             content:
-//               'The BMW 3 Series might be the world’s best sports sedan. All 3 Series models place an emphasis on driver experience, along with the size and practicality that makes them a superior choice. Whether you drive a BMW M3 or any other 3 Series model, you’ll know why it’s always been such a popular car.',
-//           },
-//           {
-//             name: 'BMW X5',
-//             content:
-//               'The BMW X5 is the luxury SUV that started it all. It’s got the sporty credentials that make it a genuine BMW, plus capability and practicality for all of life’s needs. The BMW X5’s cargo capacity and all-wheel drive make it a great choice for family trips or a solo journey.',
-//           },
-//           {
-//             name: 'BMW Z4',
-//             content:
-//               'Slide into a BMW Z4 and experience a roadster like no other. It’s an iconic model that exudes BMW’s philosophy of performance and sophistication impeccably. Mind-blowing aerodynamics and a turbocharged engine give new meaning to the word cruising from behind the wheel of this luxury sports car.',
-//           },
-//         ],
-//       },
-//     },
-
-//     brandReviews: [
-//       {
-//         username: 'Alexander C.',
-//         img: './assets/img/user2.jpg',
-//         carModel: 'BMW M8 2020',
-//         rating: 4.8,
-//         date: 'July 20, 2023',
-//         comment: 'A huge thank you to the for his amazing BMW M8.',
-//       },
-//       {
-//         username: 'David H.',
-//         img: './assets/img/user3.jpg',
-//         carModel: 'BMW 3 Series 2016',
-//         rating: 4.8,
-//         date: 'November 20, 2023',
-//         comment: 'Clean car no issues.',
-//       },
-//       {
-//         username: 'Edward H.',
-//         img: './assets/img/user1.jpg',
-//         carModel: 'BMW 4 Series 2016',
-//         rating: 4.2,
-//         date: 'August 20, 2023',
-//         comment: 'Had fun driving around Los Angeles in a BMW drop top.',
-//       },
-//     ],
-
-//     brandFaq: [
-//       {
-//         question: 'Can I extend my trip?',
-//         expanded: false,
-//         answer:
-//           'Yes! If you would like to extend your trip please modify your trip in the DriveFinder app and we will approve it right away.',
-//       },
-//       {
-//         question: 'Are there BMWs available near the airport?',
-//         expanded: false,
-//         answer:
-//           'Yes, there are BMWs available on DriveFinder at locations near airports across the US, Canada, and the UK. To save time and hassle, skip the rental car counter and have your BMW delivered to you. Set your hotel or the address of your vacation rental as your pickup location, and after arriving at your destination, take a taxi, Uber, Lyft, or shuttle service to the vehicle’s location.',
-//       },
-//       {
-//         question: 'What BMW models can I book on DriveFinder?',
-//         expanded: false,
-//         answer:
-//           'Browse a wide selection of BMW vehicles for all kinds of occasions and budgets on DriveFinder. Use the “Vehicle makes” filter to search through all available BMWs in your area, or use the “Vehicle models” filter to find a specific BMW model like the BMW 3 Series, BMW X3, BMW X6, BMW X5, BMW 7 Series, BMW Z4, and more. For the lowest prices, use the “budget-friendly” filter to browse economy options.',
-//       },
-//       {
-//         question: 'What sets BMW apart from other German luxury brands?',
-//         expanded: false,
-//         answer:
-//           'BMW, Audi, and Mercedes-Benz are the big three German luxury manufacturers, and all three brands are immensely popular around the world for producing high-quality luxury vehicles with the precision of German engineering. BMW offers a comprehensive vehicle selection across nearly every segment, from luxury SUVs, to hatchbacks, to sports cars, and even electric models in the i4, iX, and more. BMW started out producing aircraft engines, hence the stylized propeller logo. Now a staple vehicle manufacturer around the world, BMW’s bread and butter compared to the other German brands is their sports cars, particularly from BMW’s M division. The M2, M3, M4, and M5 are well-known for offering an impressive balance of usability and hard-nosed performance. These elite vehicles prioritize powerful engines and finely tuned suspensions to offer roaring on-road performance, in fitting with BMW’s slogans of “the ultimate driving machine” and “sheer driving pleasure.”',
-//       },
-
-//       {
-//         question: 'Are there discounts on weekly or monthly trips?',
-//         expanded: false,
-//         answer:
-//           'Yes, many DriveFinder hosts offer discounted prices when you book trips lasting 3+, 7+, or 30+ days. Additionally, hosts can offer “early bird” discounts for trips booked a week or more in advance. So, get the best deals and lowest rates possible by booking longer trips, at least a week in advance.',
-//       },
-//     ],
-//   },
-
-//   {
-//     brandName: 'Benz',
-//     backgroundImg: './assets/img/benz/benz-main.jpg',
-//     curvedImg: './assets/img/benz/curved-benz.jpg',
-//     brandDetail: {
-//       description: {
-//         title: 'Drive a Benz',
-//         p: 'Experience luxury and excellence',
-//         main1:
-//           'When you drive a Mercedes-Benz, it’s immediately clear you’re not in just any premium vehicle.',
-//         main2:
-//           'It’s been said that luxury is the opposite of vulgarity, and in that sense Mercedes cars epitomize the word. Everything about Mercedes — from the styling to driving experience — is smooth and elegant. Still, with industry-leading technology and performance, they’re far from old-fashioned. Explore Mercedes and book one right here on DriveFinder.',
-//       },
-//       features: [
-//         {
-//           title: 'Impressive comforts',
-//           content:
-//             'The feeling of driving a Mercedes is like no other. Anything you touch — the weight of the steering, the softness of the seats, even the click of control knobs — gives the sensation of opulence and an unmatched level of comfort. That’s the result of nearly a century of precision engineering and craftsmanship.',
-//         },
-//         {
-//           title: 'AMG muscle',
-//           content:
-//             'For all the luxury cars in the Mercedes lineup, AMG cars provide a savage contrast. The brand turns normal Mercedes vehicles into sporty, dynamic machines that are sure to thrill any driving enthusiast. Find a Mercedes-AMG rental alternative on DriveFinder to get a sense for truly powerful German engineering and performance.',
-//         },
-//         {
-//           title: 'Innovative technology',
-//           content:
-//             'Mercedes continually pushes the boundaries of what’s possible in a car. Over the years Mercedes has compiled a list of extraordinary firsts: first use of ABS, first installation of airbags, first radar cruise control system. Only time will tell what features in today’s Mercedes will spread across the auto industry.',
-//         },
-//       ],
-//       button: 'Book a Mercedes-Benz today',
-//       legend: {
-//         img: './assets/img/benz/benz-main.jpg',
-//         content: 'Experience true luxury driving',
-//         p: 'Sometimes luxury is a necessity, and a normal car simply won’t do. Whether it’s a car for a wedding, promising date, or vital business meeting, driving a Mercedes is a guaranteed way to impress. Book a Mercedes-Benz on DriveFinder for that important occasion, a leisurely day trip, or an unforgettably fun drive',
-//       },
-//       top: {
-//         heading: 'Top rated Mercedes-Benz',
-//         top: 'Top Mercedes models',
-//         button: 'Drive a Mercedes-Benz',
-//         topCars: [
-//           {
-//             name: 'Mercedes-Benz C-Class',
-//             content:
-//               'The Mercedes C-Class may be small, but shares the luxury and technology features of its larger counterparts. The C-Class sedan is the perfect size to get around town with a few passengers, or drive a C63 AMG to feel massive power in a compact body.',
-//           },
-//           {
-//             name: 'Mercedes-Benz G-Class',
-//             content:
-//               'The G-Class is Mercedes-Benz’s legendary 4x4-turned-luxury-cruiser. The boxy build of the Mercedes G-Wagon makes it instantly recognizable on roads, and it offers a wonderful experience with a smooth ride. Find a Mercedes-AMG G63 or G65 for true AMG power in a luxurious SUV.',
-//           },
-//           {
-//             name: 'Mercedes-Benz GLE-Class',
-//             content:
-//               'With enough space for family road trips or a smaller excursion, the Mercedes-Benz GLE-Class fuses sophistication and athleticism into a roomy SUV for a luxurious travel experience.',
-//           },
-//         ],
-//       },
-//     },
-
-//     brandReviews: [
-//       {
-//         username: 'Chris A.',
-//         img: './assets/img/user1.jpg',
-//         carModel: 'Mercedes-Benz C-Class 2018',
-//         rating: 4.8,
-//         date: 'June 20, 2023',
-//         comment: 'We will always use his cars for any Los Angeles trips!',
-//       },
-//       {
-//         username: 'Donna M.',
-//         img: './assets/img/user3.jpg',
-//         carModel: 'Mercedes-Benz E-Class 2016',
-//         rating: 4.8,
-//         date: 'November 20, 2023',
-//         comment: 'Thank you for making the rental process smooth and simple!',
-//       },
-//       {
-//         username: 'Luke B.',
-//         img: './assets/img/user1.jpg',
-//         carModel: 'Mercedes-Benz CLA-Class 2022',
-//         rating: 4.2,
-//         date: 'August 20, 2023',
-//         comment: 'Great car, communication was fast and easy.',
-//       },
-//     ],
-
-//     brandFaq: [
-//       {
-//         question: 'Can I extend my trip?',
-//         expanded: false,
-//         answer:
-//           'Yes! If you would like to extend your trip please modify your trip in the DriveFinder app and we will approve it right away.',
-//       },
-//       {
-//         question: 'Are there Mercedes-Benzes available near the airport?',
-//         expanded: false,
-//         answer:
-//           'Yes, there are Mercedes-Benzes available on DriveFinder at locations near airports across the US, Canada, and the UK. To save time and hassle, skip the rental car counter and have your Mercedes-Benz delivered to you. Set your hotel or the address of your vacation rental as your pickup location, and after arriving at your destination, take a taxi, Uber, Lyft, or shuttle service to the vehicle’s location.',
-//       },
-//       {
-//         question: 'What Mercedes-Benz models can I book on DriveFinder?',
-//         expanded: false,
-//         answer:
-//           'Browse a wide selection of Mercedes-Benz vehicles and Mercedes-AMG vehicles for all kinds of occasions and budgets on DriveFinder. Use the “Vehicle makes” filter to search through all available Mercedes-Benz vehicles in your area, or use the “Vehicle models” filter to find a specific Mercedes-Benz model, like the Mercedes-Benz E-Class, Mercedes-Benz C-Class, Mercedes-Benz GLE-Class, Mercedes-Benz G-Class, Mercedes-Benz E-Class, Mercedes-Benz S-Class, Mercedes-Benz GLS-Class, even an exotic vehicle like the AMG GT. For the lowest prices, use the “budget-friendly” filter to browse economy options.',
-//       },
-//       {
-//         question: 'Is there a fee to add additional drivers to my trip?',
-//         expanded: false,
-//         answer:
-//           'There is no fee or additional charge for adding a driver to your trip on DriveFinder. Only the guest who booked the trip (primary driver) can request to add drivers; DriveFinder hosts cannot do it for you. We encourage you to request to add authorized drivers before your trip starts, though guests in the US and Canada can request to add a driver while a trip is in progress with no extra charges.',
-//       },
-
-//       {
-//         question: 'Are there discounts on weekly or monthly trips?',
-//         expanded: false,
-//         answer:
-//           'Yes, many DriveFinder hosts offer discounted prices when you book trips lasting 3+, 7+, or 30+ days. Additionally, hosts can offer “early bird” discounts for trips booked a week or more in advance. So, get the best deals and lowest rates possible by booking longer trips, at least a week in advance.',
-//       },
-//     ],
-//   },
-
-//   {
-//     brandName: 'Toyota',
-//     backgroundImg: './assets/img/toyota/toyota-main.jpg',
-//     curvedImg: './assets/img/toyota/curved-toyota.jpg',
-//     brandDetail: {
-//       description: {
-//         title: 'Drive a Toyota',
-//         p: 'For all of life’s daily needs',
-//         main1:
-//           'Toyota is known around the globe for its practical, efficient, and dependable vehicles.',
-//         main2:
-//           'Japan’s #1 brand builds a wide range of sedans, sports cars, crossovers, and pickup trucks — many available in hybrid form with stellar gas mileage — that can fulfill anyone’s transport needs. Whether you’re looking for a long-term ride or a temporary replacement vehicle, a Toyota can get the job done without fuss.',
-//       },
-//       features: [
-//         {
-//           title: 'Hybrid innovation',
-//           content:
-//             'Toyota both pioneered and popularized hybrids, and remains a leader in the segment today. No longer just limited to the Prius, models with hybrid assistance have expanded across the range, meaning there’s a high-MPG version of most Toyota vehicles.',
-//         },
-//         {
-//           title: 'Budget friendly',
-//           content:
-//             'Choosing a Toyota is a proven way to keep driving costs low. Toyotas are great on gas, simple to maintain, and rank at the top of the industry in reliability. This all helps make a Toyota inexpensive to drive in both the day-to-day and the long haul, making all those happy families and high customer reviews no surprise.',
-//         },
-//         {
-//           title: 'Surprisingly entertaining',
-//           content:
-//             'No longer content with being dependable and efficient, Toyota has been making its cars more pleasurable in recent years. The results are evident in the increased agility of newer Camrys and RAV4s, and in the existence of dedicated rear-wheel-drive sports cars like the Supra and 86.',
-//         },
-//       ],
-//       button: 'Book a Toyota today',
-//       legend: {
-//         img: './assets/img/benz/toyota-main.jpg',
-//         content: 'The smart way to get to where you’re going',
-//         p: 'Toyota is among the world’s best-selling automakers, and for good reason. With legendary durability, efficiency, and safety, you can drive a Toyota to take you anywhere.',
-//       },
-//       top: {
-//         heading: 'Top rated Toyota ',
-//         top: 'Top Toyota models',
-//         button: 'Drive a Toyota ',
-//         topCars: [
-//           {
-//             name: 'Toyota Tacoma',
-//             content:
-//               'While pickup trucks with sedan underpinnings have been springing up lately, the Tacoma proudly sticks to its tough, traditional roots. With a ladder frame, rear-wheel drive, and the strong and modern V6 found on most models, this rugged truck can haul and cruise in a way the new kids can’t. Pick up a four-wheel-drive TRD model for a worry-free weekend getaway to the mountains, beach, or desert.',
-//           },
-//           {
-//             name: 'Toyota RAV4',
-//             content:
-//               'Excluding pickup trucks, this is America’s best-selling vehicle, and it’s easy to see why. An agreeable blend of competent handling, class-leading fuel efficiency (27 MPG), and useful back seat and cargo space, the Toyota RAV4 has few weaknesses as an all-around daily driver. Unique in its class, the RAV4 is also available as a hybrid (37 MPG), as well as a plug-in hybrid called the RAV4 Prime, which can go 42 miles on electric power alone.',
-//           },
-//           {
-//             name: 'Toyota Camry',
-//             content:
-//               'Camrys have always been dependable and comfortable, but try out the current generation (2018+) and you’ll find a stylish sedan with a healthy dose of agility and personality in the mix, giving the driver some enjoyment on family getaways. Its standard engine offers good performance and mileage, and this is among the last sedans to still offer a performance-boosting V6, boasting 301 horsepower. At the other end of the spectrum, the Camry Hybrid tops the class in gas mileage, scoring a lofty 47 MPG.',
-//           },
-//         ],
-//       },
-//     },
-
-//     brandReviews: [
-//       {
-//         username: 'Chris A.',
-//         img: './assets/img/user1.jpg',
-//         carModel: 'Toyota Supra 2023',
-//         rating: 4.8,
-//         date: 'June 20, 2023',
-//         comment: 'Easy street parking.',
-//       },
-//       {
-//         username: 'Donna M.',
-//         img: './assets/img/user3.jpg',
-//         carModel: 'Toyota Prius 2008',
-//         rating: 4.8,
-//         date: 'November 20, 2023',
-//         comment: 'Thank you for making the rental process smooth and simple!',
-//       },
-//       {
-//         username: 'Luke B.',
-//         img: './assets/img/user1.jpg',
-//         carModel: 'Toyota Corolla 2021',
-//         rating: 4.2,
-//         date: 'August 20, 2023',
-//         comment: 'Great car, communication was fast and easy.',
-//       },
-//     ],
-
-//     brandFaq: [
-//       {
-//         question: 'Can I extend my trip?',
-//         expanded: false,
-
-//         answer:
-//           'Yes! If you would like to extend your trip please modify your trip in the DriveFinder app and we will approve it right away.',
-//       },
-//       {
-//         question: 'Are there toyota available near the airport?',
-//         expanded: false,
-
-//         answer:
-//           'Yes, there are toyota available on DriveFinder at locations near airports across the US, Canada, and the UK. To save time and hassle, skip the rental car counter and have your Mercedes-Benz delivered to you. Set your hotel or the address of your vacation rental as your pickup location, and after arriving at your destination, take a taxi, Uber, Lyft, or shuttle service to the vehicle’s location.',
-//       },
-
-//       {
-//         question: 'Is there a fee to add additional drivers to my trip?',
-//         expanded: false,
-
-//         answer:
-//           'There is no fee or additional charge for adding a driver to your trip on DriveFinder. Only the guest who booked the trip (primary driver) can request to add drivers; DriveFinder hosts cannot do it for you. We encourage you to request to add authorized drivers before your trip starts, though guests in the US and Canada can request to add a driver while a trip is in progress with no extra charges.',
-//       },
-//       {
-//         question: 'What Toyota models can I book on DriveFinder?',
-//         expanded: false,
-
-//         answer:
-//           'Browse a wide selection of Toyota vehicles for all kinds of occasions and budgets on DriveFinder. Use the “Vehicle makes” filter to search through all available Toyota in your area, or use the “Vehicle models” filter to find a specific Toyota model like the Toyota Camry, Toyota RAV4, Toyota Highlander, Toyota Tacoma, or Toyota Sienna. For the lowest prices, use the “budget-friendly” filter to browse economy options.',
-//       },
-
-//       {
-//         question: 'Are there discounts on weekly or monthly trips?',
-//         expanded: false,
-
-//         answer:
-//           'Yes, many DriveFinder hosts offer discounted prices when you book trips lasting 3+, 7+, or 30+ days. Additionally, hosts can offer “early bird” discounts for trips booked a week or more in advance. So, get the best deals and lowest rates possible by booking longer trips, at least a week in advance.',
-//       },
-//     ],
-//   },
-
-//   {
-//     brandName: 'Lexus',
-//     backgroundImg: './assets/img/lexus/lexus-main.jpg',
-//     curvedImg: './assets/img/lexus/curved-lexus.jpg',
-//     brandDetail: {
-//       description: {
-//         title: 'Drive a Lexus',
-//         p: 'Luxurious and performance-driven vehicles',
-//         main1:
-//           'Lexus is renowned for creating luxurious and performance-driven vehicles that combine cutting-edge technology with exceptional craftsmanship. As a leader in the luxury automotive segment, Lexus offers a range of vehicles that cater to those seeking refinement and exhilarating driving experiences.',
-//         main2:
-//           "From elegant sedans to powerful SUVs, the Lexus lineup exemplifies a harmonious blend of comfort, style, and advanced features. Whether you're looking for a smooth ride for a night out or a spacious and capable SUV for a family adventure, driving a Lexus ensures you experience the epitome of automotive luxury. Explore the world of Lexus by booking one on DriveFinder and indulge in a driving experience that embodies sophistication and performance.",
-//       },
-//       features: [
-//         {
-//           title: 'Impressive comforts',
-//           content:
-//             'The feeling of driving a Lexus is like no other. Anything you touch — the weight of the steering, the softness of the seats, even the click of control knobs — gives the sensation of opulence and an unmatched level of comfort. That’s the result of nearly a century of precision engineering and craftsmanship.',
-//         },
-//         {
-//           title: 'Innovative technology',
-//           content:
-//             'Lexus continually pushes the boundaries of what’s possible in a car. Over the years Lexus has compiled a list of extraordinary firsts: first use of ABS, first installation of airbags, first radar cruise control system. Only time will tell what features in today’s Lexus will spread across the auto industry.',
-//         },
-//       ],
-//       button: 'Book a Lexus today',
-//       legend: {
-//         img: './assets/img/lexus/benz-main.jpg',
-//         content: 'Experience true luxury driving',
-//         p: 'Sometimes luxury is a necessity, and a normal car simply won’t do. Whether it’s a car for a wedding, promising date, or vital business meeting, driving a Lexus is a guaranteed way to impress. Book a Lexus on DriveFinder for that important occasion, a leisurely day trip, or an unforgettably fun drive',
-//       },
-//       top: {
-//         heading: 'Top rated Lexus',
-//         top: 'Top Lexus models',
-//         button: 'Drive a Lexus',
-//         topCars: [
-//           {
-//             name: 'Lexus ES',
-//             content:
-//               'The Lexus ES is a symbol of luxury and comfort. With its smooth ride, premium materials, and advanced technology features, the Lexus ES provides an exceptional driving experience. Ideal for those who prioritize elegance and performance in a sedan.',
-//           },
-//           {
-//             name: 'Lexus RX',
-//             content:
-//               'The Lexus RX is a popular luxury SUV known for its refined style and versatile functionality. Combining a spacious interior with advanced safety features, the Lexus RX is perfect for family adventures and daily commuting with a touch of sophistication.',
-//           },
-//           {
-//             name: 'Lexus LC',
-//             content:
-//               'Step into the Lexus LC for a thrilling coupe experience. This luxury sports car boasts a striking design and exhilarating performance. With its powerful engine and meticulously crafted interior, the Lexus LC delivers a driving experience that stands out on any road.',
-//           },
-//         ],
-//       },
-//     },
-
-//     brandReviews: [
-//       {
-//         username: 'Chris A.',
-//         img: './assets/img/user1.jpg',
-//         carModel: 'Lexus ES 2021',
-//         rating: 4.8,
-//         date: 'June 20, 2023',
-//         comment: 'The Lexus that I rented from Vitallie is amazing.',
-//       },
-//       {
-//         username: 'Donna M.',
-//         img: './assets/img/user3.jpg',
-//         carModel: 'Lexus CT 2015',
-//         rating: 4.8,
-//         date: 'November 20, 2023',
-//         comment: 'Thank you for making the rental process smooth and simple!',
-//       },
-//       {
-//         username: 'Luke B.',
-//         img: './assets/img/user1.jpg',
-//         carModel: 'Lexus ES 2023',
-//         rating: 4.2,
-//         date: 'August 20, 2023',
-//         comment: 'Movses’ Lexus ES was amazing!',
-//       },
-//     ],
-
-//     brandFaq: [
-//       {
-//         question: 'Can I extend my trip?',
-//         expanded: false,
-//         answer:
-//           'Yes! If you would like to extend your trip please modify your trip in the DriveFinder app and we will approve it right away.',
-//       },
-
-//       {
-//         question: 'Is there a fee to add additional drivers to my trip?',
-//         expanded: false,
-//         answer:
-//           'There is no fee or additional charge for adding a driver to your trip on DriveFinder. Only the guest who booked the trip (primary driver) can request to add drivers; DriveFinder hosts cannot do it for you. We encourage you to request to add authorized drivers before your trip starts, though guests in the US and Canada can request to add a driver while a trip is in progress with no extra charges.',
-//       },
-
-//       {
-//         question: 'Are there discounts on weekly or monthly trips?',
-//         expanded: false,
-//         answer:
-//           'Yes, many DriveFinder hosts offer discounted prices when you book trips lasting 3+, 7+, or 30+ days. Additionally, hosts can offer “early bird” discounts for trips booked a week or more in advance. So, get the best deals and lowest rates possible by booking longer trips, at least a week in advance.',
-//       },
-//     ],
-//   },
-// ];
-
 export const Booking: IBooking = {
   startDate: '11/06/2023',
   startTime: '10:00 AM',
@@ -3574,7 +3096,7 @@ export const Brands: IBrand[] = [
       {
         brand: 'BMW',
         id: 'kAtNYvF0',
-        category: ' classics',
+        category: 'classics',
         img: './assets/img/bmw/BMW i8 2015-2.jpg',
         name: 'BMW i8 2015',
         rating: '4.97 (90 ratings)',
@@ -3601,7 +3123,7 @@ export const Brands: IBrand[] = [
       {
         brand: 'BMW',
         id: 'kAtNYkF0',
-        category: ' car',
+        category: 'car',
         img: './assets/img/bmw/BMW i8 2019-1.jpg',
         name: 'BMW i8 2019',
         rating: '4.92 (10 ratings)',
@@ -3626,7 +3148,7 @@ export const Brands: IBrand[] = [
         name: 'BMW Z4 2020',
         id: 'bAtNYvF0',
         category: ' classics',
-        img: './assets/img/bmw/BMW i8 2019-1.jpg',
+        img: './assets/img/bmw/BMW Z4 2020-1.jpg',
         rating: '4.98 (50 ratings)',
         pricePerDay: 100,
         mpg: {
