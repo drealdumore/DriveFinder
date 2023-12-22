@@ -10,7 +10,6 @@ export class PrevDirective {
   prevFunc() {
     var elm = this.el.nativeElement.parentElement.parentElement.children[0];
     var item = elm.getElementsByClassName('item');
-    var experience = elm.getElementsByClassName('experience');
     elm.prepend(item[item.length - 1]);
   }
 }
@@ -25,7 +24,6 @@ export class NextDirective {
   nextFunc() {
     var elm = this.el.nativeElement.parentElement.parentElement.children[0];
     var item = elm.getElementsByClassName('item');
-    var experience = elm.getElementsByClassName('experience');
     elm.append(item[0]);
   }
 }

@@ -1,4 +1,4 @@
-<div class="nav">
+<div class="nav" sticky>
   <a href="/">
     <img src="../assets/img/logos/logo.png" alt="logo" class="logo" />
   </a>
@@ -8,7 +8,11 @@
       <li class="link" routerLinkActive="nav__active">
         <a href="">About Us</a>
       </li>
-      <li class="link" routerLinkActive="nav__active">
+      <li
+        class="link"
+        routerLinkActive="nav__active"
+        routerLink="/trust-&-safety"
+      >
         <a href="trust-&-safety">Trust & Safety</a>
       </li>
       <li
@@ -44,4 +48,3 @@
 
 <!-- hide nav items and button when logged in. it can be displayed 
 under the dropdown of the user gmail pic -->
-

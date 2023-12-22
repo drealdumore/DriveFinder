@@ -15,7 +15,7 @@ button {
 
 button a {
   transition: all 0.4s ease;
-  color: var(--color-ash);
+  color: #a3a3a3;
   text-decoration: none;
 }
 
@@ -38,6 +38,8 @@ button:hover {
 
 .grid-item {
   color: var(--grey-secondary);
+  color: #a3a3a3;
+  color: #d4d4d4;
   height: 10rem;
   width: 17rem;
 }

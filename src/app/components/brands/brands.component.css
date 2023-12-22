@@ -57,20 +57,39 @@
 }
 
 .sliderbtn__box {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   gap: 0.5rem;
   align-items: center;
   position: absolute;
   z-index: 1000;
   top: 4rem;
-  background: var(--bg-color-even);
+  width: 100%; */
+
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translate(-50%, -50%);
 }
 
 .sliderbtn {
+  background: var(--bg-color-even);
   color: var(--color-ash);
   font-size: 1.8rem;
-  background: none;
   border: none;
   outline: none;
   display: flex;

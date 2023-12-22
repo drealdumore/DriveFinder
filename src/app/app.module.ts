@@ -46,10 +46,12 @@ import { WeddingsComponent } from './components/weddings/weddings.component';
 import { LoaderComponent } from './loader/loader.component';
 import { UserMainComponent } from './components/user-main/user-main.component';
 import { UserSubComponent } from './components/user-sub/user-sub.component';
+import { StickyNavDirective } from './directives/sticky-nav.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
+    StickyNavDirective,
     NavComponent,
     HomepageComponent,
     OrderSucessfulPopup,

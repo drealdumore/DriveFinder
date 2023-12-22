@@ -4,24 +4,28 @@
     <span>| day</span>
   </h2>
   <div class="booking__main">
-    <div class="inputs">
-      <div class="big--input">
-        <input type="text" placeholder="Pickup location" />
+    <form [formGroup]="pickupForm">
+      <div class="inputs">
+        <div class="big--input">
+          <input type="text" placeholder="Pickup location" formControlName="pickupLocation" />
+        </div>
+        <div class="small--input">
+          <input type="time" placeholder="Pickup time" formControlName="pickupTime" />
+          <input type="date" placeholder="Pickup date" formControlName="pickupDate" />
+        </div>
       </div>
-      <div class="small--input">
-        <input type="time" placeholder="Pickup time" />
-        <input type="date" placeholder="Pickup date" />
+    </form>
+    <form [formGroup]="dropoffForm">
+      <div class="inputs">
+        <div class="big--input">
+          <input type="text" placeholder="Drop-off location" formControlName="dropoffLocation" />
+        </div>
+        <div class="small--input">
+          <input type="time" placeholder="Drop-off time" formControlName="dropoffTime" />
+          <input type="date" placeholder="Drop-off date" formControlName="dropoffDate" />
+        </div>
       </div>
-    </div>
-    <div class="inputs">
-      <div class="big--input">
-        <input type="text" placeholder="Drop-off location" />
-      </div>
-      <div class="small--input">
-        <input type="time" placeholder="Drop-off time" />
-        <input type="date" placeholder="Drop-off date" />
-      </div>
-    </div>
-    <button class="booking__btn">Continue</button>
+    </form>
+    <button class="booking__btn" (click)="submitForm()">Continue</button>
   </div>
 </div>

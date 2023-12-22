@@ -11,6 +11,8 @@ import { appService } from 'src/app/services/app.service';
 export class HomepageComponent {
   reviews$: Observable<IReview[]> | undefined;
   faq$: Observable<IFaq[]> | undefined;
+  sortByCategory: boolean = false;
+  sortByBrands: boolean = true;
 
   filteredCars$: Observable<SortItem[]> | undefined;
   categorizedCars$: Observable<SortItem[]> | undefined;

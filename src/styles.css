@@ -82,3 +82,9 @@ p {
   justify-content: center;
   align-items: center;
 }
+
+.new-nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}

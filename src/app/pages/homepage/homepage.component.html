@@ -1,12 +1,36 @@
 <header-hero> </header-hero>
 
-<section>
-  <section-heading>Explore Cars by Brands</section-heading>
+<section-heading>Explore Cars by</section-heading>
+<div class="flex__center">
+  <div class="tabs">
+    <input
+      type="radio"
+      id="radio-1"
+      name="tabs"
+      checked
+      (change)="sortByBrands = !sortByBrands; sortByCategory = !sortByBrands"
+    />
+    <label class="tab" for="radio-1">Brands</label>
+    <input
+      type="radio"
+      id="radio-2"
+      name="tabs"
+      (change)="
+        sortByCategory = !sortByCategory; sortByBrands = !sortByCategory
+      "
+    />
+    <label class="tab" for="radio-2">Category</label>
+    <span class="glider"></span>
+  </div>
+</div>
+
+<section *ngIf="sortByBrands">
+  <!-- <section-heading>Explore Cars by Brands</section-heading> -->
   <brands [brands]="filteredCars$ | async"></brands>
 </section>
 
-<section>
-  <section-heading>Explore Cars by Category</section-heading>
+<section *ngIf="sortByCategory">
+  <!-- <section-heading>Explore Cars by Category</section-heading> -->
   <category [categories]="categorizedCars$ | async"></category>
 </section>
 
