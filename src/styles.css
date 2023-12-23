@@ -37,6 +37,16 @@
   --dark-body-font-color: rgba(255, 255, 255, 0.75);
   --gray-color: #acacac;
   --bg: hsl(0 0% 2%);
+
+  --background: #fafafa;
+  --secondary-background: #f2f2f2;
+  --gray: #847f90;
+  --gray-hover: #171717;
+  --primary-hover: #555555;
+  --link-gray-hover: #171717;
+  --gray: #e1e1e1;
+  --white: #fcfcfc;
+  --navbar-height: 64px;
 }
 
 html {
@@ -87,4 +97,11 @@ p {
   position: sticky;
   top: 0;
   z-index: 2;
+}
+
+.error-span span {
+  color: var(--color-error);
+  text-align: center;
+  font-size: 12px;
+  bottom: 5.6rem;
 }

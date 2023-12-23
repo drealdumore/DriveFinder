@@ -12,8 +12,11 @@ export class BookingComponent implements OnInit {
 
   pickupForm!: FormGroup;
   dropoffForm!: FormGroup;
+  errorMessage: string = '';
+  success: boolean = false;
+  loading: boolean = false;
 
-  constructor(private fb: FormBuilder,private toastr: ToastrService) {}
+  constructor(private fb: FormBuilder, private toastr: ToastrService) {}
 
   ngOnInit(): void {
     this.pickupForm = this.fb.group({
@@ -31,11 +34,21 @@ export class BookingComponent implements OnInit {
 
   submitForm(): void {
     if (this.pickupForm?.valid && this.dropoffForm?.valid) {
+      // display the loader for sometime,
+      // then display the approved then hide booking component
+
       console.log('Pickup Form:', this.pickupForm.value);
       console.log('Drop-off Form:', this.dropoffForm.value);
+      this.loading = true;
+      
+      setTimeout(() => {
+        this.loading = false;
+        this.success = true;
+      }, 500);
     } else {
-      // Handle invalid form submission
-      console.log('Form is not valid. Please fill in all required fields.');
+      this.errorMessage =
+        'Form is not valid. Please fill in all required fields.';
     }
   }
+
 }

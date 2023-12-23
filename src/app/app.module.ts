@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NavComponent } from './components/nav/nav.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from 'src/routes';
@@ -47,12 +46,12 @@ import { LoaderComponent } from './loader/loader.component';
 import { UserMainComponent } from './components/user-main/user-main.component';
 import { UserSubComponent } from './components/user-sub/user-sub.component';
 import { StickyNavDirective } from './directives/sticky-nav.directive';
+import { NewnavComponent } from './newnav/newnav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StickyNavDirective,
-    NavComponent,
     HomepageComponent,
     OrderSucessfulPopup,
     FaqComponent,
@@ -87,6 +86,7 @@ import { StickyNavDirective } from './directives/sticky-nav.directive';
     LoaderComponent,
     UserSubComponent,
     UserMainComponent,
+    NewnavComponent,
     
   ],
   imports: [

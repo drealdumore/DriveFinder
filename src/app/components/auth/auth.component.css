@@ -115,12 +115,7 @@ label {
   gap: 5px;
 }
 
-.error-span span {
-  color: var(--color-error);
-  text-align: center;
-  font-size: 12px;
-  bottom: 5.6rem;
-}
+
 
 .container {
   padding: 0;

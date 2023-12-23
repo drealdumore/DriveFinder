@@ -1,31 +1,102 @@
 <div class="booking">
-  <h2>
-    {{ car.pricePerDay | currency : "USD" : "symbol" : "1.2-2" }}
-    <span>| day</span>
-  </h2>
-  <div class="booking__main">
-    <form [formGroup]="pickupForm">
-      <div class="inputs">
-        <div class="big--input">
-          <input type="text" placeholder="Pickup location" formControlName="pickupLocation" />
+  <div [ngStyle]="{ 'display': success ? 'none' : 'block' }">
+    <h2>
+      {{ car.pricePerDay | currency : "USD" : "symbol" : "1.2-2" }}
+      <span>| day</span>
+    </h2>
+    <div class="booking__main">
+      <form [formGroup]="pickupForm" (ngSubmit)="submitForm()">
+        <div class="inputs">
+          <div class="big--input">
+            <input
+              type="text"
+              placeholder="Pickup location"
+              formControlName="pickupLocation"
+            />
+          </div>
+          <div class="small--input">
+            <input
+              type="time"
+              placeholder="Pickup time"
+              formControlName="pickupTime"
+            />
+            <input
+              type="date"
+              placeholder="Pickup date"
+              formControlName="pickupDate"
+            />
+          </div>
         </div>
-        <div class="small--input">
-          <input type="time" placeholder="Pickup time" formControlName="pickupTime" />
-          <input type="date" placeholder="Pickup date" formControlName="pickupDate" />
+      </form>
+      <form [formGroup]="dropoffForm">
+        <div class="inputs">
+          <div class="big--input">
+            <input
+              type="text"
+              placeholder="Drop-off location"
+              formControlName="dropoffLocation"
+            />
+          </div>
+          <div class="small--input">
+            <input
+              type="time"
+              placeholder="Drop-off time"
+              formControlName="dropoffTime"
+            />
+            <input
+              type="date"
+              placeholder="Drop-off date"
+              formControlName="dropoffDate"
+            />
+          </div>
+          <span class="error-span">
+            <span>{{ errorMessage }}</span>
+          </span>
         </div>
-      </div>
-    </form>
-    <form [formGroup]="dropoffForm">
-      <div class="inputs">
-        <div class="big--input">
-          <input type="text" placeholder="Drop-off location" formControlName="dropoffLocation" />
-        </div>
-        <div class="small--input">
-          <input type="time" placeholder="Drop-off time" formControlName="dropoffTime" />
-          <input type="date" placeholder="Drop-off date" formControlName="dropoffDate" />
-        </div>
-      </div>
-    </form>
-    <button class="booking__btn" (click)="submitForm()">Continue</button>
+      </form>
+      <button
+        [disabled]="!pickupForm.valid || !dropoffForm.valid"
+        class="booking__btn"
+        (click)="submitForm()"
+      >
+        Continue
+      </button>
+    </div>
   </div>
+</div>
+
+<div  class="box">
+  <div id="spinner" class="spinner" [ngClass]="{'complete': success}">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <svg
+      width="42"
+      height="33"
+      viewBox="0 0 42 33"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6 21L13.5 28.5L36 6"
+        stroke="black"
+        stroke-width="7.5"
+        stroke-linecap="square"
+        stroke-linejoin="round"
+        pathLength="1"
+      />
+    </svg>
+  </div>
+
+  <h3 *ngIf="success" class="success-text">Booking Sucessful  </h3>
 </div>

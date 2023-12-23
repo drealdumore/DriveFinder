@@ -37,7 +37,6 @@ input {
 
 .small--input input {
   width: 11rem;
-
 }
 
 .booking__main {
@@ -61,7 +60,6 @@ input {
   border: 1px solid var(--color-white);
 }
 
-
 .host__profile {
   display: flex;
   flex-direction: column;
@@ -82,4 +80,142 @@ input {
 
 .main_p span {
   padding-left: 2px;
+}
+
+.spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.spinner div {
+  transform-origin: 40px 40px;
+  animation: spinner 1.2s linear infinite;
+}
+
+.spinner svg {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner svg path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.25s cubic-bezier(0.32, 0, 0.67, 0);
+  transition-delay: 0s;
+}
+
+.spinner.complete div {
+  animation: none;
+}
+
+.spinner.complete div:after {
+  width: 100px;
+  height: 100px;
+
+  /*  Shrink blades then expand  */
+  /*   transition: all 0.5s cubic-bezier(0.36, 0, 0.66, -0.56); */
+  transition: all 0.5s cubic-bezier(0.12, 0, 0.39, 0);
+}
+
+.spinner.complete svg path {
+  /*   transition-delay: 0.55s; */
+  transition-delay: 0.3s;
+}
+
+.spinner.complete svg path {
+  stroke-dashoffset: 0;
+}
+
+.spinner svg path[stroke-dasharray="0px 1px"] {
+  stroke-opacity: 0;
+}
+
+.spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  background: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.box {
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  height: 25rem;
+}
+
+.success-text {
+  color: var(--bg-color-odd);
+  /* text-decoration: underline wavy green; */
 }
