@@ -25,5 +25,9 @@ export class BrandPageComponent implements OnInit {
         console.error('Error loading brand:', error);
       }
     );
+    
   }
+
+  
 }
+

@@ -7,12 +7,14 @@ article {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  position: fixed;
+  right: 1.7rem;
 }
 
 .gl {
   display: flex;
   gap: 7px;
-
+  padding-top: 10px;
   align-items: center;
 }
 

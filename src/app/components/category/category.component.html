@@ -2,12 +2,20 @@
   <div class="fluid">
     <div class="slider-wrap">
       <div class="slider-main">
-        <div class="item" *ngFor="let category of categories">
+        <a
+          class="item"
+          *ngFor="let category of categories"
+          href="'/' + category.id"
+          [routerLink]="['rentals', category.id]"
+        >
           <div class="text">{{ category.text }}</div>
           <div class="imgbox">
-            <img [src]="category.img" [alt]="category.text" [title]="category.text" />
+            <img
+              [src]="category.img"
+              [alt]="category.text"
+            />
           </div>
-        </div>
+        </a>
       </div>
       <div class="sliderbtn__box">
         <button class="sliderbtn prev" appPrev>

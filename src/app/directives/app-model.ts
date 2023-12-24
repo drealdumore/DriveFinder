@@ -220,6 +220,44 @@ export interface IBrandCars {
 
 export interface SortItem {
   img: string;
+  id?: string;
   text: string;
   content?: string; 
+}
+
+export interface BigCategories {
+  categoryName: string;
+  categoryid: string;
+  backgroundImg: string;
+  curvedImg: string;
+  categoryDetail: {
+    description: {
+      title: string;
+      main1: string;
+      main2: string;
+    };
+    top: {
+      heading: string;
+      top: string;
+      button: string;
+      topCars: {
+        name: string;
+        content: string;
+      }[];
+    };
+    models: {
+      heading: string;
+      top: string;
+      button: string;
+      topCars: {
+        name: string;
+        content: string;
+      }[];
+    };
+  };
+  faq: {
+    question: string;
+    expanded: boolean;
+    answer: string;
+  }[];
 }

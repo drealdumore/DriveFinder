@@ -4,6 +4,7 @@ import {
   Brands,
   Carousel,
   Cars,
+  Categories,
   Faq,
   Reviews,
   SubReviews,
@@ -11,6 +12,7 @@ import {
   category,
 } from 'src/api/cars/data';
 import {
+  BigCategories,
   IBrand,
   ICarousel,
   ICars,
@@ -33,15 +35,25 @@ export class appService {
     );
   }
 
-  getCategory(id: any): Observable<ICars> {
+  getCategory(id: any): Observable<BigCategories> {
     const lowerCaseId = id.toLowerCase();
-    return of(Cars).pipe(
+    return of(Categories).pipe(
       map(
-        (cars) =>
-          cars.find((car) => car.category.toLowerCase() === lowerCaseId)!
+        (categories) =>
+          categories.find((category) => category.categoryid.toLowerCase() === lowerCaseId)!
       )
     );
   }
+
+  // getCategory(id: any): Observable<ICars> {
+  //   const lowerCaseId = id.toLowerCase();
+  //   return of(Cars).pipe(
+  //     map(
+  //       (cars) =>
+  //         cars.find((car) => car.category.toLowerCase() === lowerCaseId)!
+  //     )
+  //   );
+  // }
 
   getCar(id: any): Observable<ICars> {
     const lowerCaseId = id.toLowerCase();

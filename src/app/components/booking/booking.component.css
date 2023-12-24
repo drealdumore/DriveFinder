@@ -92,6 +92,7 @@ input {
   overflow: hidden;
 }
 .spinner div {
+  display: none;
   transform-origin: 40px 40px;
   animation: spinner 1.2s linear infinite;
 }
@@ -102,6 +103,8 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 3rem;
+  background: white;
 }
 
 .spinner svg path {

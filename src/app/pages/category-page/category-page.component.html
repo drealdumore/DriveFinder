@@ -1,0 +1,53 @@
+<header-sub
+  [title]="'Rent a ' + category?.categoryName"
+  [imgUrl]="category?.backgroundImg"
+></header-sub>
+
+<!-- <section style="padding-top: 4.2rem;">
+  <p class="small__heading pa">Top rated cars</p>
+  <div class="d">
+    <brand-cars [cars]="category?.cars"></brand-cars>
+  </div>
+  <div class="flex__center btn__box">
+    <button class="CTA">Book a {{ category?.categoryName }}</button>
+  </div>
+</section> -->
+
+<section>
+  <div class="flex__center pad">
+    <div class="img-container">
+      <img [src]="category?.curvedImg" [alt]="category?.categoryName" />
+    </div>
+    <div class="content">
+      <h2>{{ category?.categoryDetail?.description?.title }}</h2>
+      <p class="small__content">{{ category?.categoryDetail?.description?.main1 }}</p>
+      <p class="small__content">{{ category?.categoryDetail?.description?.main2 }}</p>
+      <div class="flex__justify btn__box">
+        <button class="CTA">{{ category?.categoryDetail?.top?.button }}</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <section-heading>{{ category?.categoryDetail?.top?.heading }}</section-heading>
+  <div class="padding__box">
+    <div class="three__grid">
+      <div
+        class="grid__item"
+        *ngFor="let rated of category?.categoryDetail?.top?.topCars"
+      >
+        <p class="small__heading">{{ rated.name }}</p>
+        <p class="small__content">{{ rated.content }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="flex__center btn__box">
+    <button class="CTA">{{ category?.categoryDetail?.top?.button }}</button>
+  </div>
+</section>
+
+<section>
+  <section-heading>Faq</section-heading>
+  <faq [items]="category?.faq"></faq>
+</section>
