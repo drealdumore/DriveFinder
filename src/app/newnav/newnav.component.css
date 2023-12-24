@@ -157,7 +157,8 @@
 }
 
 @media (max-width: 769px) {
-  .hide {
+  .hide,
+  .img-box {
     display: none;
   }
 
@@ -263,8 +264,7 @@ a {
 }
 
 .img-box img {
-  height: 1.4rem;
-  background: var(--color-white);
+  height: 2.4rem;
   padding: 4px;
   border-radius: 50px;
   border: 1px solid transparent;
@@ -272,8 +272,14 @@ a {
   transition: all 0.6s ease;
 }
 
+.img-box svg {
+  height: auto;
+  width: 2.3rem;
+  cursor: pointer;
+}
+
 .img-box img:hover {
-  border: 1px solid var(--blue);
+  border: 1px solid var(--color-white);
 }
 
 .sub {
