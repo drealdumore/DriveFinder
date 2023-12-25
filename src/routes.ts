@@ -15,7 +15,7 @@ export const appRoutes: Routes = [
   { path: 'brand/:brandID/:carID', component: CarDetailPageComponent }, // route to product page
   { path: 'how-drivefinder-works', component: HowItWorksComponent },
   { path: 'trust-&-safety', component: TrustSafetyComponent },
-  { path: 'rentals/weddings', component: WeddingComponent },
+  { path: 'weddings', component: WeddingComponent },
   { path: '', component: HomepageComponent, pathMatch: 'full' },
   { path: '**', component: Error404Component },
   // { path: '404', component: Error404Component },
