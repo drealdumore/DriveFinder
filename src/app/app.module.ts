@@ -46,7 +46,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { UserMainComponent } from './components/user-main/user-main.component';
 import { UserSubComponent } from './components/user-sub/user-sub.component';
 import { StickyNavDirective } from './directives/sticky-nav.directive';
-import { NewnavComponent } from './newnav/newnav.component';
+import { NewnavComponent } from './components/newnav/newnav.component';
 import { CategoryPageComponent } from './pages/category-page/category-page.component';
 
 @NgModule({

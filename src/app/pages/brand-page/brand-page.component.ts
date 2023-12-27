@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IBrand, IFaq } from 'src/app/directives/app-model';
 import { appService } from 'src/app/services/app.service';
 
 @Component({
-  selector: 'app-brand-page',
   templateUrl: './brand-page.component.html',
   styleUrls: ['./brand-page.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BrandPageComponent implements OnInit {
   backgroundImg: string = '';

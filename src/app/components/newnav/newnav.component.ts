@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalService } from '../services/modal.service';
-import { AuthService } from '../services/auth.service';
+import { Component, OnInit, inject } from '@angular/core';
+import { ModalService } from '../../services/modal.service';
+import { AuthService } from '../../services/auth.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'navigation',
@@ -15,10 +16,9 @@ export class NewnavComponent implements OnInit {
   userImg: string = '';
   userEmail: string = '';
 
-  constructor(
-    public modalService: ModalService,
-    private authService: AuthService
-  ) {}
+  modalService = inject(ModalService);
+  authService = inject(AuthService);
+  toastr = inject(ToastrService);
 
   ngOnInit(): void {
     // to check authentication state
@@ -26,7 +26,7 @@ export class NewnavComponent implements OnInit {
       this.isAuthenticated = isAuthenticated;
     });
 
-    // to get user display name and img from their email
+    // Retrieve user information from local storage if available
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
       this.user = JSON.parse(storedUser).displayName;
@@ -35,8 +35,23 @@ export class NewnavComponent implements OnInit {
     }
   }
 
+  logout() {
+    this.authService
+      .logOut()
+      .then((res: any) => {
+        this.toastr.success('Successfully Logged Out.');
+      })
+      .catch((error: any) => {
+        this.toastr.error('error');
+      });
+  }
+
   openModal() {
     this.modalService.openModal();
+  }
+
+  closeModal() {
+    this.modalService.closeModal();
   }
 
   showDropdown() {
@@ -46,4 +61,9 @@ export class NewnavComponent implements OnInit {
   hideDropdown() {
     this.isDropdownVisible = false;
   }
+
+
+      
+  // if the mouse is not over the drop down, this.isDropdownVisible = false;
+  // else if the mouse is over the dropdown, this.isDropdownVisible = true;
 }

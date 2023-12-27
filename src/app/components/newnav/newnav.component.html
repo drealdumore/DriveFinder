@@ -23,6 +23,7 @@
           <div
             *ngIf="isDropdownVisible"
             class="dropdown__wrapper"
+            (mouseenter)="showDropdown()"
             (mouseleave)="hideDropdown()"
           >
             <div class="dropdown">
@@ -628,6 +629,7 @@
   </button>
 
   <div class="img-box" (click)="openModal()" *ngIf="isAuthenticated">
+    
     <div *ngIf="!userImg; else usersImg">
       <svg
         width="24"
@@ -664,11 +666,13 @@
   </div>
 </header>
 
-<div class="sub" *ngIf="(modalService.modalState$ | async) && isAuthenticated">
+<div class="sub" *ngIf="(modalService.modalState$ | async) ">
   <user-sub
     [userEmail]="userEmail"
     [userName]="user"
     [userImg]="userImg"
+    (closeModal)="closeModal()"
+    (logoutEvent)="logout()"
   ></user-sub>
 </div>
 

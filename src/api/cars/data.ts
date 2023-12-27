@@ -2446,6 +2446,8 @@ export const Cars: ICars[] = [
       './assets/img/lexus/Lexus IS 2022-2.jpg',
       './assets/img/lexus/Lexus IS 2022-3.jpg',
       './assets/img/lexus/Lexus IS 2022-4.jpg',
+      './assets/img/lexus/Lexus IS 2022-5.jpg',
+      './assets/img/lexus/Lexus IS 2022-6.jpg',
     ],
 
     reviews: [
@@ -2499,8 +2501,11 @@ export const Cars: ICars[] = [
       },
     ],
 
+    // detail:
+    //   'New 2023 Lexus Hybrid with gas prices on the rise you need a Hybrid that averages 36 plus MPG.  Lexus Es hybrid is real crowd pleaser and has safety and sophistication with Apple car play this car is ready for a road trip. book now while you still can sip on gas instead of guzzling gas…',
+
     detail:
-      'New 2023 Lexus Hybrid with gas prices on the rise you need a Hybrid that averages 36 plus MPG.  Lexus Es hybrid is real crowd pleaser and has safety and sophistication with Apple car play this car is ready for a road trip. book now while you still can sip on gas instead of guzzling gas…',
+      'The Lexus ES is a luxury sedan thats available as a hybrid. The ES offers good handling, strong powertrains, great safety, and a ride that rivals envy. Its been freshened for 2022, with styling tweaks including LED headlights on top models, a new touchscreen and interface, standard blind-spot monitors, and suspension improvements. But its the ES 300h hybrid thats the star, naturally, at 43 mpg city, 44 highway, 44 combined.\n\nStandard safety equipment includes automatic emergency braking, adaptive cruise control, active lane control, blind-spot monitors, and automatic high beams. Excellent ride quality and a quiet cabin. Impressive fuel economy considering its size and power. Comfortable and mostly upscale interior.',
     features: [
       {
         icon: './assets/img/icons/apple-carplay.svg',
@@ -2640,10 +2645,13 @@ export const Cars: ICars[] = [
     ],
 
     img: [
-      './assets/img/lexus/Lexus IS 2022-1.jpg',
-      './assets/img/lexus/Lexus IS 2022-2.jpg',
-      './assets/img/lexus/Lexus IS 2022-3.jpg',
-      './assets/img/lexus/Lexus IS 2022-4.jpg',
+      './assets/img/lexus/Lexus ES 2023-1.jpg',
+      './assets/img/lexus/Lexus ES 2023-2.jpg',
+      './assets/img/lexus/Lexus ES 2023-3.jpg',
+      './assets/img/lexus/Lexus ES 2023-4.jpg',
+      './assets/img/lexus/Lexus ES 2023-5.jpg',
+      './assets/img/lexus/Lexus ES 2023-6.jpg',
+      './assets/img/lexus/Lexus ES 2023-7.jpg',
     ],
 
     reviews: [
@@ -3660,7 +3668,7 @@ export const Brands: IBrand[] = [
       ],
       button: 'Book a Lexus today',
       legend: {
-        img: './assets/img/lexus/benz-main.jpg',
+        img: '',
         content: 'Experience true luxury driving',
         p: 'Sometimes luxury is a necessity, and a normal car simply won’t do. Whether it’s a car for a wedding, promising date, or vital business meeting, driving a Lexus is a guaranteed way to impress. Book a Lexus on DriveFinder for that important occasion, a leisurely day trip, or an unforgettably fun drive',
       },
@@ -3748,7 +3756,7 @@ export const Brands: IBrand[] = [
         id: 'kAtNYvES',
         name: 'Lexus ES 2023',
         category: ' exotic & luxury',
-        img: './assets/img/lexus/Lexus IS 2022-1.jpg',
+        img: './assets/img/lexus/Lexus ES 2023-1.jpg',
         rating: '4.90 (29 ratings)',
         pricePerDay: 126,
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ICars } from 'src/app/directives/app-model';
@@ -8,6 +8,7 @@ import { appService } from 'src/app/services/app.service';
   selector: 'car-detail',
   templateUrl: './car-detail-page.component.html',
   styleUrls: ['./car-detail-page.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarDetailPageComponent {
   car$: Observable<ICars> | undefined;

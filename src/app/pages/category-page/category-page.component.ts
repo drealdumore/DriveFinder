@@ -1,27 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { appService } from 'src/app/services/app.service';
 import { BigCategories, IFaq } from 'src/app/directives/app-model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'category-page',
   templateUrl: './category-page.component.html',
   styleUrls: ['./category-page.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CategoryPageComponent implements OnInit {
-  category: BigCategories | undefined;
+export class CategoryPageComponent {
+  category$: Observable<BigCategories> | undefined;
 
-  constructor(private appservice: appService, private route: ActivatedRoute) {}
-
-  ngOnInit(): void {
+  constructor(private appservice: appService, private route: ActivatedRoute) {
     const categoryID = this.route.snapshot.params['categoryID'];
-    this.appservice.getCategory(categoryID).subscribe(
-      (category) => {
-        this.category = category;
-      },
-      (error) => {
-        console.error('Error loading category:', error);
-      }
-    );
+    this.category$ = this.appservice.getCategory(categoryID);
   }
 }

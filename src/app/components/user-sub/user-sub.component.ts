@@ -1,7 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
-import { AuthService } from 'src/app/services/auth.service';
-import { ModalService } from 'src/app/services/modal.service';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 
 @Component({
   selector: 'user-sub',
@@ -9,30 +7,18 @@ import { ModalService } from 'src/app/services/modal.service';
   styleUrls: ['./user-sub.component.css'],
 })
 export class UserSubComponent {
-  @Input() userData: [] = [];
   @Input() userEmail: string = '';
   @Input() userName: string = '';
   @Input() userImg: string = '';
+  @Output() closeModal = new EventEmitter<void>();
+  @Output() logoutEvent = new EventEmitter<void>();
 
-  constructor(
-    private authService: AuthService,
-    private toastr: ToastrService,
-    private modalService: ModalService
-  ) {}
 
   logout() {
-    this.authService
-      .logOut()
-      .then((res: any) => {
-        this.toastr.success('Successfully Logged Out.');
-      })
-      .catch((error: any) => {
-        this.toastr.error('error');
-      });
+    this.logoutEvent.emit();
   }
 
   close() {
-    this.modalService.closeModal();
+    this.closeModal.emit();
   }
-
 }
