@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-
 @Component({
   selector: 'user-sub',
   templateUrl: './user-sub.component.html',
@@ -9,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class UserSubComponent {
   @Input() userEmail: string = '';
   @Input() userName: string = '';
-  @Input() userImg: string = '';
+  @Input() firstLetter: string = '';
   @Output() closeModal = new EventEmitter<void>();
   @Output() logoutEvent = new EventEmitter<void>();
 
@@ -21,4 +20,5 @@ export class UserSubComponent {
   close() {
     this.closeModal.emit();
   }
+  
 }

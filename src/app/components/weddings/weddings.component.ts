@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Observable, map } from 'rxjs';
-import { SortItem } from 'src/app/directives/app-model';
+import { Component, Input, OnInit, inject } from '@angular/core';
+import { map } from 'rxjs';
 import { appService } from 'src/app/services/app.service';
 
 @Component({
@@ -8,16 +7,12 @@ import { appService } from 'src/app/services/app.service';
   templateUrl: './weddings.component.html',
   styleUrls: ['./weddings.component.css'],
 })
-export class WeddingsComponent implements OnInit {
-  categories$: Observable<SortItem[]> | undefined;
+export class WeddingsComponent {
+  private appService = inject(appService);
 
-  constructor(private appService: appService) {}
-
-  ngOnInit(): void {
-    this.categories$ = this.appService
-      .getCategories()
-      .pipe(
-        map((categories) => categories.filter((category) => category.content))
-      );
-  }
+  categories$ = this.appService
+    .getCategories()
+    .pipe(
+      map((categories) => categories.filter((category) => category.content))
+    );
 }

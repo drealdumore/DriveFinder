@@ -15,6 +15,7 @@ export class NewnavComponent implements OnInit {
   user: string = '';
   userImg: string = '';
   userEmail: string = '';
+  firstLetter: string = '';
 
   modalService = inject(ModalService);
   authService = inject(AuthService);
@@ -32,7 +33,12 @@ export class NewnavComponent implements OnInit {
       this.user = JSON.parse(storedUser).displayName;
       this.userImg = JSON.parse(storedUser).photoURL;
       this.userEmail = JSON.parse(storedUser).email;
+
+      // to display the first letter of the userEmail.
+      this.firstLetter = this.userEmail.charAt(0).toUpperCase();
+      console.log(this.firstLetter);
     }
+
   }
 
   logout() {
@@ -62,8 +68,6 @@ export class NewnavComponent implements OnInit {
     this.isDropdownVisible = false;
   }
 
-
-      
   // if the mouse is not over the drop down, this.isDropdownVisible = false;
   // else if the mouse is over the dropdown, this.isDropdownVisible = true;
 }

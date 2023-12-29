@@ -11,14 +11,14 @@ article {
   right: 1.7rem;
 }
 
-.gl {
+.top-item {
   display: flex;
   gap: 7px;
   padding-top: 10px;
   align-items: center;
 }
 
-.fl {
+.list-item {
   display: flex;
   gap: 1rem;
 
@@ -29,16 +29,8 @@ article {
   border-radius: 7px;
 }
 
-.fl:hover {
+.list-item:hover {
   background-color: var(--bg-color-odd);
-}
-
-.fl-img {
-  height: 3rem;
-  border-radius: 50px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: all 0.6s ease;
 }
 
 .icon {
@@ -55,7 +47,7 @@ article {
   font-size: 13px;
 }
 
-.fl p {
+.list-item p {
   font-weight: 700;
   color: var(--color-ash);
   font-size: 0.9rem;
@@ -76,4 +68,22 @@ h3 {
   right: 15px;
   top: 6px;
   cursor: pointer;
+}
+
+
+.user-img {
+  background: #1cbac1;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1rem;
+  width: 1rem;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.6s ease;
 }

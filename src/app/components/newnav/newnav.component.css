@@ -274,27 +274,29 @@ a {
   right: 0;
 }
 
-.img-box img {
-  height: 2.4rem;
-  padding: 4px;
-  border-radius: 50px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: all 0.6s ease;
-}
-
-.img-box svg {
-  height: auto;
-  width: 2.3rem;
-  cursor: pointer;
-}
-
-.img-box img:hover {
-  border: 1px solid var(--color-white);
-}
-
 .sub {
   z-index: 10;
   position: absolute;
   right: 2%;
+}
+
+.user-pic {
+  background: #1cbac1;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7px;
+  width: 7px;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.6s ease;
+}
+
+.user-pic:hover {
+  border: 1px solid var(--color-white);
 }
