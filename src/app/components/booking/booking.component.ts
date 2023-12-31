@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -24,6 +25,7 @@ export class BookingComponent implements OnInit {
 
   private auth = inject(AuthService);
   private fb = inject(FormBuilder);
+  private toaastr = inject(ToastrService);
 
   ngOnInit(): void {
     this.pickupForm = this.fb.group({
@@ -51,10 +53,8 @@ export class BookingComponent implements OnInit {
       setTimeout(() => {
         this.loading = false;
         this.success = true;
+        this.toaastr.success('Booking Successful🎉')
       }, 500);
-    } else {
-      this.errorMessage =
-        'Form is not valid. Please fill in all required fields.';
-    }
+    } 
   }
 }
