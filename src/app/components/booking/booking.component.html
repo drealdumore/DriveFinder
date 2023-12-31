@@ -1,5 +1,5 @@
 <div class="booking">
-  <div [ngStyle]="{ 'display': success ? 'none' : 'block' }">
+  <div [ngStyle]="{ display: success ? 'none' : 'block' }">
     <h2>
       {{ car.pricePerDay | currency : "USD" : "symbol" : "1.2-2" }}
       <span>| day</span>
@@ -9,6 +9,7 @@
         <div class="inputs">
           <div class="big--input">
             <input
+              required
               type="text"
               placeholder="Pickup location"
               formControlName="pickupLocation"
@@ -16,11 +17,13 @@
           </div>
           <div class="small--input">
             <input
+              required
               type="time"
               placeholder="Pickup time"
               formControlName="pickupTime"
             />
             <input
+              required
               type="date"
               placeholder="Pickup date"
               formControlName="pickupDate"
@@ -32,6 +35,7 @@
         <div class="inputs">
           <div class="big--input">
             <input
+              required
               type="text"
               placeholder="Drop-off location"
               formControlName="dropoffLocation"
@@ -39,23 +43,27 @@
           </div>
           <div class="small--input">
             <input
+              required
               type="time"
               placeholder="Drop-off time"
               formControlName="dropoffTime"
             />
             <input
+              required
               type="date"
               placeholder="Drop-off date"
               formControlName="dropoffDate"
             />
           </div>
-          <span class="error-span">
-            <span>{{ errorMessage }}</span>
-          </span>
+          <div class="error-span">
+            <span *ngIf="!pickupForm.valid">{{ pickupFormErrorMessage }}</span>
+            <span *ngIf="!dropoffForm.valid">{{ dropoffFormErrorMessage }}</span>
+            <span *ngIf="!isAuthenticated">{{ authenticationErrorMessage }}</span>
+          </div>
         </div>
       </form>
       <button
-        [disabled]="!pickupForm.valid || !dropoffForm.valid"
+        [disabled]="!pickupForm.valid || !dropoffForm.valid || !isAuthenticated"
         class="booking__btn"
         (click)="submitForm()"
       >
@@ -64,4 +72,3 @@
     </div>
   </div>
 </div>
-

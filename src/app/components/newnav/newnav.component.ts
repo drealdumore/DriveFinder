@@ -36,9 +36,7 @@ export class NewnavComponent implements OnInit {
 
       // to display the first letter of the userEmail.
       this.firstLetter = this.userEmail.charAt(0).toUpperCase();
-      console.log(this.firstLetter);
     }
-
   }
 
   logout() {

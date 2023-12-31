@@ -7,6 +7,11 @@
   border-radius: 5px;
   height: 10rem;
   transition: all 0.4s ease;
+  filter: brightness(70%);
+}
+
+.imgbox img:hover {
+  filter: brightness(100%);
 }
 
 .section {
@@ -56,6 +61,7 @@
   transform: translate(-50%, -50%);
   color: var(--color-white);
   font-weight: 600;
+  z-index: 10;
 }
 
 .sliderbtn__box {

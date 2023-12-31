@@ -81,3 +81,10 @@ input {
 .main_p span {
   padding-left: 2px;
 }
+
+.error-span {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  flex-direction: column;
+}

@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
+import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'booking',
@@ -15,8 +16,14 @@ export class BookingComponent implements OnInit {
   errorMessage: string = '';
   success: boolean = false;
   loading: boolean = false;
+  isAuthenticated: boolean = false;
 
-  constructor(private fb: FormBuilder, private toastr: ToastrService) {}
+  pickupFormErrorMessage = 'Please fill in the required fields in the pickup form.';
+  dropoffFormErrorMessage = 'Please fill in the required fields in the dropoff form.';
+  authenticationErrorMessage = 'Please log in to continue.';
+
+  private auth = inject(AuthService);
+  private fb = inject(FormBuilder);
 
   ngOnInit(): void {
     this.pickupForm = this.fb.group({
@@ -30,17 +37,17 @@ export class BookingComponent implements OnInit {
       dropoffTime: ['', Validators.required],
       dropoffDate: ['', Validators.required],
     });
+
+    this.auth.isAuthenticated$.subscribe((isAuthenticated) => {
+      this.isAuthenticated = isAuthenticated;
+      
+    });
   }
 
   submitForm(): void {
     if (this.pickupForm?.valid && this.dropoffForm?.valid) {
-      // display the loader for sometime,
-      // then display the approved then hide booking component
-
-      console.log('Pickup Form:', this.pickupForm.value);
-      console.log('Drop-off Form:', this.dropoffForm.value);
       this.loading = true;
-      
+
       setTimeout(() => {
         this.loading = false;
         this.success = true;
@@ -50,5 +57,4 @@ export class BookingComponent implements OnInit {
         'Form is not valid. Please fill in all required fields.';
     }
   }
-
 }

@@ -48,6 +48,7 @@ import { UserSubComponent } from './components/user-sub/user-sub.component';
 import { StickyNavDirective } from './directives/sticky-nav.directive';
 import { NewnavComponent } from './components/newnav/newnav.component';
 import { CategoryPageComponent } from './pages/category-page/category-page.component';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { CategoryPageComponent } from './pages/category-page/category-page.compo
     UserMainComponent,
     NewnavComponent,
     CategoryPageComponent,
+    MapComponent,
     
   ],
   imports: [

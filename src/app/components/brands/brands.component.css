@@ -6,7 +6,14 @@
   width: 100%;
   border-radius: 5px;
   height: 10rem;
+  filter: brightness(70%);
+  transition: all 0.4s ease;
 }
+
+.imgbox img:hover {
+  filter: brightness(100%);
+}
+
 
 .brands {
   padding: 20px 0;
@@ -54,6 +61,7 @@
   transform: translate(-50%, -50%);
   color: var(--color-white);
   font-weight: 600;
+  z-index: 10;
 }
 
 .sliderbtn__box {
