@@ -6,7 +6,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class ModalService {
   private modalSubject = new BehaviorSubject<boolean>(false);
-  public modalState$: Observable<boolean> = this.modalSubject.asObservable();
+  modalState$: Observable<boolean> = this.modalSubject.asObservable();
 
   openModal() {
     this.modalSubject.next(true);

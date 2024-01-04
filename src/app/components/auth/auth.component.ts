@@ -248,43 +248,4 @@ export class AuthComponent {
         this.toastr.error(this.errorMessage);
       });
   }
-
-  // private subscribeToEmailChanges(form: FormGroup): void {
-  //   const emailControl = form.get('email');
-  //   // change this so it will get the value like signupupform.get('email)
-  //   if (emailControl) {
-  //     emailControl.valueChanges.pipe(debounceTime(500)).subscribe((value) => {
-  //       this.setEmailMessage(emailControl);
-  //     });
-  //   }
-  // }
-
-  // private setEmailMessage(c: AbstractControl): void {
-  //   this.emailMessage = '';
-  //   if ((c.touched || c.dirty) && c.errors) {
-  //     this.emailMessage = Object.keys(c.errors)
-  //       .map((key) => this.emailValidationMessages[key])
-  //       .join(' ');
-  //   }
-  // }
-
-  // private setPasswordMessage(c: AbstractControl): void {
-  //   this.passwordMessage = '';
-  //   if ((c.touched || c.dirty) && c.errors) {
-  //     this.passwordMessage = Object.keys(c.errors)
-  //       .map((key) => this.passwordValidationMessages[key])
-  //       .join(' ');
-  //   }
-  // }
-
-  // private subscribeToPasswordChanges(form: FormGroup): void {
-  //   const passwordControl = form.get('password');
-  //   if (passwordControl) {
-  //     passwordControl.valueChanges
-  //       .pipe(debounceTime(500))
-  //       .subscribe((value) => {
-  //         this.setPasswordMessage(passwordControl);
-  //       });
-  //   }
-  // }
 }
